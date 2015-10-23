@@ -5,9 +5,9 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
-url:                 http://getpoole.com
+title:               R. Winston Larson
+tagline:             Mechanical engineer | Data scientist | Innovation consultant
+url:                 http://winstonlarson.github.io
 paginate:            1
 baseurl:             "http://winstonlarson.github.io/"
 
@@ -20,11 +20,11 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  name:              Winston Larson
+  url:               https://twitter.com/winstonlarson
+  email:             winstonlarson@gmail.com
 
 # Custom vars
 version:             2.0.0
-github:
+github:              https://github.com/winstonlarson
   repo:              https://github.com/winstonlarson/winstonlarson.github.io

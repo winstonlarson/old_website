@@ -23,6 +23,11 @@ author:
   name:              Winston Larson
   url:               https://twitter.com/winstonlarson
   email:             winstonlarson@gmail.com
+  
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
 
 # Custom vars
 version:             2.0.0

@@ -6,7 +6,7 @@ relative_permalinks: true
 
 # Setup
 title:               Winston Larson
-tagline:             Mechanical engineer | Data scientist | Innovation consultant
+tagline:             Mechanical engineering | Data science | Management
 url:                 http://winstonlarson.github.io
 paginate:            1
 baseurl:             "http://winstonlarson.github.io"

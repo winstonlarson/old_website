@@ -22,7 +22,8 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 **Research projects:** Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft
 
 ###Experience
-**Innovation Consultant**, *Innosight 2014-2015* <br>
+**Innovation Consultant**, *Innosight 2014-2015*
+
 * Assisting Fortune 500 companies to respond to disruptive innovation as an innovation consultant.
 * Technology and Biotech R&D: Established joint venture between a major tech company and a large pharmaceutical to build a computational R&D platform. 
 * Pharmaceutical R&D: Created new R&D accelerator and launched its first project for at major pharmaceutical.

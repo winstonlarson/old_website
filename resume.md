@@ -7,6 +7,7 @@ title: Resume
 I bring a research-oriented mindset and iterative, hypothesis-driven approach to solving ambiguous problems. I rely on data, technical skills, and a detail-focused management style to drive complex projects. I have a diverse background in innovation consulting, life science research, mechanical engineering, and industrial manufacturing that enables me to better understand the problem context and identify solutions.
 
 ###Education
+
 ####Massachusetts Institute of Technology
 
 **SM Mechanical Engineering**, *January 2014* - Major GPA: 5.0/5.0

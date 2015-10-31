@@ -27,7 +27,7 @@ author:
 pages_list:       
   About: '/about'
   Archive: '/archive'
-  Feed: '/atom.xml'
+  Resume: '/resume'
 
 # Custom vars
 version:             2.0.0

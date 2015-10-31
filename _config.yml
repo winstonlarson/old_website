@@ -10,7 +10,6 @@ tagline:             Mechanical engineering | Data science | Management
 url:                 http://winstonlarson.github.io
 paginate:            1
 baseurl:             "http://winstonlarson.github.io"
-markdown:            redcarpet
 
 # Assets
 #

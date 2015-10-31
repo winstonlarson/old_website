@@ -14,7 +14,7 @@ I bring a research-oriented mindset and iterative, hypothesis-driven approach to
 
 Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship.
 
-**Master’s Thesis**, *2012-2014* - MIT Presidential Fellow
+**Master’s Thesis**, *2012-2014* - MIT Presidential Fellow <br>
 Strategic and Financial Implications of Unmanned Underwater Vehicles and Long-term Underwater Power Sources.
 
 **SB Mechanical Engineering**, *June 2012* - GPA: 5.0/5.0

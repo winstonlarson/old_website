@@ -22,15 +22,15 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 **Research projects:** Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft
 
 ###Experience
-**Innovation Consultant**, *Innosight 2014-2015*
+**Innovation Consultant**, *Innosight 2014-2015* <br>
+Assisting Fortune 500 companies to respond to disruptive innovation as an innovation consultant.
 
-* Assisting Fortune 500 companies to respond to disruptive innovation as an innovation consultant.
-* Technology and Biotech R&D: Established joint venture between a major tech company and a large pharmaceutical to build a computational R&D platform. 
-* Pharmaceutical R&D: Created new R&D accelerator and launched its first project for at major pharmaceutical.
-* Energy & Water: Launched strategic initiative in water at an electric utility in California.
-* Consumer Electronics: Devised R&D strategy for a new product line being launched by consumer company.
-* Semiconductor Manufacturing: Advised assessment and expansion of capabilities at electronics company. 
-* Internet of things: Facilitated symposium examining opportunities and challenges in the Industrial Internet
+* **Technology and Biotech R&D:** Established joint venture between a major tech company and a large pharmaceutical to build a computational R&D platform. 
+* **Pharmaceutical R&D:** Created new R&D accelerator and launched its first project for at major pharmaceutical.
+* **Energy & Water:** Launched strategic initiative in water at an electric utility in California.
+* **Consumer Electronics:** Devised R&D strategy for a new product line being launched by consumer company.
+* **Semiconductor Manufacturing:** Advised assessment and expansion of capabilities at electronics company. 
+* **Internet of things:** Facilitated symposium examining opportunities and challenges in the Industrial Internet
 
 **Unmanned Underwater Vehicle (UUV) Projects with Lincoln Laboratory**, *MIT 2011-2014* <br>
 Managed research team members, experimental research, accounting ($300k budget), procurement, and technical documentation & communication for prototype long-term underwater power sources. Founded a startup, competed in the MIT 100K, acted as CFO & COO.

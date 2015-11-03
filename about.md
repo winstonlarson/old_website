@@ -3,10 +3,11 @@ layout: page
 title: About
 ---
 
-###Contact
-Email: [winstonlarson@gmail.com](mailto:winstonlarson@gmail.com)
-LinkedIn: [Winston Larson](https://www.linkedin.com/in/rwinstonlarson)
-Twitter: [@winstonlarson](https://www.twitter.com/winstonlarson)
+##Contact
+Email: [winstonlarson@gmail.com](mailto:winstonlarson@gmail.com) <br>
+LinkedIn: [Winston Larson's LinkedIn profile](https://www.linkedin.com/in/rwinstonlarson) <br>
+Twitter: [@winstonlarson](https://www.twitter.com/winstonlarson) <br>
+Github: [Winston Larson's Github repos](https://www.github.com/winstonlarson)
 
 ##Bio
 

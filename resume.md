@@ -3,8 +3,7 @@ layout: page
 title: Resume
 ---
 
-###Objective
-I bring a research-oriented mindset and iterative, hypothesis-driven approach to solving ambiguous problems. I rely on data, technical skills, and a detail-focused management style to drive complex projects. I have a diverse background in innovation consulting, life science research, mechanical engineering, and industrial manufacturing that enables me to better understand the problem context and identify solutions.
+----
 
 ###Education
 
@@ -20,6 +19,8 @@ Strategic and Financial Implications of Unmanned Underwater Vehicles and Long-te
 Relevant coursework: Manufacturing, systems engineering, product design & dev, robotics & controls, programming, biology.
 
 **Research projects:** Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft
+
+----
 
 ###Experience
 **Innovation Consultant**, *Innosight 2014-2015* <br>
@@ -41,6 +42,8 @@ Contributed to the development of a revolutionary manufacturing line to improve 
 
 **Schlumberger Limited**, *Summer 2011*<br>
 *Manufacturing Engineering Intern*
+
+----
 
 ###Skills
 **Engineering:** Systems engineering; manufacturing; data mining and analysis; Python (pandas, Numpy, SciPy), Java & Matlab; SolidWorks; product design and development; electronics.

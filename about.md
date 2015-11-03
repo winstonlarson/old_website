@@ -3,28 +3,10 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+I bring a research-oriented mindset and iterative, hypothesis-driven approach to solving ambiguous problems. I rely on data, technical skills, and a detail-focused management style to drive complex projects. I have a diverse background in innovation consulting, life science research, mechanical engineering, and industrial manufacturing that enables me to better understand the problem context and identify solutions.
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+As a strategy consultant at Innosight, I focus on helping clients understand complex industrial and technology problems to identify opportunities for rapid growth. I am particularly interested in the ways business model innovation can combine with breakthroughs in basic science or high technology to create growth opportunities for new businesses and products. I have worked with pharmaceutical, consumer electronics, and manufacturing clients to create research accelerators and implement R&D programs that will unlock new market growth.
 
-There are currently two themes built on Poole:
+Prior to Innosight, I held engineering positions in the aerospace and petroleum industries, where I helped to develop new capabilities in advanced manufacturing techniques and technologies. I was also a co-founder of an alternative energy startup at MIT.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+I received SM and SB degrees in Mechanical Engineering from the Massachusetts Institute of Technology. My graduate research centered on applying disruptive innovation theories to energy and robotics research, trying to understand the research capabilities and technological breakthroughs that underly successful disruptive innovations. My other research interests include robotics, manufacturing, data science, and energy.

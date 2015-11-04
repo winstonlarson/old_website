@@ -3,10 +3,10 @@
 
   {% include head.html %}
 
-  <body>
+  <body style="height: 100%;">
 
     <div class="container content">
-      <header class="masthead" style="position: fixed">
+      <header class="masthead" style="height= 100$; overflow: hidden;">
         <h1 class="masthead-title">
           <a href="/" title="Home">{{ site.title }}</a>
           <div style="float: right;">
@@ -21,7 +21,7 @@
         </h3>
       </header>
       <hr>
-      <main>
+      <main style="height: 100%; overflow: scroll;">
         {{ content }}
       </main>
 

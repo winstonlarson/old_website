@@ -28,6 +28,7 @@ pages_list:
   About: '/about'
   Archive: '/archive'
   Resume: '/resume'
+  Portfolio: '/portfolio'
 
 # Custom vars
 version:             2.0.0

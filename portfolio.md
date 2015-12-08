@@ -31,6 +31,7 @@ I created software that uses the USPTO website to find the find the information 
 ###Venture portfolio simulation
 
 Portfolios of venture-based companies are inherently fraught with risk. As part of a project to build a strategy for managing a portfolio of high-risk biotech ventures, I created a Monte Carlo simulation of the portfolio. My simulation accepted basic assumptions about the expected life-span of ventures, their chances of success, and their expected costs. Based on a desired number of successful ventures over 10 years, we used the simulation to estimate:
+
 * The number of deals the portfolio managers would need to do
 * The approximate number of ventures they would be managing at a given time
 * The expected amount of investment needed

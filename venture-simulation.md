@@ -3,9 +3,9 @@ layout: page
 title: Venture portfolio simulation
 ---
 
-##Simulating a research venture portfolio
-
 Managing a portfolio of venture-based companies is inherently fraught with risk. The oft-quoted statistic (that I can never find a proper citation for, oddly enough) is that only one in ten venture companies will succeed. Even fewer companies facing high scientific risk ever find success. Research-based ventures face particularly high risk, with long timelines and gigantic budgets between initial scientific insight and bringing a treatment to market. Creating a model that describes potential outcomes over the life of the portfolio can help managers to mitigate risk and communicate expectations.
+
+##Simulating a research venture portfolio
 
 As part of a project to build a strategy for managing a portfolio of high-risk research-based ventures, I created a Monte Carlo simulation of a venture portfolio. Based on the strategic structure of the portfolio, my simulation accepted basic assumptions about the expected life-span of ventures, their chances of success, and their expected costs. The managers knew that they desired a certain number of successful ventures over the life of the portfolio. To understand the effort involved in reaching success, we used the simulation to estimate:
 
@@ -48,7 +48,7 @@ The basic goal of the simulation was to understand what would be required to rea
 
 To check that I actually set up this simulation correctly, I did a (fairly) simple binomial probability calculation. Let’s say that we would consider the portfolio to be successful if there were at least *k* = 3 projects that graduated by the end. If we set our simulation to accept a total of *n* = 30 new projects into our portfolio early on, and a project had a *p* = 18.75% chance of making it through all the stages successfully. The probability of the portfolio being successful is
 
-![alt text](/images/2015-12-10-math-prob.png "P = \sum_{j=1}^{28} \frac{n!}{(2+j)!(n-(2+j))!}p^{2+j}(1-p)^{n-(2+j)}")
+![alt text](/images/2015-12-10-math-prob.png "P = \sum_{j=1}^{28} \frac{n!}{(2+j)!(n-(2+j))!}p^{2+j}(1-p)^{n-(2+j)}" | width=300px)
 
 Which evaluates to about *P* = 0.59. That’s about the probability of success that the simulation predicted across many trials.
 

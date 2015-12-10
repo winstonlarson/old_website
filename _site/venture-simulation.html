@@ -61,9 +61,9 @@
       <main style="z-index: 1; height: 100%; margin: 160px auto;">
         <article class="page">
   <h1 class="page-title">Venture portfolio simulation</h1>
-  <h2 id="simulating-a-research-venture-portfolio">Simulating a research venture portfolio</h2>
+  <p>Managing a portfolio of venture-based companies is inherently fraught with risk. The oft-quoted statistic (that I can never find a proper citation for, oddly enough) is that only one in ten venture companies will succeed. Even fewer companies facing high scientific risk ever find success. Research-based ventures face particularly high risk, with long timelines and gigantic budgets between initial scientific insight and bringing a treatment to market. Creating a model that describes potential outcomes over the life of the portfolio can help managers to mitigate risk and communicate expectations.</p>
 
-<p>Managing a portfolio of venture-based companies is inherently fraught with risk. The oft-quoted statistic (that I can never find a proper citation for, oddly enough) is that only one in ten venture companies will succeed. Even fewer companies facing high scientific risk ever find success. Research-based ventures face particularly high risk, with long timelines and gigantic budgets between initial scientific insight and bringing a treatment to market. Creating a model that describes potential outcomes over the life of the portfolio can help managers to mitigate risk and communicate expectations.</p>
+<h2 id="simulating-a-research-venture-portfolio">Simulating a research venture portfolio</h2>
 
 <p>As part of a project to build a strategy for managing a portfolio of high-risk research-based ventures, I created a Monte Carlo simulation of a venture portfolio. Based on the strategic structure of the portfolio, my simulation accepted basic assumptions about the expected life-span of ventures, their chances of success, and their expected costs. The managers knew that they desired a certain number of successful ventures over the life of the portfolio. To understand the effort involved in reaching success, we used the simulation to estimate:</p>
 
@@ -110,7 +110,14 @@
 
 <p>To check that I actually set up this simulation correctly, I did a (fairly) simple binomial probability calculation. Let’s say that we would consider the portfolio to be successful if there were at least <em>k</em> = 3 projects that graduated by the end. If we set our simulation to accept a total of <em>n</em> = 30 new projects into our portfolio early on, and a project had a <em>p</em> = 18.75% chance of making it through all the stages successfully. The probability of the portfolio being successful is</p>
 
-<p><img src="/images/2015-12-10-math-prob.png" alt="alt text" title="P = \sum_{j=1}^{28} \frac{n!}{(2+j)!(n-(2+j))!}p^{2+j}(1-p)^{n-(2+j)}" /></p>
+<table>
+  <tbody>
+    <tr>
+      <td>![alt text](/images/2015-12-10-math-prob.png “P = \sum_{j=1}^{28} \frac{n!}{(2+j)!(n-(2+j))!}p^{2+j}(1-p)^{n-(2+j)}”</td>
+      <td>width=300px)</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>Which evaluates to about <em>P</em> = 0.59. That’s about the probability of success that the simulation predicted across many trials.</p>
 
@@ -122,7 +129,7 @@
 
       <footer class="footer">
         <small>
-            &copy; <time datetime="2015-12-10T15:07:27-05:00">2015</time>. All rights reserved. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Then you will know the data, and the data will set you free."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:winstonlarson@gmail.com">winstonlarson@gmail.com</a>
+            &copy; <time datetime="2015-12-10T15:14:39-05:00">2015</time>. All rights reserved. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Then you will know the data, and the data will set you free."<br>Contact me: <a href="mailto:winstonlarson@gmail.com">winstonlarson@gmail.com</a>
         </small>
       </footer>
     </div>

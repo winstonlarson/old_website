@@ -23,7 +23,7 @@ The portfolio I simulated was part of the R&D arm of a large research-driven com
 
 In essence, the portfolio became a kind of project pipeline or funnel (see the figure), where ideas would be initiated, and then move from stage to stage by achieving bigger and bigger objectives, receiving more money and headcount each time. This also meant, naturally, that there would be fewer projects in the more mature stages than there would be in earlier stages. Each stage of the pipeline had assumptions regarding the average investment, the headcount per project, the expected rate of success,  and the amount of time a project was expected to remain at that stage.
 
-!(/images/2015-12-10-img-funnel.png "It was a funnel. With stuff in it.")
+![alt text](/images/2015-12-10-img-funnel.png "It was a funnel. With stuff in it.")
 
 ###Why we needed a simulation
 
@@ -55,3 +55,11 @@ To check that I actually set up this simulation correctly, I did a (fairly) simp
 Which evaluates to about *P* = 0.59. That’s about the probability of success that the simulation predicted across many trials.
 
 ###Simulation results
+
+As I mentioned at the beginning, the goal was to answer some key questions to help the portfolio managers understand and communicate the strategy and expectations for the venture portfolio they were running. A summary graphic is shown in the figure using dummy simulation data.
+
+![alt text](/images/2015-12-10-img-graph.png “A graph of the number of projects in each stage and the budget, over the time period 2015 to 2030")
+
+I successfully used the portfolio to optimize the number of projects that they would need to bring into the portfolio in the early years in order to reach their goals by the end of the portfolio. I was also able to predict their expected budget each year, the number of projects they would be managing, and the headcount.
+
+The portfolio managers found this analysis very helpful, and it was a key part of a presentation to their managers in demonstrating the operational parameters for the portfolio.

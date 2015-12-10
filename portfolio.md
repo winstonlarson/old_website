@@ -39,4 +39,4 @@ Portfolios of venture-based companies are inherently fraught with risk. As part 
 
 My simulation helped to inform the portfolio managers in creating their strategy and setting expectations around the output of the portfolio.
 
-[Read more about my work simulating a venture portfolio](/venture-portfolio)
+[Read more about my work simulating a venture portfolio](/venture-simulation)

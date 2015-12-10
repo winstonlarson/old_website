@@ -48,7 +48,7 @@ The basic goal of the simulation was to understand what would be required to rea
 
 To check that I actually set up this simulation correctly, I did a (fairly) simple binomial probability calculation. Let’s say that we would consider the portfolio to be successful if there were at least *k* = 3 projects that graduated by the end. If we set our simulation to accept a total of *n* = 30 new projects into our portfolio early on, and a project had a *p* = 18.75% chance of making it through all the stages successfully. The probability of the portfolio being successful is
 
-![alt text](/images/2015-12-10-math-prob.png "P = \sum_{j=1}^{28} \frac{n!}{(2+j)!(n-(2+j))!}p^{2+j}(1-p)^{n-(2+j)}" | width=300px)
+![alt text](/images/2015-12-10-math-prob.png "P = \sum_{j=1}^{28} \frac{n!}{(2+j)!(n-(2+j))!}p^{2+j}(1-p)^{n-(2+j)}"=300x)
 
 Which evaluates to about *P* = 0.59. That’s about the probability of success that the simulation predicted across many trials.
 

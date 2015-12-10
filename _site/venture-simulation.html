@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Venture portfolio simulation &middot; Winston Larson
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://winstonlarson.github.io/styles.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://winstonlarson.github.io/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="http://winstonlarson.github.io/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="Winston Larson" href="http://winstonlarson.github.io/atom.xml">
+
+  <!-- Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-146052-15', 'getpoole.com');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+
+  <body style="height: 100%;">
+
+    <div class="container content">
+      <header class="masthead" style="z-index: 2; border-bottom-style: solid; border-color: #d8d8d8; top: 0px; width: 42.5rem; background: #FFFFFF; position: fixed;">
+        <h1 class="masthead-title">
+          <a href="/" title="Home">Winston Larson</a>
+          <div style="float: right;">
+          
+            <small>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/about">About</a></small>
+          
+            <small>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archive">Archive</a></small>
+          
+            <small>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/resume">Resume</a></small>
+          
+            <small>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/portfolio">Portfolio</a></small>
+          
+          </div>
+          
+          <br>
+          <small>Mechanical engineering | Data science | Management</small>
+        </h3>
+      </header>
+      <main style="z-index: 1; height: 100%; margin: 160px auto;">
+        <article class="page">
+  <h1 class="page-title">Venture portfolio simulation</h1>
+  <h2 id="simulating-a-research-venture-portfolio">Simulating a research venture portfolio</h2>
+
+<p>Managing a portfolio of venture-based companies is inherently fraught with risk. The oft-quoted statistic (that I can never find a proper citation for, oddly enough) is that only one in ten venture companies will succeed. Even fewer companies facing high scientific risk ever find success. Research-based ventures face particularly high risk, with long timelines and gigantic budgets between initial scientific insight and bringing a treatment to market. Creating a model that describes potential outcomes over the life of the portfolio can help managers to mitigate risk and communicate expectations.</p>
+
+<p>As part of a project to build a strategy for managing a portfolio of high-risk research-based ventures, I created a Monte Carlo simulation of a venture portfolio. Based on the strategic structure of the portfolio, my simulation accepted basic assumptions about the expected life-span of ventures, their chances of success, and their expected costs. The managers knew that they desired a certain number of successful ventures over the life of the portfolio. To understand the effort involved in reaching success, we used the simulation to estimate:</p>
+
+<ul>
+  <li>The number of deals the portfolio managers would need to do to bring ventures into the portfolio</li>
+  <li>The approximate number of ventures they would be managing at a given time</li>
+  <li>The expected amount of investment needed in total</li>
+  <li>The approximate headcount in the portfolio at a given time</li>
+  <li>and other useful portfolio metrics</li>
+</ul>
+
+<p>My simulation helped to inform the portfolio managers in creating their portfolio strategy, setting and communicating expectations about the output of the portfolio, and the eventual amount of investment they might need to make.</p>
+
+<h3 id="venture-portfolio-strategy">Venture portfolio strategy</h3>
+
+<p>The portfolio I simulated was part of the R&amp;D arm of a large research-driven company. That meant that the goal of the venture portfolio was not to achieve some given return on an investment fund. Rather, the goal was to nurture high-risk research projects to a point where they could be adopted by the R&amp;D group and developed into a full product. We designed a portfolio to help the managers identify interesting ideas and then test them out. If an idea was successful in meeting its first milestones with a little bit of money, it could set new goals and receive more money to achieve those. If the project failed to achieve its objectives, then at least they hadn’t spent that much money on it, and the idea could “fail gracefully” rather than languish in corporate limbo.</p>
+
+<p>In essence, the portfolio became a kind of project pipeline or funnel, where ideas would be initiated, and then move from stage to stage by achieving bigger and bigger objectives, receiving more money and headcount each time. This also meant, naturally, that there would be fewer projects in the more mature stages than there would be in earlier stages. Each stage of the pipeline had assumptions regarding the average investment, the headcount per project, the expected rate of success,  and the amount of time a project was expected to remain at that stage.</p>
+
+<h3 id="why-we-needed-a-simulation">Why we needed a simulation</h3>
+
+<p>We knew how many projects we wanted at the end of ten years, but we needed to know what that meant for the actual operations of the portfolio. There were some important questions we needed to answer for the portfolio managers:</p>
+
+<ul>
+  <li>How much money would the portfolio need each year?</li>
+  <li>How many projects and ideas would they need to screen each year to reach their goals? What were the implications for considerations like hiring and lab space?</li>
+  <li>How should they divide their time between different types of projects? How much time should they give to early-stage ideas vs. more mature, successful projects?</li>
+</ul>
+
+<h3 id="creating-the-simulation">Creating the simulation</h3>
+
+<p>There were several levels of information that I needed to keep track of in order to answer the managers’ questions. First, I needed to model a portfolio where the projects could be tracked. If projects failed anywhere in the pipeline, new projects needed to be started. As I mentioned, the portfolio was divided into stages, and each stage had a limited number of projects it could hold at a given time. Second, I also needed to keep track of the projects themselves. What stage were they at, what was their investment amount and headcount, how long had they been active, and were they successful at their current stage or failing? Third, I needed to track the progress of the portfolio each year. How much money was being spent, how many projects were active in each stage, and how many new projects would need to be launched?</p>
+
+<p>I created an object-oriented system for keeping track of all these things. There is an <code>Accelerator</code> object that manages the portfolio and keeping track of time (since we were calling the venture portfolio an “Accelerator” in the spirit of start up accelerators), as well as the total amount that had been invested and the total number of successful and failed projects. The <code>Portfolio</code> holds the master portfolio and tracks projects. There are <code>Year</code> objects that keep track of the number of projects, budget, and headcount for each year. And then there are the projects, which are modeled as an object for each project at each stage of the pipeline (for example, I start with an object in the first stage. If that project is deemed successful, that object is deleted and an object in the subsequent stage is created). The Accelerator steps through years. Each year, budgets are calculated and projects are deemed successful or unsuccessful. Then the next year is initiated.</p>
+
+<p>I had to start with some basic assumptions. I assumed that all projects were created equal. At each stage, projects had a given chance of success for that stage. They also had a standardized budget and headcount.</p>
+
+<p>Finally, we started with some boundary conditions. We already had the first project in the portfolio, and a minimal headcount of portfolio managers, as well as a starting budget.</p>
+
+<h4 id="going-to-monte-carlo">Going to Monte Carlo</h4>
+<p>Since this is a Monte Carlo simulation, I determined the success of a given project in its stage by a random drawing based on the assumed success rate for that stage. Since the success of the projects was random, each Accelerator would be different. To understand the average expected behavior of the portfolio, I loop through thousands of Accelerator objects and take the average of their metrics (e.g. total budget).</p>
+
+<p>The basic goal of the simulation was to understand what would be required to reach a certain number of successful projects that graduated from the portfolio. The key variable that we altered was the number of projects that could be brought into the first phase in a given year. Since it takes a certain amount of time for projects to move through all the stages and graduate, there comes a point when you don’t even want to accept new ideas anymore. If we knew that we wanted 3 successful projects over a 15 year timeline, we needed to know how many projects to accept in the earlier years to reach our goal.</p>
+
+<p>To check that I actually set up this simulation correctly, I did a (fairly) simple binomial probability calculation. Let’s say that we would consider the portfolio to be successful if there were at least <em>k</em> = 3 projects that graduated by the end. If we set our simulation to accept a total of <em>n</em> = 30 new projects into our portfolio early on, and a project had a <em>p</em> = 18.75% chance of making it through all the stages successfully. The probability of the portfolio being successful is</p>
+
+<p><img src="/images/2015-12-10-math-prob.png" alt="alt text" title="P = \sum_{j=1}^{28} \frac{n!}{(2+j)!(n-(2+j))!}p^{2+j}(1-p)^{n-(2+j)}" /></p>
+
+<p>Which evaluates to about <em>P</em> = 0.59. That’s about the probability of success that the simulation predicted across many trials.</p>
+
+<h3 id="simulation-results">Simulation results</h3>
+
+</article>
+
+      </main>
+
+      <footer class="footer">
+        <small>
+            &copy; <time datetime="2015-12-10T15:05:20-05:00">2015</time>. All rights reserved. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Then you will know the data, and the data will set you free."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:winstonlarson@gmail.com">winstonlarson@gmail.com</a>
+        </small>
+      </footer>
+    </div>
+
+  </body>
+</html>

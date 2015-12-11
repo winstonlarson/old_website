@@ -43,6 +43,7 @@ Contributed to the development of a revolutionary manufacturing line to improve 
 
 **Schlumberger Limited**, *Summer 2011*<br>
 *Manufacturing Engineering Intern*
+Led a team to design, build, and implement apparati for testing electrical components for oil service equipment.
 
 ----
 

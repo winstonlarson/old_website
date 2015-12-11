@@ -5,6 +5,8 @@ title: Venture portfolio simulation
 
 Managing a portfolio of venture-based companies is inherently fraught with risk. The oft-quoted statistic (that I can never find a proper citation for, oddly enough) is that only one in ten venture companies will succeed. Even fewer companies facing high scientific risk ever find success. Research-based ventures face particularly high risk, with long timelines and gigantic budgets between initial scientific insight and bringing a treatment to market. Creating a model that describes potential outcomes over the life of the portfolio can help managers to mitigate risk and communicate expectations.
 
+The code for this project can be found on GitHub in my [venture-simulation repo](https://github.com/winstonlarson/venture_simulation).
+
 ##Simulating a research venture portfolio
 
 As part of a project to build a strategy for managing a portfolio of high-risk research-based ventures, I created a Monte Carlo simulation of a venture portfolio. Based on the strategic structure of the portfolio, my simulation accepted basic assumptions about the expected life-span of ventures, their chances of success, and their expected costs. The managers knew that they desired a certain number of successful ventures over the life of the portfolio. To understand the effort involved in reaching success, we used the simulation to estimate:

@@ -4,13 +4,11 @@ title: About
 ---
 
 ##Contact
-<table><tr>
-<td><img src="/images/about-img-pic.png" alt="Profile pic" width="150"></td>
+<img src="/images/about-img-pic.png" alt="Profile pic" width="150">
 <td>Email: [winstonlarson@gmail.com](mailto:winstonlarson@gmail.com) <br>
 LinkedIn: [Winston Larson's LinkedIn profile](https://www.linkedin.com/in/rwinstonlarson) <br>
 Twitter: [@winstonlarson](https://www.twitter.com/winstonlarson) <br>
 Github: [Winston Larson's Github repos](https://www.github.com/winstonlarson)
-</td></tr></table>
 
 ##Bio
 

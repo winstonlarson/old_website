@@ -4,7 +4,7 @@ title: About
 ---
 
 ##Contact
-![alt text](/images/about-img-pic.png "Profile pic" width="150")
+<img src="/images/about-img-pic.png" alt="Profile pic" width="150")
 Email: [winstonlarson@gmail.com](mailto:winstonlarson@gmail.com) <br>
 LinkedIn: [Winston Larson's LinkedIn profile](https://www.linkedin.com/in/rwinstonlarson) <br>
 Twitter: [@winstonlarson](https://www.twitter.com/winstonlarson) <br>

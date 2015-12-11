@@ -58,7 +58,7 @@ Which evaluates to about *P* = 0.59. That’s about the probability of success t
 
 As I mentioned at the beginning, the goal was to answer some key questions to help the portfolio managers understand and communicate the strategy and expectations for the venture portfolio they were running. A summary graphic is shown in the figure using dummy simulation data.
 
-<img src="/images/2015-12-10-img-graph.png" alt=“A graph of the number of projects in each stage and the budget, over the time period 2015 to 2030" width="600">
+<img src="/images/2015-12-10-img-graph.png" alt=“A graph of the number of projects in each stage and the budget, over the time period 2015 to 2030" width="500">
 
 I successfully used the portfolio to optimize the number of projects that they would need to bring into the portfolio in the early years in order to reach their goals by the end of the portfolio. I was also able to predict their expected budget each year, the number of projects they would be managing, and the headcount.
 

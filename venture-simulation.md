@@ -23,7 +23,9 @@ The portfolio I simulated was part of the R&D arm of a large research-driven com
 
 In essence, the portfolio became a kind of project pipeline or funnel (see the figure), where ideas would be initiated, and then move from stage to stage by achieving bigger and bigger objectives, receiving more money and headcount each time. This also meant, naturally, that there would be fewer projects in the more mature stages than there would be in earlier stages. Each stage of the pipeline had assumptions regarding the average investment, the headcount per project, the expected rate of success,  and the amount of time a project was expected to remain at that stage.
 
+<p align="center">
 <img src="/images/2015-12-10-img-funnel.png" alt="It was a funnel. With stuff in it." width="300">
+</p>
 
 ###Why we needed a simulation
 
@@ -60,7 +62,9 @@ Which evaluates to about *P* = 0.59. That’s about the probability of success t
 
 As I mentioned at the beginning, the goal was to answer some key questions to help the portfolio managers understand and communicate the strategy and expectations for the venture portfolio they were running. A summary graphic is shown in the figure using dummy simulation data.
 
+<p align="center">
 <img src="/images/2015-12-10-img-graph.png" alt="A graph of the number of projects in each stage and the budget, over the time period 2015 to 2030" width="700">
+</p>
 
 I successfully used the portfolio to optimize the number of projects that they would need to bring into the portfolio in the early years in order to reach their goals by the end of the portfolio. I was also able to predict their expected budget each year, the number of projects they would be managing, and the headcount.
 

@@ -50,7 +50,7 @@ The basic goal of the simulation was to understand what would be required to rea
 
 To check that I actually set up this simulation correctly, I did a (fairly) simple binomial probability calculation. Let’s say that we would consider the portfolio to be successful if there were at least *k* = 3 projects that graduated by the end. If we set our simulation to accept a total of *n* = 30 new projects into our portfolio early on, and a project had a *p* = 18.75% chance of making it through all the stages successfully. The probability of the portfolio being successful is
 
-<img src="/images/2015-12-10-math-prob.png" alt="P = \sum_{j=1}^{28} \frac{n!}{(2+j)!(n-(2+j))!}p^{2+j}(1-p)^{n-(2+j)}" width="400">
+<img src="/images/2015-12-10-math-prob.png" alt="P = \sum_{j=1}^{28} \frac{n!}{(2+j)!(n-(2+j))!}p^{2+j}(1-p)^{n-(2+j)}" align="center" width="400">
 
 Which evaluates to about *P* = 0.59. That’s about the probability of success that the simulation predicted across many trials.
 
@@ -58,7 +58,7 @@ Which evaluates to about *P* = 0.59. That’s about the probability of success t
 
 As I mentioned at the beginning, the goal was to answer some key questions to help the portfolio managers understand and communicate the strategy and expectations for the venture portfolio they were running. A summary graphic is shown in the figure using dummy simulation data.
 
-<img src="/images/2015-12-10-img-graph.png" alt="A graph of the number of projects in each stage and the budget, over the time period 2015 to 2030" width="500">
+<img src="/images/2015-12-10-img-graph.png" alt="A graph of the number of projects in each stage and the budget, over the time period 2015 to 2030" width="700">
 
 I successfully used the portfolio to optimize the number of projects that they would need to bring into the portfolio in the early years in order to reach their goals by the end of the portfolio. I was also able to predict their expected budget each year, the number of projects they would be managing, and the headcount.
 

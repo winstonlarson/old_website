@@ -70,4 +70,4 @@ As I mentioned at the beginning, the goal was to answer some key questions to he
 
 I successfully used the portfolio to optimize the number of projects that they would need to bring into the portfolio in the early years in order to reach their goals by the end of the portfolio. I was also able to predict their expected budget each year, the number of projects they would be managing, and the headcount.
 
-The portfolio managers found this analysis very helpful, and it was a key part of a presentation to their managers in demonstrating the operational parameters for the portfolio.
+The Monte Carlo simulation was a key part of the business case to upper management for the venture portfolio, and it allowed the portfolio managers to better understand and communicate expectations for success and investment needs. The simulation provided critical data for designing the portfolio's operational plan.

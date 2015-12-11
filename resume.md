@@ -23,7 +23,8 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 ----
 
 ###Experience
-**Innovation Consultant**, *Innosight 2014-2015* <br>
+**Innosight**, *2014 - Present* <br>
+*Innovation strategy consultant* <br>
 Assisting Fortune 500 companies to respond to disruptive innovation as an innovation consultant.
 
 * **Technology and Biotech R&D:** Established joint venture between a major tech company and a large pharmaceutical to build a computational R&D platform. 

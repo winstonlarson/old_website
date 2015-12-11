@@ -5,7 +5,7 @@ permalink:           "/:title"
 relative_permalinks: true
 
 # Setup
-title:               Winston Larson
+title:               Winston Larson R
 tagline:             Mechanical engineering | Data science | Management
 url:                 http://winstonlarson.github.io
 paginate:            1

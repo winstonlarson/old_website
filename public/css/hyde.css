@@ -94,9 +94,9 @@ html {
   margin-bottom: 1rem;
 }
 .sidebar-nav-item {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  display: grid;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: block;
   line-height: 2.5;
   font-size: 17px;
 }

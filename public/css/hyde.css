@@ -42,7 +42,7 @@ html {
     color: #4863A0;
   }
   a {
-    color: #77BFC7;
+    color: #BCC6CC;
   }
 }
 @media (min-width: 58em) {
@@ -77,7 +77,7 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #77BFC7;
+  color: #BCC6CC;
 }
 
 /* About section */
@@ -94,6 +94,7 @@ html {
   margin-bottom: 1rem;
 }
 .sidebar-nav-item {
+  padding: 2rem 1rem;
   display: block;
   line-height: 1.75;
   font-size: 17px;

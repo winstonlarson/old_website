@@ -33,7 +33,6 @@
 
 html {
   font-family: Helvetica, Arial, sans-serif;
-  text-align: left;
 }
 @media (min-width: 48em) {
   html {
@@ -55,10 +54,10 @@ html {
  */
 
 .sidebar {
-  text-align: center;
+  text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #737CA1;
+  background-color: #2C3539;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -93,7 +92,7 @@ html {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: underline;
+  
 }
 .sidebar-nav-item.active {
   font-weight: bold;

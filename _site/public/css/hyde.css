@@ -79,7 +79,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: Quicksand, Helvetica, Arial, sans-serif;
+  font-family: Spinnaker, Helvetica, Arial, sans-serif;
   font-size: 3.25rem;
 }
 
@@ -93,10 +93,10 @@ html {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: underline;
+  text-decoration: bold;
 }
 .sidebar-nav-item.active {
-  font-weight: bold;
+  font-weight: underline;
 }
 
 /* Sticky sidebar

@@ -93,10 +93,10 @@ html {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: bold;
+  font-weight: bold;
 }
 .sidebar-nav-item.active {
-  font-weight: underline;
+  text-decoration: underline;
 }
 
 /* Sticky sidebar

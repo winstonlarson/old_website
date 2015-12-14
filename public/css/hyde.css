@@ -80,7 +80,7 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: #E56717;
 }
 
 /* About section */
@@ -101,7 +101,6 @@ html {
   line-height: 1.75;
   font-size: 17px;
   padding-top:    1rem;
-  color: #E56717;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {

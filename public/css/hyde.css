@@ -45,7 +45,7 @@ html {
     color: #E55B3C;
   }
   a {
-    color: #E55B3C;
+    color: #6CC417;
   }
 }
 @media (min-width: 58em) {
@@ -66,7 +66,7 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #2B3856;
+  background-color: #2B547E;
 }
 @media (min-width: 48em) {
   .sidebar {

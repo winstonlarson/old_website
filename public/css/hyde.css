@@ -83,7 +83,7 @@ html {
   text-decoration: none;
 }
 
-.sidebar-about:hover h1 {
+a.sidebar-about:hover {
   color: #fff;
   margin-top: 0;
   font-family: Spinnaker, Helvetica, Arial, sans-serif;

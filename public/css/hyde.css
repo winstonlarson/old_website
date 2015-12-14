@@ -33,6 +33,7 @@
 
 html {
   font-family: Helvetica, Arial, sans-serif;
+  text-align: left;
 }
 @media (min-width: 48em) {
   html {
@@ -57,7 +58,7 @@ html {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #2B3856;
+  background-color: #737CA1;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -66,7 +67,6 @@ html {
     left: 0;
     bottom: 0;
     width: 22rem;
-    text-align: left;
   }
 }
 

@@ -5,7 +5,7 @@ title: About
 
 ***
 
-<img src="/images/about-img-pic.png" alt="Profile pic" width="150">
+<img src="/images/about-img-pic.png" alt="Profile pic" width="175">
 
 ##Contact
 Email: [winstonlarson@gmail.com](mailto:winstonlarson@gmail.com) <br>

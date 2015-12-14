@@ -65,7 +65,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 25rem;
+    width: 22rem;
     text-align: left;
   }
 }
@@ -79,7 +79,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Quicksand, Helvetica, Arial, sans-serif;
   font-size: 3.25rem;
 }
 
@@ -137,7 +137,7 @@ a.sidebar-nav-item:focus {
 @media (min-width: 64em) {
   .content {
     max-width: 64rem;
-    margin-left: 30rem;
+    margin-left: 27rem;
     margin-right: 4rem;
   }
 }

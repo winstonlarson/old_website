@@ -94,10 +94,9 @@ html {
   margin-bottom: 1rem;
 }
 .sidebar-nav-item {
-  padding-left: 4rem;
-  padding-right: 4rem;
-  display: block;
-  line-height: 2.5;
+  display: table-row;
+  color: #2B3856;
+  line-height: 2.75;
   font-size: 17px;
 }
 a.sidebar-nav-item:hover,

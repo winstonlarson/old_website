@@ -38,6 +38,15 @@ html {
   html {
     font-size: 14px;
   }
+  h1 {
+    color: #2B547E;
+  }
+  h2, h3, h4, h5, h6 {
+    color: #728FCE;
+  }
+  a {
+    color: #728FCE;
+  }
 }
 @media (min-width: 58em) {
   html {
@@ -57,7 +66,7 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #2C3539;
+  background-color: #2B3856;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -92,6 +101,7 @@ html {
   line-height: 1.75;
   font-size: 17px;
   padding-top:    1rem;
+  color: #E56717;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {

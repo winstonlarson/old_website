@@ -36,7 +36,7 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media (min-width: 58em) {
@@ -65,7 +65,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 25rem;
     text-align: left;
   }
 }
@@ -109,7 +109,7 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    top: 1rem;
+    top: 10rem;
     left:   1rem;
   }
 }

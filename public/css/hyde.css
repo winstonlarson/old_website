@@ -38,14 +38,11 @@ html {
   html {
     font-size: 14px;
   }
-  h1 {
-    color: #737CA1;
-  }
   h2, h3, h4, h5, h6 {
     color: #E55B3C;
   }
   a {
-    color: #6CC417;
+    color: #488AC7;
   }
 }
 @media (min-width: 58em) {
@@ -80,7 +77,7 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #6CC417;
+  color: #E55B3C;
 }
 
 /* About section */

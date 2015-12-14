@@ -39,10 +39,10 @@ html {
     font-size: 14px;
   }
   h2, h3, h4, h5, h6 {
-    color: #357EC7;
+    color: #4863A0;
   }
   a {
-    color: #6698FF;
+    color: #2B65EC;
   }
 }
 @media (min-width: 58em) {

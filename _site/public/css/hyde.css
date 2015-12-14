@@ -83,14 +83,6 @@ html {
   text-decoration: none;
 }
 
-a.sidebar-about:hover {
-  color: #fff;
-  margin-top: 0;
-  font-family: Spinnaker, Helvetica, Arial, sans-serif;
-  font-size: 3.25rem;
-  text-decoration: none;
-}
-
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Winston Larson</title>
+ <link href="http://winstonlarson.github.io/atom.xml" rel="self"/>
+ <link href="http://winstonlarson.github.io/"/>
+ <updated>2015-12-14T10:24:55-05:00</updated>
+ <id>http://winstonlarson.github.io</id>
+ <author>
+   <name>Winston Larson</name>
+   <email>winstonlarson@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>My first post</title>
+   <link href="http://winstonlarson.github.io/first-post"/>
+   <updated>2015-12-04T00:00:00-05:00</updated>
+   <id>http://winstonlarson.github.io/first-post</id>
+   <content type="html">&lt;p&gt;This is a test of the permalink system. I really hope this works!&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

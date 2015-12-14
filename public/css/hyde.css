@@ -93,7 +93,7 @@ html {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  color: #202020;
+  text-decoration: underline;
 }
 .sidebar-nav-item.active {
   font-weight: bold;

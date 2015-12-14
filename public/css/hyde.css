@@ -77,7 +77,7 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #EBF4FA;
+  color: #BCC6CC;
 }
 
 /* About section */
@@ -96,7 +96,7 @@ html {
 .sidebar-nav-item {
   padding-left: 1rem;
   padding-right: 1rem;
-  display: run-in;
+  display: grid;
   line-height: 2.5;
   font-size: 17px;
 }

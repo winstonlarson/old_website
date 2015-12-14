@@ -38,14 +38,11 @@ html {
   html {
     font-size: 14px;
   }
-  h1 {
-    color: #737CA1;
-  }
   h2, h3, h4, h5, h6 {
-    color: #E55B3C;
+    color: #4863A0;
   }
   a {
-    color: #E55B3C;
+    color: #488AC7;
   }
 }
 @media (min-width: 58em) {
@@ -80,7 +77,7 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #6CC417;
+  color: #BCC6CC;
 }
 
 /* About section */
@@ -97,14 +94,14 @@ html {
   margin-bottom: 1rem;
 }
 .sidebar-nav-item {
-  display: block;
-  line-height: 1.75;
+  display: table-row;
+  line-height: 2.75;
   font-size: 17px;
-  padding-top:    1rem;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #E55B3C;
 }
 .sidebar-nav-item.active {
   font-weight: bold;

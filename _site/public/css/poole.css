@@ -72,6 +72,7 @@ a {
 }
 a strong {
   color: inherit;
+  font-weight: bold;
 }
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
@@ -111,6 +112,7 @@ p {
 
 strong {
   color: #303030;
+  font-weight: bold;
 }
 
 
@@ -337,11 +339,12 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: #E55B3C;
 }
 .page-title,
 .post-title {
   margin-top: 0;
+  color: #E55B3C;
 }
 
 /* Meta data line below post title */

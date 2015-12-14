@@ -95,14 +95,13 @@ html {
 }
 .sidebar-nav-item {
   display: table-row;
-  color: #2B3856;
   line-height: 2.75;
   font-size: 17px;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: #E55B3C;
+  color: #E55B3C;
 }
 .sidebar-nav-item.active {
   font-weight: bold;

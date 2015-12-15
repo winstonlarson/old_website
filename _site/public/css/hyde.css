@@ -63,7 +63,7 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #2B3856;
+  background-color: #E5E4E2;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -112,12 +112,12 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #BCC6CC;
+  color: #2B3856;
 }
 
 /* About section */
 .sidebar-about h1 {
-  color: #fff;
+  color: #2B3856;
   margin-top: 0;
   font-family: 'Poiret One', Helvetica, Arial, sans-serif;
   font-size: 5rem;

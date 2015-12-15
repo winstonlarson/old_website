@@ -84,10 +84,14 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  margin-bottom: 2rem;
   font-family: 'Poiret One', Helvetica, Arial, sans-serif;
-  font-size: 5rem;
+  font-size: 5.25rem;
   text-decoration: none;
+}
+@media (min-width: 48em) {
+  .sidebar-about h1 {
+    margin-bottom: 0rem;
+  }
 }
 
 /* Sidebar nav */

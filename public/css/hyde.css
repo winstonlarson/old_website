@@ -72,7 +72,7 @@ html {
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 90%;
+    height: 96%;
   }
 }
 
@@ -89,7 +89,7 @@ html {
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 5%;
+    height: 2%;
   }
 }
 
@@ -102,11 +102,11 @@ html {
 @media (min-width: 48em) {
   .sidebarlow {
     position: fixed;
-    top: 95%;
+    top: 98%;
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 5%;
+    height: 2%;
   }
 }
 

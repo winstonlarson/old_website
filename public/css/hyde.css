@@ -112,7 +112,7 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #BCC6CC;
+  color: #E5E4E2;
 }
 
 /* About section */
@@ -141,7 +141,7 @@ html {
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
-  color: #E5E4E2;
+  color: #E55B3C;
 }
 .sidebar-nav-item.active {
   font-weight: bold;

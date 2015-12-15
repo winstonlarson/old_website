@@ -68,11 +68,11 @@ html {
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
-    top: 10%;
+    top: 5%;
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 50%;
+    height: 90%;
   }
 }
 
@@ -89,7 +89,7 @@ html {
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 10%;
+    height: 5%;
   }
 }
 
@@ -102,11 +102,11 @@ html {
 @media (min-width: 48em) {
   .sidebarlow {
     position: fixed;
-    top: 60%;
+    top: 95%;
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 40%;
+    height: 5%;
   }
 }
 

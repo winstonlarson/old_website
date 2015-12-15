@@ -76,6 +76,23 @@ html {
   }
 }
 
+.sidebarlow {
+  text-align: left;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #488AC7;
+}
+@media (min-width: 48em) {
+  .sidebarlow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 22rem;
+    height: 20%;
+  }
+}
+
 /* Sidebar links */
 .sidebar a {
   color: #BCC6CC;
@@ -123,7 +140,7 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    top: 10rem;
+    top: 5rem;
     left:   1rem;
   }
 }

@@ -68,11 +68,11 @@ html {
 @media (min-width: 48em) {
   .sidebar {
     position: fixed;
-    top: 5%;
+    top: 1.5%;
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 90%;
+    height: 97%;
   }
 }
 
@@ -80,7 +80,7 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #488AC7;
+  background-color: #E55B3C;
 }
 @media (min-width: 48em) {
   .sidebarhigh {
@@ -89,7 +89,7 @@ html {
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 5%;
+    height: 1.5%;
   }
 }
 
@@ -97,16 +97,16 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #E55B3C;
+  background-color: #488AC7;
 }
 @media (min-width: 48em) {
   .sidebarlow {
     position: fixed;
-    top: 95%;
+    top: 98.5%;
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 5%;
+    height: 1.5%;
   }
 }
 
@@ -125,7 +125,7 @@ html {
 }
 @media (min-width: 48em) {
   .sidebar-about h1 {
-    margin-bottom: 6rem;
+    margin-bottom: 10%;
   }
 }
 
@@ -157,7 +157,7 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    top: 5rem;
+    top: 20%;
     left:   1rem;
   }
 }

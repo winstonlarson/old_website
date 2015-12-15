@@ -125,7 +125,7 @@ html {
 }
 @media (min-width: 48em) {
   .sidebar-about h1 {
-    margin-bottom: 10%;
+    padding-bottom: 5%;
   }
 }
 

@@ -63,7 +63,7 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #E5E4E2;
+  background-color: #2B3856;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -112,7 +112,7 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #2B3856;
+  color: #E5E4E2;
 }
 
 /* About section */

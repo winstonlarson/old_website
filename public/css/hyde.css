@@ -39,7 +39,10 @@ html {
     font-size: 14px;
   }
   h2, h3, h4, h5, h6 {
-    color: #4863A0;
+    color: #757185;
+  }
+  h2 {
+    font-size: 3rem;
   }
   a {
     color: #488AC7;
@@ -145,7 +148,7 @@ html {
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
-  color: #E55B3C;
+  color: #E5E4E2;
 }
 .sidebar-nav-item.active {
   font-weight: 300;

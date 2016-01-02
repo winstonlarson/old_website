@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -124,7 +124,7 @@ html {
 .sidebar-about h1 {
   color: #2B3856;
   margin-top: 0;
-  font-family: 'Lato', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 4.5rem;
   text-decoration: none;
   font-weight: 300;

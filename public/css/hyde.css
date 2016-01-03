@@ -69,7 +69,7 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #2F2B3F;
+  background-color: #393549;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -167,7 +167,7 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right: 1rem;
-    top: 20%;
+    top: 0%;
     left: 1rem;
   }
 }

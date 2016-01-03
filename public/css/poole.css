@@ -339,14 +339,14 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #B1ADC1;
+  color: #1F45FC;
   font-weight:100;
   font-size: 4rem;
 }
 .page-title,
 .post-title {
   margin-top: 0;
-  color: #B1ADC1;
+  color: #1F45FC;
   font-weight:100;
   font-size: 4rem;
 }

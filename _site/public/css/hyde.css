@@ -32,24 +32,30 @@
  */
 
 html {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
-@media (min-width: 48em) {
+/*@media (min-width: 48em) {*/
   html {
     font-size: 14px;
   }
   h2, h3, h4, h5, h6 {
-    color: #4863A0;
+    color: #757185;
+    font-weight: 300;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
   }
   a {
     color: #488AC7;
   }
-}
-@media (min-width: 58em) {
-  html {
-    font-size: 14px;
+  p {
+    font-size: 16px;
   }
-}
+/*}*/
 
 
 /*
@@ -63,50 +69,15 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #2B3856;
+  background-color: #2F2B3F;
 }
 @media (min-width: 48em) {
   .sidebar {
-    position: fixed;
-    top: 1.5%;
-    left: 0;
-    bottom: 0;
-    width: 22rem;
-    height: 97%;
-  }
-}
-
-.sidebarhigh {
-  text-align: left;
-  padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
-  background-color: #E55B3C;
-}
-@media (min-width: 48em) {
-  .sidebarhigh {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 1.5%;
-  }
-}
-
-.sidebarlow {
-  text-align: left;
-  padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
-  background-color: #488AC7;
-}
-@media (min-width: 48em) {
-  .sidebarlow {
-    position: fixed;
-    top: 98.5%;
-    left: 0;
-    bottom: 0;
-    width: 22rem;
-    height: 1.5%;
   }
 }
 
@@ -119,8 +90,8 @@ html {
 .sidebar-about h1 {
   color: #2B3856;
   margin-top: 0;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  font-size: 4.25rem;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 5rem;
   text-decoration: none;
   font-weight: 300;
 }
@@ -135,17 +106,17 @@ html {
   margin-bottom: 1rem;
 }
 .sidebar-nav-item {
-  display: table-row;
+  display: block;
   line-height: 2.75;
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: 300;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
-  color: #E55B3C;
 }
 .sidebar-nav-item.active {
-  font-weight: bold;
+  font-weight: 300;
 }
 
 /* Sticky sidebar
@@ -157,9 +128,10 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
-    right:  1rem;
+    right: 1rem;
     top: 20%;
-    left:   1rem;
+    left: 1rem;
+    bottom: 1rem;
   }
 }
 
@@ -185,116 +157,8 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 64em) {
   .content {
-    max-width: 64rem;
+    max-width: 58rem;
     margin-left: 25rem;
     margin-right: 3rem;
   }
-}
-
-
-/*
- * Reverse layout
- *
- * Flip the orientation of the page by placing the `.sidebar` on the right.
- */
-
-@media (min-width: 48em) {
-  .layout-reverse .sidebar {
-    left: auto;
-    right: 0;
-  }
-  .layout-reverse .content {
-    margin-left: 2rem;
-    margin-right: 20rem;
-  }
-}
-
-@media (min-width: 64em) {
-  .layout-reverse .content {
-    margin-left: 4rem;
-    margin-right: 22rem;
-  }
-}
-
-
-
-/*
- * Themes
- *
- * As of v1.1, Hyde includes optional themes to color the sidebar and links
- * within blog posts. To use, add the class of your choosing to the `body`.
- */
-
-/* Base16 (http://chriskempson.github.io/base16/#default) */
-
-/* Red */
-.theme-base-08 .sidebar {
-  background-color: #ac4142;
-}
-.theme-base-08 .content a,
-.theme-base-08 .related-posts li a:hover {
-  color: #ac4142;
-}
-
-/* Orange */
-.theme-base-09 .sidebar {
-  background-color: #d28445;
-}
-.theme-base-09 .content a,
-.theme-base-09 .related-posts li a:hover {
-  color: #d28445;
-}
-
-/* Yellow */
-.theme-base-0a .sidebar {
-  background-color: #f4bf75;
-}
-.theme-base-0a .content a,
-.theme-base-0a .related-posts li a:hover {
-  color: #f4bf75;
-}
-
-/* Green */
-.theme-base-0b .sidebar {
-  background-color: #90a959;
-}
-.theme-base-0b .content a,
-.theme-base-0b .related-posts li a:hover {
-  color: #90a959;
-}
-
-/* Cyan */
-.theme-base-0c .sidebar {
-  background-color: #75b5aa;
-}
-.theme-base-0c .content a,
-.theme-base-0c .related-posts li a:hover {
-  color: #75b5aa;
-}
-
-/* Blue */
-.theme-base-0d .sidebar {
-  background-color: #6a9fb5;
-}
-.theme-base-0d .content a,
-.theme-base-0d .related-posts li a:hover {
-  color: #6a9fb5;
-}
-
-/* Magenta */
-.theme-base-0e .sidebar {
-  background-color: #aa759f;
-}
-.theme-base-0e .content a,
-.theme-base-0e .related-posts li a:hover {
-  color: #aa759f;
-}
-
-/* Brown */
-.theme-base-0f .sidebar {
-  background-color: #8f5536;
-}
-.theme-base-0f .content a,
-.theme-base-0f .related-posts li a:hover {
-  color: #8f5536;
 }

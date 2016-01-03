@@ -34,12 +34,13 @@
 html {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
   font-weight: 300;
+  font-size: 14px;
 }
-/*@media (min-width: 48em) {*/
-  html {
-    font-size: 14px;
+@media (min-width: 48em) {
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 300px;
   }
-/*}*/
+}
 
 
 /*
@@ -53,7 +54,7 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #3F3D47;
+  background-color: #2F2B3F;
 }
 @media (min-width: 48em) {
   .sidebar {

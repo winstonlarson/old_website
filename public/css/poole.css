@@ -348,6 +348,7 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
+  margin-top: 0;
   font-weight:300;
   font-size: 4rem;
 }

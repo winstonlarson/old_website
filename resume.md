@@ -9,7 +9,7 @@ title: Resume
 
 **Massachusetts Institute of Technology**
 
-#####SM Mechanical Engineering, *January 2014* - Major GPA: 5.0/5.0 <br>
+<h5>SM Mechanical Engineering</h5>, *January 2014* - Major GPA: 5.0/5.0 <br>
 Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship.
 
 **Master’s Thesis**, *2012-2014* - MIT Presidential Fellow <br>

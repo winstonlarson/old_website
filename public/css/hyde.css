@@ -37,7 +37,7 @@ html {
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
   h2, h3, h4, h5, h6 {
     color: #757185;
@@ -52,9 +52,7 @@ html {
   a {
     color: #488AC7;
   }
-}
-@media (min-width: 58em) {
-  html {
+  p {
     font-size: 16px;
   }
 }

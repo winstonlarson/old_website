@@ -33,6 +33,7 @@
 
 html {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-weight: 300;
 }
 @media (min-width: 48em) {
   html {
@@ -40,9 +41,13 @@ html {
   }
   h2, h3, h4, h5, h6 {
     color: #757185;
+    font-weight: 100;
   }
   h2 {
     font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
   }
   a {
     color: #488AC7;

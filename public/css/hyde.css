@@ -70,7 +70,6 @@ html {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #2F2B3F;
-  top: 0;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -79,7 +78,7 @@ html {
     left: 0;
     bottom: 0;
     width: 22rem;
-    height: 100%; /*97%*/
+    /*height: 100%; 97%*/
   }
 }
 
@@ -144,7 +143,7 @@ html {
   margin-bottom: 1rem;
 }
 .sidebar-nav-item {
-  display: table-row;
+  display: block;
   line-height: 2.75;
   font-size: 17px;
   font-weight: 300;
@@ -152,7 +151,6 @@ html {
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
-  color: #E5E4E2;
 }
 .sidebar-nav-item.active {
   font-weight: 300;

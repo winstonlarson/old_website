@@ -5,11 +5,11 @@ title: Resume
 
 ----
 
-###Education
+##Education
 
 **Massachusetts Institute of Technology**
 
-**SM Mechanical Engineering**, *January 2014* - Major GPA: 5.0/5.0 <br>
+#####SM Mechanical Engineering, *January 2014* - Major GPA: 5.0/5.0 <br>
 Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship.
 
 **Master’s Thesis**, *2012-2014* - MIT Presidential Fellow <br>
@@ -22,16 +22,16 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 
 ----
 
-###Experience
+##Experience
 **Innosight**, *2014 - Present* <br>
 *Innovation strategy consultant* <br>
 Assisting Fortune 500 companies to respond to disruptive innovation as an innovation consultant.
 
-* **Technology and Biotech R&D:** Established joint venture between a major tech company and a large pharmaceutical to build a computational R&D platform. 
+* **Technology and Biotech R&D:** Established joint venture between a major tech company and a large pharmaceutical to build a computational R&D platform.
 * **Pharmaceutical R&D:** Created new R&D accelerator and launched its first project for at major pharmaceutical.
 * **Energy & Water:** Launched strategic initiative in water at an electric utility in California.
 * **Consumer Electronics:** Devised R&D strategy for a new product line being launched by consumer company.
-* **Semiconductor Manufacturing:** Advised assessment and expansion of capabilities at electronics company. 
+* **Semiconductor Manufacturing:** Advised assessment and expansion of capabilities at electronics company.
 * **Internet of things:** Facilitated symposium examining opportunities and challenges in the Industrial Internet
 
 **Unmanned Underwater Vehicle (UUV) Projects with Lincoln Laboratory**, *MIT 2011-2014* <br>
@@ -47,8 +47,7 @@ Led a team to design, build, and implement apparati for testing electrical compo
 
 ----
 
-###Skills
+##Skills
 **Engineering:** Systems engineering; manufacturing; data mining and analysis; Python (pandas, Numpy, SciPy), Java & Matlab; SolidWorks; product design and development; electronics.
 
 **Business:** Team & project management; strategy & business development; disruptive innovation; entrepreneurship & startups; communication, presentations & writing.
-

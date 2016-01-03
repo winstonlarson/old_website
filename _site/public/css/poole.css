@@ -67,7 +67,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+  color: #88ACDB;
   text-decoration: none;
 }
 a strong {
@@ -83,31 +83,36 @@ a:focus {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
-  font-weight: bold;
+  font-weight: 100;
   line-height: 1.25;
-  color: #313131;
+  color: #88ACDB;
   text-rendering: optimizeLegibility;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 3.25rem;
 }
 h2 {
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 h3 {
   margin-top: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
-h4, h5, h6 {
+h4 {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+h5, h6 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
 }
 
 /* Body text */
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 16px;
 }
 
 strong {
@@ -120,6 +125,7 @@ strong {
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 16px;
 }
 
 dt {
@@ -339,14 +345,14 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #B6CDE5;
+  color: #88ACDB;88ACDB
   font-weight:100;
   font-size: 4rem;
 }
 .page-title,
 .post-title {
   margin-top: 0;
-  color: #B6CDE5;/*B1ADC1*/
+  color: #88ACDB;/*7B92B0*/
   font-weight:100;
   font-size: 4rem;
 }

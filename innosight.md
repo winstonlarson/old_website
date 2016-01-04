@@ -36,3 +36,7 @@ Here are some of the interesting challenges I confronted, experiences and expert
 ####SAB recruitment
 
 ####Executive interviewing
+
+####Technology road-mapping
+
+####Consumer electronics

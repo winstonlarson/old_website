@@ -3,11 +3,25 @@ layout: page
 title: Portfolio
 ---
 
-Some coding and analysis projects of which I am particularly fond.
+I've worked on a variety of projects that reflect my interests in data science, business and management, and mechanical engineering.
+
+#####Data science
++ [**BRFSS:**](#brfss) Extracting insights from the world's largest health survey
++ [**Patent valuation:**](#patents) Scraping the USPTO website to estimate patent values
++ [**Venture portfolio simulation:**](#ventures) Monte Carlo simulation of a venture portfolio to guide investment and management strategy
++ [**Scientific advisory board membership:**](#sab) Using scientific publication records to identify potential SAB candidates
+
+#####Business and management
++ Innosight experience
+
+#####Mechanical engineering
++ Unmanned underwater vehicles and disruptive innovation
++ Portable controls experiments
++ Bio-mimetic robotic stingray
 
 ****
 
-###BRFSS
+###BRFSS<a id="brfss"></a>
 
 The BRFSS is the largest health survey in the world. It is conducted by the CDC, and there are over 400,000 interviewees every year who answer hundreds of questions. Many important findings about population health, trends in behaviors, and demographic differences in health and disease outcomes originate in the data provided through the BRFSS. A wealth of interesting statistical and correlative findings are buried in the data, but unfortunately, the BRFSS can be difficult to work with due to archaic data storage techniques.
 
@@ -18,7 +32,7 @@ I have cleaned up all of the available BRFSS data sets (1984-2014) to make them 
 
 ****
 
-###Patent valuation
+###Patent valuation<a id="patents"></a>
 
 Protectable intellectual property is a crucial piece of any corporate strategy for creating a long-term differentiated position in a market. Patent valuation has arisen as a critical component of legal cases, startup valuations, and measuring R&D productivity. There are many approaches to patent valuation, but a common method examines the number of patents citing a given patent (called “forward cites”). A patent with many forward cites is generally more valuable since it was likely the genesis of continued innovation. One can therefore measure a patent’s value relative to similar patents by comparing its number of forward cites with other patents in the same patent class.
 
@@ -39,7 +53,7 @@ Portfolios of venture-based companies are inherently fraught with risk. As part 
 
 My simulation helped to inform the portfolio managers in creating their strategy and setting expectations around the output of the portfolio.
 
-[Read more about my work simulating a venture portfolio](/venture-simulation)
+[Read more about my work on simulating a venture portfolio](/venture-simulation)
 
 ****
 

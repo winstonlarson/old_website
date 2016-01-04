@@ -68,13 +68,13 @@ body {
 a, h1, h2, h3, h4, h5, h6, .page-title,
 .post-title,
 .post-title a {
-  color: #A2B9D1;/*6B88C9*/
+  color: #BCC6CC;/*6B88C9*/
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
   text-decoration: none;
-  color: #43C6DB;
+  color: #0020C2;
 }
 a strong {
   color: inherit;
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
-  color: #0020C2;
+  color: #43C6DB;
 }
 h1 {
   font-size: 3.25rem;

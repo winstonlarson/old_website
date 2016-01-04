@@ -38,7 +38,7 @@ I have cleaned up all of the available BRFSS data sets (1984-2014) to make them 
 
 Protectable intellectual property is a crucial piece of any corporate strategy for creating a long-term differentiated position in a market. Patent valuation has arisen as a critical component of legal cases, startup valuations, and measuring R&D productivity. There are many approaches to patent valuation, but a common method examines the number of patents citing a given patent (called “forward cites”). A patent with many forward cites is generally more valuable since it was likely the genesis of continued innovation. One can therefore measure a patent’s value relative to similar patents by comparing its number of forward cites with other patents in the same patent class.
 
-I created software that uses the USPTO website to find the find the information needed to value a patent. For a given class of patents, I scrape the key information for each patent (i.e. patent number, title, abstract, assignee, and file date) as well as all of the forward cites for that class.
+I created software that uses the USPTO website to find the find the information needed to value a patent. For a given class of patents, I scrape the key information for each patent (i.e. patent number, title, abstract, assignee, and file date) as well as all of the forward cites for that class. The data generated can then be used to compare patent values.
 
 [Read more about my work on valuing patents](/patents)
 

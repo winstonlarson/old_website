@@ -19,7 +19,7 @@ I've worked on a variety of projects that reflect my interests in data science, 
 ####Mechanical engineering
 + [Unmanned underwater vehicles and disruptive innovation:](#uuv) Demonstrating the financial and strategic value of unmanned underwater vehicles (UUVs) and how they are disrupting traditional naval power
 + [Portable controls experiments:](#portable) Developing a series of portable lab experiences for undergraduate mechatronics and controls courses
-+ [Bio-mimetic robotic stingray:](#stingray) Designing, manufacturing, programming, and testing a small under-actuated stingray robot
++ [Bio-mimetic underwater robotics:](#stingray) Designing, manufacturing, programming, and testing small under-actuated stingray and salamander robots
 
 ****
 
@@ -99,7 +99,7 @@ For my senior thesis in mechanical engineering at MIT, I developed a series of m
 
 ****
 
-### <a id="stingray"></a> Bio-mimetic robotic stingray
+### <a id="stingray"></a> Bio-mimetic underwater robotics
 
 As I have previously mentioned, underwater robots are becoming increasingly important to naval and maritime science operations. Robots must be robust and durable to survive in the harsh ocean environment, and many applications also require agility and speed. In the past, biomimetic underwater robots (e.g. robotic fish or stingrays) relied on segmented body designs, where each segment is individually actuated, to bestow agility and speed on their designs. Unfortunately, these segmented designs were not robust and suffer from high failure rates.
 

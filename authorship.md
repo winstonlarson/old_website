@@ -24,7 +24,7 @@ We have to begin by finding a comprehensive list of scientific publications for 
 As an example, we can look at prostate cancer. Using the PubMed database, we can search for “prostate cancer” and then download the entire list of 132,597 citations to a text file, as seen in the figure. There are a variety of other formats we could use (e.g. XML), but text ends up being the smallest file size and the easiest to work with.
 
 <p align="center">
-<img src="/images/2016-01-04-pubmed-results.png" alt="The pubmed website. Search for your topic, then click on Send to in the upper right corner." width="600">
+<img src="/images/2016-01-04-pubmed-results.png" alt="The pubmed website. Search for your topic, then click on Send to in the upper right corner." width="700">
 </p>
 
 ###Using author metrics

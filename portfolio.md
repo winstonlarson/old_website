@@ -66,3 +66,43 @@ Accessing world-class expertise is critical for corporate R&D projects that are 
 I developed a rudimentary method that relies on scientific publication records. I wrote a script that takes a full citation list for a given topic (e.g. prostate cancer) and identifies SAB candidates based on total authorship, first authorship, and last authorship. While quick and dirty, my method makes it easy to rapidly identify SAB candidates from a field of thousands, allowing the team to immediately begin making connections.
 
 [Read more about my work selecting scientific advisory board candidates](/authorship)
+
+****
+
+### <a id="innosight"></a> Innovation and management consulting at Innosight
+
+Translating new and exciting science into products and services that the market values is a key challenge in R&D-driven industries. Managing high-risk research programs and successfully commercializing ideas is difficult, but very worth it. Unfortunately, it is something that many companies (large and small) struggle to get right. Billions of dollars in R&D funds are squandered every year through mis-management. Understanding how to effectively run a R&D program and then commercialize the resulting products is a rare and valuable skill.
+
+At Innosight, I have focused on advising and managing high-risk corporate R&D programs. I have built deep expertise in designing organizations and plans, communicating strategies to executives, and doing the legwork to get programs off the ground. On multiple projects ranging across a variety of industries, I have built a working knowledge of the underlying scientific and technological principles, engaged with scientists and engineers to test ideas, and created targeted strategies to build and sell products that people need.
+
+[Read more about my work in R&D management at Innosight](/innosight)
+
+****
+
+### <a id="uuv"></a> Unmanned underwater vehicles and disruptive innovation in the Navy
+
+Unmanned aerial drones have revolutionized warfare in the last decade. In many ways, they are a classic case of disruptive innovation, where small, inexpensive unmanned drones have replaced fighters and helicopters in carrying out dangerous attacks, fundamentally changing the way the Air Force operates. A similar phenomenon is occurring in the Navy. Small unmanned underwater vehicles (UUVs) are able to efficiently accomplish missions that would have previously required large, expensive shipborne operations. An important challenge in developing underwater vehicles is energy storage. MIT is developing technologies that would expand current underwater operation limits by 10x.
+
+My master's thesis in mechanical engineering at MIT examined the financial and strategic implications of UUVs for the Navy. I found, for example, that the Navy could reduce costs by 95% by using UUVs for certain mission types. By not investing more in unmanned systems, the Navy is exposing itself to considerable financial and tactical risk.
+
+[Read more about my work on UUVs and their implications](/uuvs)
+
+****
+
+### <a id="portable"></a> Portable controls experiments
+
+Hands-on education is a critical part of any STEM program. Studies are increasingly showing that a project-based hands-on program is critical to helping students maintaining interest and succeed in difficult math-based majors. Unfortunately, due to budget and staffing limits, it can be difficult to provide a good experiential experience for all students, especially in large introductory classes.
+
+For my senior thesis in mechanical engineering at MIT, I developed a series of mechatronics and controls experiments for undergraduate classes. Dynamics and controls is a passion of mine, and I wanted to create tools that other students could use to discover the field. My experiments, based on National Instruments DACs and Matlab Simulink, were small and portable, allowing students to take them home and tinker. That sort of hands-on tinkering is where true engineering learning happens.
+
+[Read more about my work on portable controls experiments](/controls-experiments)
+
+****
+
+### <a id="stingray"></a> Bio-mimetic robotic stingray
+
+As I have previously mentioned, underwater robots are becoming increasingly important to naval and maritime science operations. Robots must be robust and durable to survive in the harsh ocean environment, and many applications also require agility and speed. In the past, biomimetic underwater robots (e.g. robotic fish or stingrays) relied on segmented body designs, where each segment is individually actuated, to bestow agility and speed on their designs. Unfortunately, these segmented designs were not robust and suffer from high failure rates.
+
+At MIT, I was part of a team that designed a bio-mimetic robotic stingray that solved these durability issues. It was constructed of a soft polymer body with only two actuators. I designed and demonstrated the control and actuation system to enable forward and backward motion and turning using only the two actuators. I also build and tested a robotic salamander that could both swim and walk.
+
+[Read more about my work on bio-mimetic underwater robots](/biomimetic-robots)

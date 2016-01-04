@@ -65,9 +65,14 @@ body {
       -ms-text-size-adjust: 100%;
 }
 
+a, h1, h2, h3, h4, h5, h6, .page-title,
+.post-title,
+.post-title a {
+  color: #6B88C9;/*5294D1*/
+}
+
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #88ACDB;
   text-decoration: none;
 }
 a strong {
@@ -83,9 +88,8 @@ a:focus {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.25;
-  color: #88ACDB;
   text-rendering: optimizeLegibility;
 }
 h1 {
@@ -117,7 +121,7 @@ p {
 
 strong {
   color: #303030;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 
@@ -345,15 +349,8 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #88ACDB;88ACDB
-  font-weight:100;
-  font-size: 4rem;
-}
-.page-title,
-.post-title {
   margin-top: 0;
-  color: #88ACDB;/*7B92B0*/
-  font-weight:100;
+  font-weight:300;
   font-size: 4rem;
 }
 

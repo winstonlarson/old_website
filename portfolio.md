@@ -40,3 +40,13 @@ Portfolios of venture-based companies are inherently fraught with risk. As part 
 My simulation helped to inform the portfolio managers in creating their strategy and setting expectations around the output of the portfolio.
 
 [Read more about my work simulating a venture portfolio](/venture-simulation)
+
+****
+
+###Scientific advisory board membership
+
+Accessing world-class expertise is critical for corporate R&D projects that are dependent on cutting edge science, but bringing top scientists in-house is often not an option. To solve the expertise problem, many companies use scientific advisory boards (SABs), where they contract with academics to provide advice. Identifying potential members can be  difficult since most well-known academics are extremely busy. Many well-qualified, although less well-known or more junior, scientists can provide critical knowledge. How can we quickly identify potential SAB members?
+
+I developed a rudimentary method that relies on scientific publication records. I wrote a script that takes a full citation list for a given topic (e.g. prostate cancer) and identifies SAB candidates based on total authorship, first authorship, and last authorship. While quick and dirty, my method makes it easy to rapidly identify SAB candidates from a field of thousands, allowing the team to immediately begin making connections.
+
+[Read more about my work selecting scientific advisory board candidates](/authorship)

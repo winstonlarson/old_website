@@ -3,21 +3,23 @@ layout: page
 title: Portfolio
 ---
 
+****
+
 I've worked on a variety of projects that reflect my interests in data science, business and management, and mechanical engineering.
 
-#####Data science
-+ [BRFSS:](#brfss) Extracting insights from the world's largest health survey
-+ [Patent valuation:](#patents) Scraping the USPTO website to estimate patent values
-+ [**Venture portfolio simulation:**](#ventures) Monte Carlo simulation of a venture portfolio to guide investment and management strategy
-+ [**Scientific advisory board membership:**](#sab) Using scientific publication records to identify potential SAB candidates
+####Data science
++ [BRFSS:](#brfss) Extracting insights from the world's largest health survey, including data wrangling and machine learning
++ [Patent valuation:](#patents) Scraping the USPTO website and structuring data to estimate patent values
++ [Venture portfolio simulation:](#ventures) Monte Carlo simulation of a venture portfolio to guide investment and management strategy
++ [Scientific advisory board membership:](#sab) Using scientific publication records to identify potential SAB candidates
 
-#####Business and management
-+ Innosight experience
+####Business and management
++ [Innosight experience:](#innosight) A variety of management and innovation consulting engagements focused on developing strategies to advance and commercialize cutting edge R&D
 
-#####Mechanical engineering
-+ Unmanned underwater vehicles and disruptive innovation
-+ Portable controls experiments
-+ Bio-mimetic robotic stingray
+####Mechanical engineering
++ [Unmanned underwater vehicles and disruptive innovation:](#uuv) Demonstrating the financial and strategic value of unmanned underwater vehicles (UUVs) and how they are disrupting traditional naval power
++ [Portable controls experiments:](#portable) Developing a series of portable lab experiences for undergraduate mechatronics and controls courses
++ [Bio-mimetic robotic stingray:](#stingray) Designing, manufacturing, programming, and testing a small under-actuated stingray robot
 
 ****
 
@@ -42,7 +44,7 @@ I created software that uses the USPTO website to find the find the information 
 
 ****
 
-###Venture portfolio simulation
+### <a id="ventures"></a> Venture portfolio simulation
 
 Portfolios of venture-based companies are inherently fraught with risk. As part of a project to build a strategy for managing a portfolio of high-risk biotech ventures, I created a Monte Carlo simulation of the portfolio. My simulation accepted basic assumptions about the expected life-span of ventures, their chances of success, and their expected costs. Based on a desired number of successful ventures over 10 years, we used the simulation to estimate:
 
@@ -57,7 +59,7 @@ My simulation helped to inform the portfolio managers in creating their strategy
 
 ****
 
-###Scientific advisory board membership
+### <a id="sab"></a> Scientific advisory board membership
 
 Accessing world-class expertise is critical for corporate R&D projects that are dependent on cutting edge science, but bringing top scientists in-house is often not an option. To solve the expertise problem, many companies use scientific advisory boards (SABs), where they contract with academics to provide advice. Identifying potential members can be  difficult since most well-known academics are extremely busy. Many well-qualified, although less well-known or more junior, scientists can provide critical knowledge. How can we quickly identify potential SAB members?
 

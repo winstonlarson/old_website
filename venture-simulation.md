@@ -28,7 +28,7 @@ The portfolio I simulated was part of the R&D arm of a large research-driven com
 In essence, the portfolio became a kind of project pipeline or funnel (see the figure), where ideas would be initiated, and then move from stage to stage by achieving bigger and bigger objectives, receiving more money and headcount each time. This also meant, naturally, that there would be fewer projects in the more mature stages than there would be in earlier stages. Each stage of the pipeline had assumptions regarding the average investment, the headcount per project, the expected rate of success,  and the amount of time a project was expected to remain at that stage.
 
 <p align="center">
-<img src="/images/2015-12-10-img-funnel.png" alt="It was a funnel. With stuff in it." width="300">
+<img src="/images/2015-12-10-img-funnel.png" alt="It was a funnel. With stuff in it." width="500">
 </p>
 
 ###Why we needed a simulation

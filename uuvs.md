@@ -11,9 +11,9 @@ Furthermore, long-term underwater power sources currently under development at M
 
 I explored the financial and strategic implications of UUVs and long-term underwater power sources to the Navy and its future operations. By examining current naval operations and the ways in which UUVs could complement or replace divers and ships, I identified ways to use UUV technology to reduce risk to human life, decrease costs, and leverage the technology learning curve. I concluded that significant cost savings are immediately available with the widespread use of UUVs, and current research investment levels are inadequate in comparison with the risks and rewards of UUV programs.
 
-## Financial and strategic implications of UUVs to the Navy - Executive summary
+## UUVs and naval disruption
 
-A copy of my [master's thesis](https://dspace.mit.edu/bitstream/handle/1721.1/87959/880676433-MIT.pdf?sequence=2) is available from DSpace@MIT.
+A copy of my [master's thesis](https://dspace.mit.edu/bitstream/handle/1721.1/87959/880676433-MIT.pdf?sequence=2) is available from DSpace@MIT. You can also learn more about [Professor Doug Hart's research in to UUV power sources](https://www.ll.mit.edu/news/NovelUUV.html) at MIT.
 
 ###Unmanned underwater vehicles
 
@@ -37,7 +37,7 @@ Disruptive innovation must be skillfully managed to realize its full potential. 
 
 To demonstrate the disruptive power of UUVs, I analyzed the costs of missions that can be completed using current UUV technology. I examined the mission scenarios, the cost of completing the mission using manned systems, and the cost of completing the mission using UUVs. I compared the costs and analyzed the advantages of using UUV technologies. In the table below, I present the percent cost savings experienced by using UUV technologies rather than manned systems. In general, UUV systems are roughly an order of magnitude (90% cost savings) less expensive than manned systems.
 
-Markdown | Percent savings
+Mission type | Percent savings
 :--- | ---:
 **CBNRE** | 93%
 **Water column profiling** | 99%

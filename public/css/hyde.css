@@ -99,14 +99,15 @@ html {
   display: block;
   line-height: 2.75;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
+  color: #48A9E4;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
 }
 .sidebar-nav-item.active {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Sticky sidebar

@@ -59,7 +59,7 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background: #E4EEF4; /*linear-gradient(to right, #1F45FC, #52B3EE);*/
+  background: #FAFAFA; /*linear-gradient(to right, #1F45FC, #52B3EE);*/
   /*background-color: #1E1E23;*/
 }
 @media (min-width: 48em) {
@@ -79,7 +79,7 @@ html {
 
 /* About section */
 .sidebar-about h1 {
-  color: #2B3856;
+  color: #48A9E4;
   margin-top: 0;
   font-family: 'Lato', Arial, sans-serif;
   font-size: 5rem;

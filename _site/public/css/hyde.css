@@ -94,20 +94,17 @@ html {
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
+  color: #48A9E4;
 }
 .sidebar-nav-item {
   display: block;
   line-height: 2.75;
   font-size: 18px;
   font-weight: 400;
-  color: #48A9E4;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
-}
-.sidebar-nav-item.active {
-  font-weight: 400;
 }
 
 /* Sticky sidebar

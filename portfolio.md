@@ -85,7 +85,17 @@ Unmanned aerial drones have revolutionized warfare in the last decade. In many w
 
 My master's thesis in mechanical engineering at MIT examined the financial and strategic implications of UUVs for the Navy. I found, for example, that the Navy could reduce costs by 95% by using UUVs for certain mission types. By not investing more in unmanned systems, the Navy is exposing itself to considerable financial and tactical risk.
 
-[Read more about my work on UUVs and their implications](/uuvs)
+[Read more about my work on UUV strategy and disruptive innovation](/uuvs)
+
+****
+
+### <a id="uuv"></a> Long-term UUV power sources
+
+A critical barrier to wide-spread use of underwater vehicles is energy storage. Current lithium-based battery systems give  UUVs 3-day mission durations. After that, a ship must retrieve the UUV, recharge it, and redeploy it. Requiring a ship to be so heavily involved in UUV operations is expensive and defeats the purpose of unmanned operations. Professor Doug Hart at MIT is working with MIT Lincoln Labs to develop technologies that would expand current underwater operation limits by 10x, or up to 30 days.
+
+As a senior and master's student at MIT, I worked on a series of projects exploring, designing, and building multiple approaches to long-term underwater power sources for UUVs. I was part of the engineering team for designing, building, and testing a diesel-powered hybrid system, as well as an aluminum-gallium system. My responsibilities included engine testing, vibration isolation, system integration, and fabrication. I acted as the communications manager, maintaining all of the documents and reports to communicate and document our system for Lincoln Lab. I was also the CFO, managing the $300k engineering budget as well as procurement.
+
+[Read more about my work on designing and building UUV power sources](/uuv-power)
 
 ****
 
@@ -103,6 +113,6 @@ For my senior thesis in mechanical engineering at MIT, I developed a series of m
 
 As I have previously mentioned, underwater robots are becoming increasingly important to naval and maritime science operations. Robots must be robust and durable to survive in the harsh ocean environment, and many applications also require agility and speed. In the past, biomimetic underwater robots (e.g. robotic fish or stingrays) relied on segmented body designs, where each segment is individually actuated, to bestow agility and speed on their designs. Unfortunately, these segmented designs were not robust and suffer from high failure rates.
 
-At MIT, I was part of a team that designed a bio-mimetic robotic stingray that solved these durability issues. It was constructed of a soft polymer body with only two actuators. I designed and demonstrated the control and actuation system to enable forward and backward motion and turning using only the two actuators. I also build and tested a robotic salamander that could both swim and walk.
+At MIT, I was part of a team that designed a bio-mimetic robotic stingray that solved these durability issues. It was constructed of a soft polymer body with only two actuators. I designed and demonstrated the control and actuation system to enable forward and backward motion and turning using only the two actuators. I also built and tested a robotic salamander that could both swim and walk.
 
 [Read more about my work on bio-mimetic underwater robots](/biomimetic-robots)

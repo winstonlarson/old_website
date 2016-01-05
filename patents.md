@@ -27,7 +27,7 @@ I relied on the [USPTO's advanced search website](http://patft.uspto.gov/netahtm
 
 ###Scraping patents
 
-The great thing about PATFT is that it has a very predictable format in translating searches into URLs, so it's easy to search for patents or patent classes using just URLs. This means that given a class number `classNum`, I can get the search results by using the URL `http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&r=0&p=1&f=S&l=50&Query=ccl%2F' + classNum + '&d=PTXT'`.
+The great thing about PATFT is that it has a very predictable format in translating searches into URLs, so it's easy to search for patents or patent classes using just URLs. This means that given a class number `classNum`, I can get the search results by using the URL `http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&r=0&p=1&f=S&l=50&Query=ccl%2F' +` **`classNum`** `+ '&d=PTXT'`.
 
 I used Python's `requests` package to grab the HTML pages for the class searches. After searching for a class, I needed to figure out how many patents were in the class, since search results are served on pages of 50. I could then loop through each search results page and grab all of the patent numbers in the class. After getting a list of patent numbers, I could then use a similarly standardized URL to search for the webpage for each patent, and I would again grab the HTML.
 

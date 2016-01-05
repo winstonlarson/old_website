@@ -68,7 +68,3 @@ In conclusion, I offer several observations on UUVs and their disruptive potenti
 + The low costs and disruptive nature of UUVs will make them attractive to other navies and entities
 
 Unmanned underwater vehicles will revolutionize naval warfare. Proper innovation management and early, enthusiastic adoption is required to seize their strategic potential and maintain maritime superiority.
-
-<p align="center">
-<img src="/images/2015-12-10-img-funnel.png" alt="It was a funnel. With stuff in it." width="500">
-</p>

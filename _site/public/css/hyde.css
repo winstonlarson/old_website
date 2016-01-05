@@ -59,7 +59,8 @@ html {
   text-align: left;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
-  background-color: #1E1E23;
+  background: #E4EEF4; /*linear-gradient(to right, #1F45FC, #52B3EE);*/
+  /*background-color: #1E1E23;*/
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -94,7 +95,6 @@ html {
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
-  color: #48A9E4;
 }
 .sidebar-nav-item {
   display: block;
@@ -105,6 +105,7 @@ html {
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
+  color: #48A9E4;
 }
 
 /* Sticky sidebar

@@ -86,6 +86,9 @@ html {
   text-decoration: none;
   font-weight: 300;
 }
+a.sidebar-about:hover {
+  text-decoration: none;
+}
 @media (min-width: 48em) {
   .sidebar-about h1 {
     padding-bottom: 5%;

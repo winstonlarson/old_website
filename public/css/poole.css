@@ -71,6 +71,10 @@ a, h1, h2, h3, h4, h5, h6, .page-title,
   color: #1677B2;/*949EA4*/
 }
 
+a.page-title:hover {
+  text-decoration: none;
+}
+
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
   text-decoration: none;

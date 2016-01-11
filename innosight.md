@@ -13,30 +13,38 @@ At [Innosight](http://www.innosight.com), I have focused on helping R&D-driven c
 ##Consulting experience
 Here are some of the interesting challenges I confronted, experiences and expertise I gained, and spaces I worked in. To respect client confidentiality, I cannot discuss projects in detail, but I think that this gives a good flavor of my business and management experience.
 
-####Immunology
+###Domain expertise
 
-####Oncology
+####Pharmaceuticals and life sciences
 
-####Semiconductors
+**Immunology**
 
-####Water and energy
+**Oncology**
 
-####Venture portfolio design
+**Microbiome**
 
-####Executive communication
+**Bioinformatics**
 
-####Pharmaceutical R&D strategy
+####High technology and industrials
 
-####Microbiome
+**Semiconductors**
 
-####Writing technical specifications
+**Water and energy**
 
-####Biological computing
+**Consumer electronics**
 
-####SAB recruitment
+###Solutions designed
 
-####Executive interviewing
+#####Venture portfolio design
 
-####Technology road-mapping
+#####Executive communication
 
-####Consumer electronics
+#####Writing technical specifications
+
+#####SAB recruitment
+
+#####Executive and expert interviews
+
+#####Technology road-mapping
+
+#####Innovation workshops

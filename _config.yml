@@ -8,7 +8,7 @@ relative_permalinks: true
 title:               Winston Larson
 tagline:             Mechanical engineering | Data science | Management
 url:                 http://winstonlarson.github.io/
-paginate:            1
+paginate:            0
 baseurl:             "http://winstonlarson.github.io/"
 
 # Assets
@@ -21,10 +21,10 @@ sass:
 # About/contact
 author:
   name:              Winston Larson
-  url:               https://twitter.com/winstonlarson
+  url:               http://winstonlason.com
   email:             winstonlarson@gmail.com
-  
-pages_list:       
+
+pages_list:
   About: '/about'
   Archive: '/archive'
   Resume: '/resume'

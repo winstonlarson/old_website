@@ -68,7 +68,7 @@ body {
 a, h1, h2, h3, h4, h5, h6, .page-title,
 .post-title,
 .post-title a {
-  color: #f2b632;/*152737*/
+  color: #677077;/*152737*/
 }
 
 a.page-title:hover {
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
-  color: #677077; /*8A949A;*/
+  color: #f2b632; /*f2b632;*/
 }
 h1 {
   font-size: 3.25rem;

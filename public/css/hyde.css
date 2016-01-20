@@ -60,7 +60,7 @@ html {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   /*background: #FAFAFA; /*linear-gradient(to right, #1F45FC, #52B3EE);*/
-  background-color: #152737;
+  background-color: #C9E1C1;
 }
 @media (min-width: 48em) {
   .sidebar {

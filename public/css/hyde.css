@@ -38,7 +38,7 @@ html {
 }
 
 .back {
-  background-color: #FCFCFC;
+  background-color: #ffffff;
 }
 
 .page-title,
@@ -174,7 +174,7 @@ a.sidebar-nav-item:focus {
     margin-right: 3rem;
   }
   .topper {
-    background-color: #E8E8E8;
+    background-color: #FCFCFC;
     height: 9rem;
     padding-top: 0rem;
     margin-left: 0rem;

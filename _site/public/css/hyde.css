@@ -37,6 +37,10 @@ html {
   font-size: 14px;
 }
 
+.back {
+  background-color: #FCFCFC;
+}
+
 .page-title,
 .post-title,
 .post-title a {
@@ -170,7 +174,7 @@ a.sidebar-nav-item:focus {
     margin-right: 3rem;
   }
   .topper {
-    background-color: #f2f2f2;
+    background-color: #E8E8E8;
     height: 9rem;
     padding-top: 0rem;
     margin-left: 0rem;

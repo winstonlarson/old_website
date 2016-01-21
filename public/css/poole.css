@@ -361,6 +361,7 @@ tbody tr:nth-child(odd) th {
   background-color: #7D6115;
   font-weight:300;
   font-size: 4rem;
+  height: 8rem;
 }
 
 /* Meta data line below post title */

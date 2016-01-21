@@ -1,0 +1,157 @@
+/*
+ *  __                  __
+ * /\ \                /\ \
+ * \ \ \___   __  __   \_\ \     __
+ *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+ *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+ *    \ \_\ \_\/`____ \ \___,_\ \____\
+ *     \/_/\/_/`/___/> \/__,_ /\/____/
+ *                /\___/
+ *                \/__/
+ *
+ * Designed, built, and released under MIT license by @mdo. Learn more at
+ * https://github.com/poole/hyde.
+ */
+
+
+/*
+ * Contents
+ *
+ * Global resets
+ * Sidebar
+ * Container
+ * Reverse layout
+ * Themes
+ */
+
+
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+html {
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+@media (min-width: 48em) {
+  h1,h2,h3,h4,h5,h6 {
+    font-weight: 300;
+  }
+  .page-title,
+  .post-title,
+  .post-title a {
+    font-weight: 100;
+  }
+}
+
+
+/*
+ * Sidebar
+ *
+ * Flexible banner for housing site name, intro, and "footer" content. Starts
+ * out above content in mobile and later moves to the side with wider viewports.
+ */
+
+.sidebar {
+  text-align: left;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  /*background: #FAFAFA; /*linear-gradient(to right, #1F45FC, #52B3EE);*/
+  background-color: #252839;
+}
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 22rem;
+  }
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #E5E4E2;
+}
+
+/* About section */
+.sidebar-about h1 {
+  color: #fff;
+  margin-top: 0;
+  font-family: 'Lato', Arial, sans-serif;
+  font-size: 5rem;
+  text-decoration: none;
+  font-weight: 300;
+}
+a.sidebar-about:hover {
+  text-decoration: none;
+}
+@media (min-width: 48em) {
+  .sidebar-about h1 {
+    padding-bottom: 5%;
+  }
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin-bottom: 1rem;
+  color: #48A9E4;
+}
+.sidebar-nav-item {
+  display: block;
+  line-height: 2.75;
+  font-size: 18px;
+  font-weight: 400;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: underline;
+  color: #48A9E4;
+}
+
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+
+@media (min-width: 48em) {
+  .sidebar-sticky {
+    position: absolute;
+    right: 1rem;
+    top: 20%;
+    left: 1rem;
+    bottom: 1rem;
+  }
+}
+
+
+/* Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.sidebar`.
+ */
+
+.content {
+  padding-top:    4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 48em) {
+  .content {
+    max-width: 38rem;
+    margin-left: 25rem;
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .content {
+    max-width: 58rem;
+    margin-left: 25rem;
+    margin-right: 3rem;
+  }
+}

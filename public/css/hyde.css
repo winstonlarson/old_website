@@ -36,6 +36,21 @@ html {
   font-weight: 300;
   font-size: 14px;
 }
+
+.page-title,
+.post-title,
+.post-title a {
+  color: #1677B2;/*152737*/
+}
+
+a {
+  color: #48A9E4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #808080; /*f2b632;*/
+}
+
 @media (min-width: 48em) {
   h1,h2,h3,h4,h5,h6 {
     font-weight: 100;
@@ -104,7 +119,7 @@ a.sidebar-about:hover {
   display: block;
   line-height: 2.75;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 100;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {

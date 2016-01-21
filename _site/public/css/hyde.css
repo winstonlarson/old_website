@@ -154,13 +154,24 @@ a.sidebar-nav-item:focus {
     margin-left: 25rem;
     margin-right: 3rem;
   }
-
   .topper {
     background-color: #15317E;
-    height: 8rem;
+    height: 13rem;
     padding-top: 0rem;
     margin-left: 0rem;
     margin-right: 0rem;
     max-width: 100%;
+  }
+  .page-title,
+  .post-title,
+  .post-title a {
+    margin-top: 0;
+    padding-top: 4rem;
+    margin-left: 26rem;
+    font-weight: 300;
+    font-size: 4rem;
+  }
+  .post-date {
+    margin-left: 26rem;
   }
 }

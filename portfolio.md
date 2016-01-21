@@ -6,18 +6,26 @@ title: Portfolio
 I've worked on a variety of projects that reflect my interests in data science, business and management, and mechanical engineering.
 
 ####Data science
-+ [BRFSS:](#brfss) Extracting insights from the world's largest health survey, including data wrangling and machine learning
-+ [Patent valuation:](#patents) Scraping the USPTO website and structuring data to estimate patent values
-+ [Venture portfolio simulation:](#ventures) Monte Carlo simulation of a venture portfolio to guide investment and management strategy
-+ [Scientific advisory board membership:](#sab) Using scientific publication records to identify potential SAB candidates
+
+[BRFSS:](#brfss) Extracting insights from the world's largest health survey, including data wrangling and machine learning
+
+[Patent valuation:](#patents) Scraping the USPTO website and structuring data to estimate patent values
+
+[Venture portfolio simulation:](#ventures) Monte Carlo simulation of a venture portfolio to guide investment and management strategy
+
+[Scientific advisory board membership:](#sab) Using scientific publication records to identify potential SAB candidates
 
 ####Business and management
-+ [Innosight experience:](#innosight) A variety of management and innovation consulting engagements focused on developing strategies to advance and commercialize cutting edge R&D
+
+[Innosight experience:](#innosight) A variety of management and innovation consulting engagements focused on developing strategies to advance and commercialize cutting edge R&D
 
 ####Mechanical engineering
-+ [Unmanned underwater vehicles and disruptive innovation:](#uuv) Demonstrating the financial and strategic value of unmanned underwater vehicles (UUVs) and how they are disrupting traditional naval power
-+ [Portable controls experiments:](#portable) Developing a series of portable lab experiences for undergraduate mechatronics and controls courses
-+ [Bio-mimetic underwater robotics:](#stingray) Designing, manufacturing, programming, and testing small under-actuated stingray and salamander robots
+
+[Unmanned underwater vehicles and disruptive innovation:](#uuv) Demonstrating the financial and strategic value of unmanned underwater vehicles (UUVs) and how they are disrupting traditional naval power
+
+[Portable controls experiments:](#portable) Developing a series of portable lab experiences for undergraduate mechatronics and controls courses
+
+[Bio-mimetic underwater robotics:](#stingray) Designing, manufacturing, programming, and testing small under-actuated stingray and salamander robots
 
 ****
 

@@ -156,7 +156,7 @@ a.sidebar-nav-item:focus {
   }
   .topper {
     background-color: #15317E;
-    height: 8rem;
+    height: 12rem;
     padding-top: 0rem;
     margin-left: 0rem;
     margin-right: 0rem;
@@ -167,7 +167,7 @@ a.sidebar-nav-item:focus {
   .post-title a {
     margin-top: 0;
     padding-top: 4rem;
-    margin-left: 25rem;
+    margin-left: 26rem;
     font-weight: 300;
     font-size: 4rem;
   }

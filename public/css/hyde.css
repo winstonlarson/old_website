@@ -162,8 +162,11 @@ a.sidebar-nav-item:focus {
 .page-title,
 .post-title,
 .post-title a {
-  margin-left: 2rem;
   padding-top: 2rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 /*@media (min-width: 48em) {

@@ -84,7 +84,7 @@ html {
   font-family: 'Lato', Arial, sans-serif;
   font-size: 5rem;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 100;
 }
 a.sidebar-about:hover {
   text-decoration: none;
@@ -136,7 +136,7 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    0rem;
+  padding-top:    1.5rem;
   padding-bottom: 4rem;
 }
 

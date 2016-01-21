@@ -356,6 +356,8 @@ tbody tr:nth-child(odd) th {
 .post-title,
 .post-title a {
   margin-top: 0;
+  top: 0;
+  left: 0;
   background-color: #15317E;
   font-weight:300;
   font-size: 4rem;

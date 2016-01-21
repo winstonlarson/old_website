@@ -159,9 +159,7 @@ a.sidebar-nav-item:focus {
   padding-bottom: 4rem;
 }
 
-.page-title,
-.post-title,
-.post-title a {
+.topper {
   padding-top: 2rem;
   padding-left:  1rem;
   padding-right: 1rem;

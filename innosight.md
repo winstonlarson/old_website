@@ -15,16 +15,16 @@ Here are some of the spaces I worked in, experiences and expertise I gained, and
 
 #####Pharmaceuticals, life sciences, and healthcare
 
-+ **Immunology:** The immune system, its genetic underpinnings, and immune-based drugs. Autoimmune diseases and R&D projects into new therapies and MOAs.
++ **Immunology:** The immune system, its genetic underpinnings, and immune-based drugs. Autoimmune diseases and R&D projects into new therapies and MOAs. R&D challenges and opportunities.
 + **Oncology:** General genetic and biochemical processes that cause cancer. Evaluating new therapies and treatment modalities, especially in early cancer stages.
-+ **Microbiome:** Potential treatments relying on the microbiome. Experimental processes, especially in computational microbiology. Popular open source packages, databases, and end-to-end solutions for target genome, metagenomic, and metatranscriptomic analysis.
-+ **Pharmaceutical R&D:** Modern pharmaceutical R&D processes and practices. Pre-discovery, discovery, pre-clinical, and clinical (Phases I, II, and III) stages.
-+ **Pharmaceutical life cycle planning:** Building plans for patent expiration and biosimilar/generic introduction. Evaluating alternative business models.
++ **Microbiome:** Potential treatments relying on the microbiome. Experimental processes, especially in computational microbiology. Popular open source packages, databases, and end-to-end solutions for target genome, metagenomic, and metatranscriptomic analysis. Microbiome and therapeutic trends.
++ **Pharmaceutical R&D:** Modern pharmaceutical R&D processes and practices. Pre-discovery, discovery, pre-clinical, and clinical (Phases I, II, and III) stages. Pharm R&D and biotech industry trends.
++ **Pharmaceutical life cycle planning:** Building plans for patent expiration and biosimilar/generic introduction. Evaluating alternative business models. Market surveys. Patent litigation.
 + **Health insurance:** Current health insurance market and payor dynamics. Future models for healthcare delivery and payment, especially value-based systems (e.g. ACOs).
 
 #####High technology and industrials
 
-+ **Semiconductors and semiconductor manufacturing:** Physics of semiconductors. Modern semiconductor manufacturing processes. ASIC design and manufacturing processes.
++ **Semiconductors and semiconductor manufacturing:** Physics of semiconductors. Modern semiconductor manufacturing processes. ASIC design and manufacturing processes. Semiconductor industry trends.
 + **Utilities:** Regulatory environment and business models of utilities in the US. Smart metering and smart grids. Power generation and distribution. Water regulations, pricing, and rights. Feasibility studies.
 + **Water and clean energy:** Sourcing, treating, and distributing water. New sources and strategies for water in drought-stricken areas. Renewable energy including solar and wind.
 + **Consumer electronics:** Conception and early development of new consumer electronics products. Building product development plans. Planning R&D for product development.
@@ -32,13 +32,14 @@ Here are some of the spaces I worked in, experiences and expertise I gained, and
 
 ###Solutions designed
 
-+ **Venture portfolio and project accelerators:** Creating R&D accelerators to shepherd high-risk projects through  milestones using funding tranches. Project evaluation criteria. Organizational design.
-+ **Technical project management:** Directing R&D strategy. Day-to-day operation of teams to evaluate opportunites, build plans, and execute.
++ **Technical project management:** Directing new R&D strategy. Driving timelines and collaborating with stakeholders. Running meetings. Executing on milestones. Managing team members.
 + **Executive communication:** Creating executive-level documentation and presentations. Building Board of Directors presentations. Executive memos and project updates.
 + **Writing technical specifications:** Writing documentation for new computational R&D systems. Capturing needs of users and communicating to engineers. Creating user stories and designing experiences. Refining concepts with users and technical team.
-+ **SAB recruitment:** Identifying potential scientific advisory board candidates. Making connections.
-+ Executive, expert, and customer interviews
-+ Technology road-mapping
-+ Innovation workshops
-+ Capabilities development
-+ Partnerships
++ **Industry trends survey:** Identifying and evaluating trends relevant to new business models and R&D efforts. Industry dynamics. Macro trends.
++ **Capabilities development:** Identifying key new business and R&D capabilities based on industry trends. Surveying and evaluating current capabilities. Generating plans to develop and leverage old and new capabilities to create new business models.
++ **Technology road-mapping:** Creating and communicating plans to manage interdependent product development and research processes. Managing technology and business risks, especially when dealing with high uncertainty.
++ **Executive, expert, and customer interviews:** Exploring the concerns, needs, and opinions of stakeholders. Assessing objectives and patterns across leadership. Building knowledge base and relationships. Empathizing with customers.
++ **Venture portfolio and project accelerators:** Creating R&D accelerators to shepherd high-risk projects through  milestones using funding tranches. Project evaluation criteria. Organizational design.
++ **Partnerships:** Making connections and managing partnership processes to spur innovation and new businesses. Facilitating technical discussions between teams. Identifying new opportunities for partnership.
++ **Innovation workshops:** Facilitating brainstorming and ideation sessions for R&D teams. Teaching innovation patterns and processes. Capturing and synthesizing output for execution.
++ **SAB recruitment:** Identifying potential scientific advisory board candidates. Evaluating necessary knowledge and expertise.

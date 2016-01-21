@@ -3,8 +3,6 @@ layout: page
 title: About
 ---
 
-***
-
 <img src="/images/about-img-pic.png" alt="Profile pic" width="175">
 
 ##Contact

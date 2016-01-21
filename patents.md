@@ -3,8 +3,6 @@ layout: page
 title: Patent valuation
 ---
 
-****
-
 ##Valuing patents using forward cites
 
 Protectable intellectual property is a crucial piece of any corporate strategy for creating a long-term differentiated position in a market. Patents are a key part of IP strategy. Thanks to a series of high profile court cases, patents and patent strategy have become a highly visible part of technology strategy, representing billions of dollars in litigation every year. Patent valuation has arisen as a critical component of legal cases, startup valuations, and measuring R&D productivity.

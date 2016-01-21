@@ -3,8 +3,6 @@ layout: page
 title: Portable controls experiments
 ---
 
-***
-
 ##Hands-on engineering education
 
 Hands-on education is a critical part of any STEM program. Studies are increasingly showing that a project-based hands-on program is critical to helping students maintaining interest and succeed in difficult math-based majors. [The New York Times has reported](http://www.nytimes.com/2011/11/06/education/edlife/why-science-majors-change-their-mind-its-just-so-darn-hard.html) that most students quickly lose interest in the abstraction and theory that is the basis of many introductory courses. However, project-based courses can help students tie together their theoretical understanding and real-world experience, driving them to engage with the theory on a deeper level and reach true understanding.

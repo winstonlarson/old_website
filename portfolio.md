@@ -3,8 +3,6 @@ layout: page
 title: Portfolio
 ---
 
-****
-
 I've worked on a variety of projects that reflect my interests in data science, business and management, and mechanical engineering.
 
 ####Data science

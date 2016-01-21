@@ -3,8 +3,6 @@ layout: page
 title: Resume
 ---
 
-----
-
 ##Education
 
 **Massachusetts Institute of Technology**

@@ -3,8 +3,6 @@ layout: page
 title: Long-term UUV power sources
 ---
 
-***
-
 Introductory text
 
 An [IEEE conference paper](https://dspace.mit.edu/handle/1721.1/79685) is available from DSpace@MIT.

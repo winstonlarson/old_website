@@ -15,46 +15,30 @@ Here are some of the interesting challenges I confronted, experiences and expert
 
 ####Pharmaceuticals, life sciences, and healthcare
 
-**Immunology:**
-
-**Oncology:**
-
-**Microbiome:**
-
-**Bioinformatics:**
-
-**Scientific cloud computing:**
-
-**Pharmaceutical R&D:**
-
-**Pharmaceutical life cycle planning:**
-
-**Health insurance:**
++Immunology
++Oncology
++Microbiome
++Bioinformatics
++Scientific cloud computing
++Pharmaceutical R&D
++Pharmaceutical life cycle planning
++Health insurance
 
 ####High technology and industrials
 
-**Semiconductors**
-
-**Water and energy**
-
-**Consumer electronics**
++Semiconductors and semiconductor manufacturing
++Utilities
++Water and clean energy
++Consumer electronics
 
 ###Solutions designed
 
-**Venture portfolio and project accelerator design:**
-
-**Technical project management:**
-
-**Executive communication:**
-
-**Writing technical specifications:**
-
-**SAB recruitment:**
-
-**Executive, expert, and customer interviews:**
-
-**Technology road-mapping:**
-
-**Innovation workshops:**
-
-**Capabilities development:**
++Venture portfolio and project accelerator design
++Technical project management
++Executive communication
++Writing technical specifications
++SAB recruitment
++Executive, expert, and customer interviews
++Technology road-mapping
++Innovation workshops
++Capabilities development

@@ -38,7 +38,7 @@ html {
 }
 
 .back {
-  background-color: #FCFCFC;
+  background-color: #ffffff;
 }
 
 .page-title,
@@ -155,26 +155,35 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    1.5rem;
+  padding-top:    0rem;
   padding-bottom: 4rem;
 }
 
-@media (min-width: 48em) {
+.topper {
+  padding-top: 2rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+/*@media (min-width: 48em) {
   .content {
     max-width: 38rem;
     margin-left: 25rem;
     margin-right: 3rem;
   }
-}
+}*/
 
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .content {
+    padding-top: 1.5rem;
     max-width: 58rem;
     margin-left: 25rem;
     margin-right: 3rem;
   }
   .topper {
-    background-color: #E8E8E8;
+    background-color: #FCFCFC;
     height: 9rem;
     padding-top: 0rem;
     margin-left: 0rem;

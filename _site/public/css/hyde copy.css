@@ -153,11 +153,5 @@ a.sidebar-nav-item:focus {
     max-width: 58rem;
     margin-left: 25rem;
     margin-right: 3rem;
-    padding-top: 0rem;
-  }
-
-  .topper {
-    background-color: #15317E;
-    height: 8rem;
   }
 }

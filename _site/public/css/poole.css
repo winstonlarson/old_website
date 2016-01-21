@@ -68,13 +68,17 @@ body {
 a, h1, h2, h3, h4, h5, h6, .page-title,
 .post-title,
 .post-title a {
-  color: #1677B2;/*949EA4*/
+  color: #677077;/*152737*/
+}
+
+a.page-title:hover {
+  text-decoration: none;
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
   text-decoration: none;
-  color: #48A9E4;
+  color: #b5b5b7;
 }
 a strong {
   color: inherit;
@@ -92,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
-  color: #8A949A;
+  color: #f2b632; /*f2b632;*/
 }
 h1 {
   font-size: 3.25rem;
@@ -352,7 +356,7 @@ tbody tr:nth-child(odd) th {
 .post-title,
 .post-title a {
   margin-top: 0;
-  font-weight:300;
+  font-weight: 300;
   font-size: 4rem;
 }
 

@@ -155,7 +155,7 @@ a.sidebar-nav-item:focus {
  */
 
 .content {
-  padding-top:    4rem;
+  padding-top:    0rem;
   padding-bottom: 4rem;
 }
 
@@ -163,6 +163,7 @@ a.sidebar-nav-item:focus {
 .post-title,
 .post-title a {
   margin-left: 2rem;
+  padding-top: 2rem;
 }
 
 /*@media (min-width: 48em) {

@@ -29,12 +29,11 @@ Here are some of the spaces I worked in, experiences and expertise I gained, and
 
 ####High technology and industrials
 
-+ Semiconductors and semiconductor manufacturing
-+ Utilities
-+ Water and clean energy
-+ Consumer electronics
-
-**Scientific cloud computing:** Building systems to support improved computational capabilities and community collaboration. Sharing open source software, storing and securely collaborating on data sets. Facilitating reproducible research.
++ **Semiconductors and semiconductor manufacturing:** Physics of semiconductors. Modern semiconductor manufacturing processes. ASIC design and manufacturing processes.
++ **Utilities:** Regulatory environment and business models of utilities in the US. Smart metering and smart grids. Power generation and distribution. Water regulations, pricing, and rights. Feasibility studies.
++ **Water and clean energy:** Sourcing, treating, and distributing water. New sources and strategies for water in drought-stricken areas. Renewable energy including solar and wind.
++ **Consumer electronics:** Conception and early development of new consumer electronics products. Building product development plans. Planning R&D for product development.
++ **Scientific cloud computing:** Building systems to support improved computational capabilities and community collaboration. Sharing open source software, storing and securely collaborating on data sets. Facilitating reproducible research.
 
 ###Solutions designed
 

@@ -166,6 +166,7 @@ a.sidebar-nav-item:focus {
   .post-title,
   .post-title a {
     margin-top: 0;
+    padding-top: 4rem;
     margin-left: 25rem;
     font-weight: 300;
     font-size: 4rem;

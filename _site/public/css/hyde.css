@@ -183,7 +183,9 @@ a.sidebar-nav-item:focus {
     margin-right: 3rem;
   }
   .topper {
-    background-color: #FCFCFC;
+    /*background-color: #FCFCFC;*/
+    background-image: "/images/bg1.png";
+    background-repeat: repeat;
     height: auto;
     padding-top: 0rem;
     margin-left: 0rem;

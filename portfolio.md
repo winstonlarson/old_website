@@ -12,12 +12,13 @@ I've worked on a variety of projects that reflect my interests in data science, 
 + [Scientific advisory board membership:](#sab) Using scientific publication records to identify potential SAB candidates
 
 ####Business and management
-+ [Innosight experience:](#innosight) A variety of management and innovation consulting engagements focused on developing strategies to advance and commercialize cutting edge R&D
++ [Consulting at Innosight:](#innosight) A variety of innovation and management consulting engagements, focused on developing strategies to advance and commercialize cutting edge R&D
 
 ####Mechanical engineering
 + [Unmanned underwater vehicles and disruptive innovation:](#uuv) Demonstrating the financial and strategic value of unmanned underwater vehicles (UUVs) and how they are disrupting traditional naval power
 + [Portable controls experiments:](#portable) Developing a series of portable lab experiences for undergraduate mechatronics and controls courses
 + [Bio-mimetic underwater robotics:](#stingray) Designing, manufacturing, programming, and testing small under-actuated stingray and salamander robots
++ [Mechanical engineering projects at MIT](#meche) A spectrum of engineering projects that demonstrate my analytical, design, and experimental abilities across a wide range of applications
 
 ****
 
@@ -26,7 +27,6 @@ I've worked on a variety of projects that reflect my interests in data science, 
 The BRFSS is the largest health survey in the world. It is conducted by the CDC, and there are over 400,000 interviewees every year who answer hundreds of questions. Many important findings about population health, trends in behaviors, and demographic differences in health and disease outcomes originate in the data provided through the BRFSS. A wealth of interesting statistical and correlative findings are buried in the data, but unfortunately, the BRFSS can be difficult to work with due to archaic data storage techniques.
 
 I have cleaned up all of the available BRFSS data sets (1984-2014) to make them easy to work with. I have also begun using various machine learning algorithms and statistical methods with the BRFSS results. These demonstrate the value of the data, as well as the difficulties inherent in health data and policy.
-
 
 [Read more about my work on the BRFSS](/brfss)
 
@@ -44,14 +44,14 @@ I created software that uses the USPTO website to find the find the information 
 
 ### <a id="ventures"></a> Venture portfolio simulation
 
-Portfolios of venture-based companies are inherently fraught with risk. As part of a project to build a strategy for managing a portfolio of high-risk biotech ventures, I created a Monte Carlo simulation of the portfolio. My simulation accepted basic assumptions about the expected life-span of ventures, their chances of success, and their expected costs. Based on a desired number of successful ventures over 10 years, we used the simulation to estimate:
+Portfolios of venture-based companies are inherently fraught with risk. To demonstrate a potential strategy for managing a portfolio of high-risk biotech ventures, I created a Monte Carlo simulation of a hypothetical portfolio. My simulation accepts basic assumptions about the expected life-span of ventures, their chances of success, and their expected costs. Based on a desired number of successful ventures over, say, 15 years, I can use the simulation to estimate:
 
-* The number of deals the portfolio managers would need to do
+* The number of deals a portfolio manager would need to do
 * The approximate number of ventures they would be managing at a given time
 * The expected amount of investment needed
 * The approximate headcount in the portfolio at a given time
 
-My simulation helped to inform the portfolio managers in creating their strategy and setting expectations around the output of the portfolio.
+My simulation could be used by portfolio managers when creating their strategies, communication their business cases, and setting expectations around the outputs of their portfolios.
 
 [Read more about my work on simulating a venture portfolio](/venture-simulation)
 
@@ -87,16 +87,6 @@ My master's thesis in mechanical engineering at MIT examined the financial and s
 
 ****
 
-### <a id="uuv"></a> Long-term UUV power sources
-
-A critical barrier to wide-spread use of underwater vehicles is energy storage. Current lithium-based battery systems give  UUVs 3-day mission durations. After that, a ship must retrieve the UUV, recharge it, and redeploy it. Requiring a ship to be so heavily involved in UUV operations is expensive and defeats the purpose of unmanned operations. Professor Doug Hart at MIT is working with MIT Lincoln Labs to develop technologies that would expand current underwater operation limits by 10x, or up to 30 days.
-
-As a senior and master's student at MIT, I worked on a series of projects exploring, designing, and building multiple approaches to long-term underwater power sources for UUVs. I was part of the engineering team for designing, building, and testing a diesel-powered hybrid system, as well as an aluminum-gallium system. My responsibilities included engine testing, vibration isolation, system integration, and fabrication. I acted as the communications manager, maintaining all of the documents and reports to communicate and document our system for Lincoln Lab. I was also the CFO, managing the $300k engineering budget as well as procurement.
-
-[Read more about my work on designing and building UUV power sources](/uuv-power)
-
-****
-
 ### <a id="portable"></a> Portable controls experiments
 
 Hands-on education is a critical part of any STEM program. Studies are increasingly showing that a project-based hands-on program is critical to helping students maintaining interest and succeed in difficult math-based majors. Unfortunately, due to budget and staffing limits, it can be difficult to provide a good experiential experience for all students, especially in large introductory classes.
@@ -114,3 +104,11 @@ As I have previously mentioned, underwater robots are becoming increasingly impo
 At MIT, I was part of a team that designed a bio-mimetic robotic stingray that solved these durability issues. It was constructed of a soft polymer body with only two actuators. I designed and demonstrated the control and actuation system to enable forward and backward motion and turning using only the two actuators. I also built and tested a robotic salamander that could both swim and walk.
 
 [Read more about my work on bio-mimetic underwater robots](/biomimetic-robots)
+
+****
+
+### <a id="meche"></a> Mechanical engineering projects at MIT
+
+I believe MIT's project-based learning paradigm is one of the key reasons that it is so successful at training scientists and engineers. As a student, I had many opportunities to get my hands dirty (literally) in interesting engineering problems, both inside and outside of class. Not only were the projects solving interesting, real-world problems, but professors are willing to give students an enormous amount of autonomy and responsibility. It's fairly intoxicating.
+
+Here are [descriptions of some of my favorite projects at MIT](/meche).

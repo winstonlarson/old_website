@@ -25,12 +25,13 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 *Innovation strategy consultant* <br>
 Assisting Fortune 500 companies to respond to disruptive innovation as an innovation consultant.
 
-* **Technology and Biotech R&D:** Established joint venture between a major tech company and a large pharmaceutical to build a computational R&D platform.
-* **Pharmaceutical R&D:** Created new R&D accelerator and launched its first project for at major pharmaceutical.
-* **Energy & Water:** Launched strategic initiative in water at an electric utility in California.
-* **Consumer Electronics:** Devised R&D strategy for a new product line being launched by consumer company.
-* **Semiconductor Manufacturing:** Advised assessment and expansion of capabilities at electronics company.
-* **Internet of things:** Facilitated symposium examining opportunities and challenges in the Industrial Internet
+* **Technology and Biotech R&D:** Established a joint venture between a tech company and a large pharmaceutical to build a computational biotech R&D platform.
+* **Pharmaceutical R&D:** Created a new R&D accelerator and launched its first project at a major pharmaceutical.
+* **Energy & Water:** Launched a strategic initiative in water at an electric utility in California.
+* **Consumer Electronics:** Devised an R&D strategy for a new product line being launched by a popular consumer electronics company.
+* **Semiconductor Manufacturing:** Advised assessment and expansion of semiconductor design and manufacturing capabilities at an electronics components company.
+* **Big Data in Healthcare:** Renewed big data strategy at a health insurer by creating new processes for project and stakeholder management.
+* **Internet of things:** Facilitated a symposium examining opportunities and challenges in the Industrial Internet.
 
 **Unmanned Underwater Vehicle (UUV) Projects with Lincoln Laboratory**, *MIT 2011-2014* <br>
 Managed research team members, experimental research, accounting ($300k budget), procurement, and technical documentation & communication for prototype long-term underwater power sources. Founded a startup, competed in the MIT 100K, acted as CFO & COO.

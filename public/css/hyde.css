@@ -184,7 +184,7 @@ a.sidebar-nav-item:focus {
   }
   .topper {
     /*background-color: #FCFCFC;*/
-    background-image: "/images/bg1.png";
+    background-image: url("http://winstonlarson.com/images/bg1.png");
     background-repeat: repeat;
     height: auto;
     padding-top: 0rem;

@@ -68,9 +68,9 @@
 
 <h4 id="data-science">Data science</h4>
 <ul>
-  <li><a href="#brfss">BRFSS:</a> Extracting insights from the world’s largest health survey, including data wrangling and machine learning</li>
-  <li><a href="#patents">Patent valuation:</a> Scraping the USPTO website and structuring data to estimate patent values</li>
   <li><a href="#ventures">Venture portfolio simulation:</a> Monte Carlo simulation of a venture portfolio to guide investment and management strategy</li>
+  <li><a href="#patents">Patent valuation:</a> Scraping the USPTO website and structuring data to estimate patent values</li>
+  <li><a href="#brfss">BRFSS:</a> Extracting insights from the world’s largest health survey, including data wrangling and machine learning</li>
   <li><a href="#sab">Scientific advisory board membership:</a> Using scientific publication records to identify potential SAB candidates</li>
 </ul>
 
@@ -82,30 +82,10 @@
 <h4 id="mechanical-engineering">Mechanical engineering</h4>
 <ul>
   <li><a href="#uuv">Unmanned underwater vehicles and disruptive innovation:</a> Demonstrating the financial and strategic value of unmanned underwater vehicles (UUVs) and how they are disrupting traditional naval power</li>
-  <li><a href="#portable">Portable controls experiments:</a> Developing a series of portable lab experiences for undergraduate mechatronics and controls courses</li>
   <li><a href="#stingray">Bio-mimetic underwater robotics:</a> Designing, manufacturing, programming, and testing small under-actuated stingray and salamander robots</li>
+  <li><a href="#portable">Portable controls experiments:</a> Developing a series of portable lab experiences for undergraduate mechatronics and controls courses</li>
   <li><a href="#meche">Mechanical engineering projects at MIT</a> A spectrum of engineering projects that demonstrate my analytical, design, and experimental abilities across a wide range of applications</li>
 </ul>
-
-<hr />
-
-<h3 id="a-idbrfssa-brfss"><a id="brfss"></a> BRFSS</h3>
-
-<p>The BRFSS is the largest health survey in the world. It is conducted by the CDC, and there are over 400,000 interviewees every year who answer hundreds of questions. Many important findings about population health, trends in behaviors, and demographic differences in health and disease outcomes originate in the data provided through the BRFSS. A wealth of interesting statistical and correlative findings are buried in the data, but unfortunately, the BRFSS can be difficult to work with due to archaic data storage techniques.</p>
-
-<p>I have cleaned up all of the available BRFSS data sets (1984-2014) to make them easy to work with. I have also begun using various machine learning algorithms and statistical methods with the BRFSS results. These demonstrate the value of the data, as well as the difficulties inherent in health data and policy.</p>
-
-<p><a href="/brfss">Read more about my work on the BRFSS</a></p>
-
-<hr />
-
-<h3 id="a-idpatentsa-patent-valuation"><a id="patents"></a> Patent valuation</h3>
-
-<p>Protectable intellectual property is a crucial piece of any corporate strategy for creating a long-term differentiated position in a market. Patent valuation has arisen as a critical component of legal cases, startup valuations, and measuring R&amp;D productivity. There are many approaches to patent valuation, but a common method examines the number of patents citing a given patent (called “forward cites”). A patent with many forward cites is generally more valuable since it was likely the genesis of continued innovation. One can therefore measure a patent’s value relative to similar patents by comparing its number of forward cites with other patents in the same patent class.</p>
-
-<p>I created software that uses the USPTO website to find the find the information needed to value a patent. For a given class of patents, I scrape the key information for each patent (i.e. patent number, title, abstract, assignee, and file date) as well as all of the forward cites for that class. The data generated can then be used to compare patent values.</p>
-
-<p><a href="/patents">Read more about my work on valuing patents</a></p>
 
 <hr />
 
@@ -120,9 +100,29 @@
   <li>The approximate headcount in the portfolio at a given time</li>
 </ul>
 
-<p>My simulation could be used by portfolio managers when creating their strategies, communication their business cases, and setting expectations around the outputs of their portfolios.</p>
+<p>My simulation could be used by portfolio managers when creating their strategies, communicate their business cases, and setting expectations around the outputs of their portfolios.</p>
 
 <p><a href="/venture-simulation">Read more about my work on simulating a venture portfolio</a></p>
+
+<hr />
+
+<h3 id="a-idpatentsa-patent-valuation"><a id="patents"></a> Patent valuation</h3>
+
+<p>Protectable intellectual property is a crucial piece of any corporate strategy for creating a long-term differentiated position in a market. Patent valuation has arisen as a critical component of legal cases, startup valuations, and measuring R&amp;D productivity. There are many approaches to patent valuation, but a common method examines the number of patents citing a given patent (called “forward cites”). A patent with many forward cites is generally more valuable since it was likely the genesis of continued innovation. One can therefore measure a patent’s value relative to similar patents by comparing its number of forward cites with other patents in the same patent class.</p>
+
+<p>I created software that uses the USPTO website to find the find the information needed to value a patent. For a given class of patents, I scrape the key information for each patent (i.e. patent number, title, abstract, assignee, and file date) as well as all of the forward cites for that class. The data generated can then be used to compare patent values.</p>
+
+<p><a href="/patents">Read more about my work on valuing patents</a></p>
+
+<hr />
+
+<h3 id="a-idbrfssa-brfss"><a id="brfss"></a> BRFSS</h3>
+
+<p>The BRFSS is the largest health survey in the world. It is conducted by the CDC, and there are over 400,000 interviewees every year who answer hundreds of questions. Many important findings about population health, trends in behaviors, and demographic differences in health and disease outcomes originate in the data provided through the BRFSS. A wealth of interesting statistical and correlative findings are buried in the data, but unfortunately, the BRFSS can be difficult to work with due to archaic data storage techniques.</p>
+
+<p>I have cleaned up all of the available BRFSS data sets (1984-2014) to make them easy to work with. I have also begun using various machine learning algorithms and statistical methods with the BRFSS results. These demonstrate the value of the data, as well as the difficulties inherent in health data and policy.</p>
+
+<p><a href="/brfss">Read more about my work on the BRFSS</a></p>
 
 <hr />
 
@@ -130,7 +130,7 @@
 
 <p>Accessing world-class expertise is critical for corporate R&amp;D projects that are dependent on cutting edge science, but bringing top scientists in-house is often not an option. To solve the expertise problem, many companies use scientific advisory boards (SABs), where they contract with academics to provide advice. Identifying potential members can be  difficult since most well-known academics are extremely busy. Many well-qualified, although less well-known or more junior, scientists can provide critical knowledge. How can we quickly identify potential SAB members?</p>
 
-<p>I developed a rudimentary method that relies on scientific publication records. I wrote a script that takes a full citation list for a given topic (e.g. prostate cancer) and identifies SAB candidates based on total authorship, first authorship, and last authorship. While quick and dirty, my method makes it easy to rapidly identify SAB candidates from a field of thousands, allowing the team to immediately begin making connections.</p>
+<p>I developed a method that relies on scientific publication records. I wrote a script that takes a full citation list for a given topic (e.g. prostate cancer) and identifies SAB candidates based on total authorship, first authorship, and last authorship. While quick and dirty, my method makes it easy to rapidly identify SAB candidates from a field of thousands, allowing the team to immediately begin making connections.</p>
 
 <p><a href="/authorship">Read more about my work selecting scientific advisory board candidates</a></p>
 
@@ -138,7 +138,7 @@
 
 <h3 id="a-idinnosighta-innovation-and-management-consulting-at-innosight"><a id="innosight"></a> Innovation and management consulting at Innosight</h3>
 
-<p>Translating new and exciting science into products and services that the market values is a key challenge in R&amp;D-driven industries. Managing high-risk research programs and successfully commercializing ideas is difficult, but very worth it. Unfortunately, it is something that many companies (large and small) struggle to get right. Billions of dollars in R&amp;D funds are squandered every year through mis-management. Understanding how to effectively run a R&amp;D program and then commercialize the resulting products is a rare and valuable skill.</p>
+<p>Translating new and exciting science into products and services that the market values is a key challenge in R&amp;D-driven industries. Managing high-risk research programs and successfully commercializing ideas is difficult, but very worthwhile. Unfortunately, it is something that many companies (large and small) struggle to get right. Billions of dollars in R&amp;D funds are squandered every year through mis-management. Understanding how to effectively run a R&amp;D program and then commercialize the resulting products is a rare and valuable skill.</p>
 
 <p>At Innosight, I have focused on advising and managing high-risk corporate R&amp;D programs. I have built deep expertise in designing organizations and plans, communicating strategies to executives, and doing the legwork to get programs off the ground. On multiple projects ranging across a variety of industries, I have built a working knowledge of the underlying scientific and technological principles, engaged with scientists and engineers to test ideas, and created targeted strategies to build and sell products that people need.</p>
 
@@ -156,6 +156,16 @@
 
 <hr />
 
+<h3 id="a-idstingraya-bio-mimetic-underwater-robotics"><a id="stingray"></a> Bio-mimetic underwater robotics</h3>
+
+<p>As I have previously mentioned, underwater robots are becoming increasingly important to naval and maritime science operations. Robots must be robust and durable in order to survive in the harsh ocean environment, and many applications also require agility and speed. In the past, biomimetic underwater robots (e.g. robotic fish or stingrays) relied on segmented body designs, where each segment is individually actuated, to bestow agility and speed on their designs. Unfortunately, these segmented designs were not robust and suffer from high failure rates.</p>
+
+<p>At MIT, I was part of a team that designed a bio-mimetic robotic stingray that solved these durability issues. It was constructed of a soft polymer body with only two actuators. I designed and demonstrated the control and actuation system to enable forward and backward motion and turning using only the two actuators. I also built and tested a robotic salamander that could both swim and walk.</p>
+
+<p><a href="/biomimetic-robots">Read more about my work on bio-mimetic underwater robots</a></p>
+
+<hr />
+
 <h3 id="a-idportablea-portable-controls-experiments"><a id="portable"></a> Portable controls experiments</h3>
 
 <p>Hands-on education is a critical part of any STEM program. Studies are increasingly showing that a project-based hands-on program is critical to helping students maintaining interest and succeed in difficult math-based majors. Unfortunately, due to budget and staffing limits, it can be difficult to provide a good experiential experience for all students, especially in large introductory classes.</p>
@@ -163,16 +173,6 @@
 <p>For my senior thesis in mechanical engineering at MIT, I developed a series of mechatronics and controls experiments for undergraduate classes. Dynamics and controls is a passion of mine, and I wanted to create tools that other students could use to discover the field. My experiments, based on National Instruments DACs and Matlab Simulink, were small and portable, allowing students to take them home and tinker. That sort of hands-on tinkering is where true engineering learning happens.</p>
 
 <p><a href="/controls-experiments">Read more about my work on portable controls experiments</a></p>
-
-<hr />
-
-<h3 id="a-idstingraya-bio-mimetic-underwater-robotics"><a id="stingray"></a> Bio-mimetic underwater robotics</h3>
-
-<p>As I have previously mentioned, underwater robots are becoming increasingly important to naval and maritime science operations. Robots must be robust and durable to survive in the harsh ocean environment, and many applications also require agility and speed. In the past, biomimetic underwater robots (e.g. robotic fish or stingrays) relied on segmented body designs, where each segment is individually actuated, to bestow agility and speed on their designs. Unfortunately, these segmented designs were not robust and suffer from high failure rates.</p>
-
-<p>At MIT, I was part of a team that designed a bio-mimetic robotic stingray that solved these durability issues. It was constructed of a soft polymer body with only two actuators. I designed and demonstrated the control and actuation system to enable forward and backward motion and turning using only the two actuators. I also built and tested a robotic salamander that could both swim and walk.</p>
-
-<p><a href="/biomimetic-robots">Read more about my work on bio-mimetic underwater robots</a></p>
 
 <hr />
 

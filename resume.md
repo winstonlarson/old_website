@@ -23,7 +23,7 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 ##Experience
 **Innosight**, *2014 - Present* <br>
 *Innovation strategy consultant* <br>
-Assisting Fortune 500 companies to respond to disruptive innovation as an innovation consultant.
+Developing strategies for Fortune 500 companies to respond to disruptive innovation.
 
 * **Technology and Biotech R&D:** Established a joint venture between a tech company and a large pharmaceutical to build a computational biotech R&D platform.
 * **Pharmaceutical R&D:** Created a new R&D accelerator and launched its first project at a major pharmaceutical.
@@ -41,8 +41,8 @@ Managed research team members, experimental research, accounting ($300k budget),
 Contributed to the development of a revolutionary manufacturing line to improve aircraft quality & takt time, building & presenting critical industrial robotic vision & manipulation systems to upper management.
 
 **Schlumberger Limited**, *Summer 2011*<br>
-*Manufacturing Engineering Intern*
-Led a team to design, build, and implement apparati for testing electrical components for oil service equipment.
+*Manufacturing Engineering Intern* <br>
+Led a team to design, build, and implement apparati for testing electrical components for oil exploration equipment.
 
 ----
 

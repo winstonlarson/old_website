@@ -48,7 +48,7 @@ html {
 }
 
 a {
-  color: #aebd38;
+  color: #68829e;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -183,7 +183,7 @@ a.sidebar-nav-item:focus {
     margin-right: 3rem;
   }
   .topper {
-    background-color: #68829e;
+    background-color: #aebd38;
     /*background-image: url("http://winstonlarson.com/images/bg1.png");
     background-size: 100% 100%;
     background-repeat: repeat;*/

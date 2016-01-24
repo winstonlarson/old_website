@@ -44,15 +44,15 @@ html {
 .page-title,
 .post-title,
 .post-title a {
-  color: #1e1f26;/*152737*/
+  color: #f8f1e5;/*152737*/
 }
 
 a {
-  color: #4d648d;
+  color: #426e86;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #283655; /*f2b632;*/
+  color: #f9ba32; /*f2b632;*/
 }
 
 @media (min-width: 48em) {
@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   /*background: #FAFAFA; /*linear-gradient(to right, #1F45FC, #52B3EE);*/
-  background-color: #1e1f26;
+  background-color: #2f3131;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -183,7 +183,7 @@ a.sidebar-nav-item:focus {
     margin-right: 3rem;
   }
   .topper {
-    background-color: #d0e1f9;
+    background-color: #426e86;
     /*background-image: url("http://winstonlarson.com/images/bg1.png");
     background-size: 100% 100%;
     background-repeat: repeat;*/

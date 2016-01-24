@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   /*background: #FAFAFA; /*linear-gradient(to right, #1F45FC, #52B3EE);*/
-  background-color: #03102E;
+  background-color: #07132e;
 }
 @media (min-width: 48em) {
   .sidebar {

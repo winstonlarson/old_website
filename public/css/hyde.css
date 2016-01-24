@@ -52,7 +52,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #8AFB17; /*f2b632;*/
+  color: #2686BD; /*f2b632;*/
 }
 
 @media (min-width: 48em) {
@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   /*background: #FAFAFA; /*linear-gradient(to right, #1F45FC, #52B3EE);*/
-  background-color: #07132e;
+  background-color: #03102E;
 }
 @media (min-width: 48em) {
   .sidebar {

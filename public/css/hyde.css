@@ -48,11 +48,11 @@ html {
 }
 
 a {
-  color: #4863A0;
+  color: #48A9E4;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2C87F0; /*f2b632;*/
+  color: #E56717; /*f2b632;*/
 }
 
 @media (min-width: 48em) {

@@ -44,7 +44,7 @@ html {
 .page-title,
 .post-title,
 .post-title a {
-  color: #FFA62F;/*1677B2*/
+  color: #1677B2;/*1677B2*/
 }
 
 a {
@@ -52,7 +52,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #48A9E4; /*f2b632;*/
+  color: #FFA62F; /*48A9E4;*/
 }
 
 @media (min-width: 48em) {

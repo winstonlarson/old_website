@@ -77,12 +77,20 @@
 
  .thirdrow{
    margin-top: 0;
-   padding-top: 20.5rem;
+   padding-top: 24rem;
    padding-bottom: 2rem;
    margin-left: 25rem;
    font-size: 1.25rem;
    max-width: 60rem;
    margin-right: 3rem;
+ }
+
+ .content {
+   padding-top: 1.5rem;
+   max-width: 58rem;
+   margin-left: 25rem;
+   margin-right: 3rem;
+   font-size: 1rem;
  }
 
 /*

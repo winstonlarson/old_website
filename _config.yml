@@ -8,7 +8,7 @@ relative_permalinks: true
 title:               Winston Larson
 tagline:             Mechanical engineering | Data science | Management
 url:                 http://winstonlarson.github.io/
-paginate:            1
+paginate:            3
 baseurl:             "http://winstonlarson.github.io/"
 
 # Assets

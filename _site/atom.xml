@@ -4,7 +4,7 @@
  <title>Winston Larson</title>
  <link href="http://winstonlarson.github.io//atom.xml" rel="self"/>
  <link href="http://winstonlarson.github.io//"/>
- <updated>2016-01-28T08:18:29-08:00</updated>
+ <updated>2016-01-28T09:33:00-08:00</updated>
  <id>http://winstonlarson.github.io/</id>
  <author>
    <name>Winston Larson</name>
@@ -13,9 +13,1865 @@
 
  
  <entry>
+   <title>Cleaning BRFSS demographic data</title>
+   <link href="http://winstonlarson.github.io//brfss-clean"/>
+   <updated>2016-11-15T00:00:00-08:00</updated>
+   <id>http://winstonlarson.github.io//brfss-clean</id>
+   <content type="html">&lt;h1 id=&quot;brfss-cleaning-example&quot;&gt;BRFSS cleaning example&lt;/h1&gt;
+
+&lt;p&gt;This post is also available as a Jupyter Notebook on my GitHub repo: &lt;a href=&quot;https://github.com/winstonlarson/brfss/blob/master/clean_2014_notebook.ipynb&quot;&gt;&lt;code&gt;clean_2014_notebook.ipynb&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The BRFSS is a fairly large and messy dataset. To put it into a useable format, you have to do a bit of cleaning and massaging. This Notebook demonstrates cleaning the data bit by bit for 2014. Scripts for every year are in the &lt;code&gt;cleaning_code&lt;/code&gt; folder. I had to do a separate script for each year because the codebooks change slightly nearly every year, and it’s just enough to make it a real headache.&lt;/p&gt;
+
+&lt;p&gt;Pandas is a terrific tool for data cleaning and manipulation, and that’s what I use here.&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting started&lt;/h2&gt;
+&lt;p&gt;Let’s start by importing our libraries. We’ll be using Pandas and Numpy.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+import numpy as np
+import pandas as pd
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, we’ll set our year variable (2014), which made it easy to change when I had to copy scripts for each year.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+year = &#39;2014&#39;
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reading-in-the-data&quot;&gt;Reading in the data&lt;/h2&gt;
+
+&lt;p&gt;Let’s use Pandas to read in the &lt;code&gt;.csv&lt;/code&gt; of the raw data for 2014. This isn’t available on GitHub because the file is too big, but &lt;a href=&quot;https://www.amazon.com/clouddrive/share/HAfuNnNSbFqKmdyuodrVAQMpgcyqoFACuBoKWIqoWeG?ref_=cd_ph_share_link_copy&quot;&gt;I’ve made it available on my Amazon Cloud Drive&lt;/a&gt;. Also, since the file is so big, you might get a warning.&lt;/p&gt;
+
+&lt;p&gt;Since we didn’t specify UTF-8 encoding in the R script for creating the &lt;code&gt;.csv&lt;/code&gt;’s, we need to specify the encoding, which somehow ends up being the interesting choice of “cp1252.” That little tidbit right there was a couple hours worth of Googling.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+df = pd.read_csv(&#39;data/brfss&#39; + year + &#39;.csv&#39;, encoding=&#39;cp1252&#39;)
+&lt;/code&gt;
+&lt;code&gt;
+/Users/wlarson/anaconda/lib/python3.4/site-packages/pandas/io/parsers.py:1130: DtypeWarning: Columns (121) have mixed types. Specify dtype option on import or set low_memory=False.
+    data = self._reader.read(nrows)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s take a quick look at what we have here. As you can see, this is a rather large data set.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+df
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;div style=&quot;max-height:1000px;max-width:1500px;overflow:auto;&quot;&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Unnamed: 0&lt;/th&gt;
+      &lt;th&gt;x.state&lt;/th&gt;
+      &lt;th&gt;fmonth&lt;/th&gt;
+      &lt;th&gt;idate&lt;/th&gt;
+      &lt;th&gt;imonth&lt;/th&gt;
+      &lt;th&gt;iday&lt;/th&gt;
+      &lt;th&gt;iyear&lt;/th&gt;
+      &lt;th&gt;dispcode&lt;/th&gt;
+      &lt;th&gt;seqno&lt;/th&gt;
+      &lt;th&gt;x.psu&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;x.fobtfs&lt;/th&gt;
+      &lt;th&gt;x.crcrec&lt;/th&gt;
+      &lt;th&gt;x.aidtst3&lt;/th&gt;
+      &lt;th&gt;x.impeduc&lt;/th&gt;
+      &lt;th&gt;x.impmrtl&lt;/th&gt;
+      &lt;th&gt;x.imphome&lt;/th&gt;
+      &lt;th&gt;rcsbrac1&lt;/th&gt;
+      &lt;th&gt;rcsrace1&lt;/th&gt;
+      &lt;th&gt;rchisla1&lt;/th&gt;
+      &lt;th&gt;rcsbirth&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0     &lt;/th&gt;
+      &lt;td&gt;      1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1172014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 17&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000001&lt;/td&gt;
+      &lt;td&gt; 2014000001&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1     &lt;/th&gt;
+      &lt;td&gt;      2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1072014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  7&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000002&lt;/td&gt;
+      &lt;td&gt; 2014000002&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2     &lt;/th&gt;
+      &lt;td&gt;      3&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1092014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  9&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000003&lt;/td&gt;
+      &lt;td&gt; 2014000003&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3     &lt;/th&gt;
+      &lt;td&gt;      4&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1072014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  7&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000004&lt;/td&gt;
+      &lt;td&gt; 2014000004&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4     &lt;/th&gt;
+      &lt;td&gt;      5&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1162014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 16&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000005&lt;/td&gt;
+      &lt;td&gt; 2014000005&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;5     &lt;/th&gt;
+      &lt;td&gt;      6&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1022014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000006&lt;/td&gt;
+      &lt;td&gt; 2014000006&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;6     &lt;/th&gt;
+      &lt;td&gt;      7&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1062014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  6&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000007&lt;/td&gt;
+      &lt;td&gt; 2014000007&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;7     &lt;/th&gt;
+      &lt;td&gt;      8&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1112014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000008&lt;/td&gt;
+      &lt;td&gt; 2014000008&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;8     &lt;/th&gt;
+      &lt;td&gt;      9&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1022014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000009&lt;/td&gt;
+      &lt;td&gt; 2014000009&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;9     &lt;/th&gt;
+      &lt;td&gt;     10&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1082014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  8&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000010&lt;/td&gt;
+      &lt;td&gt; 2014000010&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;10    &lt;/th&gt;
+      &lt;td&gt;     11&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1072014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  7&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000011&lt;/td&gt;
+      &lt;td&gt; 2014000011&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;11    &lt;/th&gt;
+      &lt;td&gt;     12&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1022014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000012&lt;/td&gt;
+      &lt;td&gt; 2014000012&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;12    &lt;/th&gt;
+      &lt;td&gt;     13&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1132014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 13&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000013&lt;/td&gt;
+      &lt;td&gt; 2014000013&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;13    &lt;/th&gt;
+      &lt;td&gt;     14&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1042014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  4&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000014&lt;/td&gt;
+      &lt;td&gt; 2014000014&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;14    &lt;/th&gt;
+      &lt;td&gt;     15&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1022014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000015&lt;/td&gt;
+      &lt;td&gt; 2014000015&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;15    &lt;/th&gt;
+      &lt;td&gt;     16&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1062014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  6&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000016&lt;/td&gt;
+      &lt;td&gt; 2014000016&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;16    &lt;/th&gt;
+      &lt;td&gt;     17&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1072014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  7&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000017&lt;/td&gt;
+      &lt;td&gt; 2014000017&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;17    &lt;/th&gt;
+      &lt;td&gt;     18&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1072014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  7&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000018&lt;/td&gt;
+      &lt;td&gt; 2014000018&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;18    &lt;/th&gt;
+      &lt;td&gt;     19&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1042014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  4&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000019&lt;/td&gt;
+      &lt;td&gt; 2014000019&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;19    &lt;/th&gt;
+      &lt;td&gt;     20&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1082014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  8&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000020&lt;/td&gt;
+      &lt;td&gt; 2014000020&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;20    &lt;/th&gt;
+      &lt;td&gt;     21&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1092014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  9&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1200&lt;/td&gt;
+      &lt;td&gt; 2014000021&lt;/td&gt;
+      &lt;td&gt; 2014000021&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;21    &lt;/th&gt;
+      &lt;td&gt;     22&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1032014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  3&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000022&lt;/td&gt;
+      &lt;td&gt; 2014000022&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;22    &lt;/th&gt;
+      &lt;td&gt;     23&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1132014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 13&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000023&lt;/td&gt;
+      &lt;td&gt; 2014000023&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;23    &lt;/th&gt;
+      &lt;td&gt;     24&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1152014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 15&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000024&lt;/td&gt;
+      &lt;td&gt; 2014000024&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;24    &lt;/th&gt;
+      &lt;td&gt;     25&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1072014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  7&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000025&lt;/td&gt;
+      &lt;td&gt; 2014000025&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;25    &lt;/th&gt;
+      &lt;td&gt;     26&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1142014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 14&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000026&lt;/td&gt;
+      &lt;td&gt; 2014000026&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;26    &lt;/th&gt;
+      &lt;td&gt;     27&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1112014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000027&lt;/td&gt;
+      &lt;td&gt; 2014000027&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;27    &lt;/th&gt;
+      &lt;td&gt;     28&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1082014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  8&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000028&lt;/td&gt;
+      &lt;td&gt; 2014000028&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;28    &lt;/th&gt;
+      &lt;td&gt;     29&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1072014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  7&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000029&lt;/td&gt;
+      &lt;td&gt; 2014000029&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;29    &lt;/th&gt;
+      &lt;td&gt;     30&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1142014&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 14&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014000030&lt;/td&gt;
+      &lt;td&gt; 2014000030&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  9&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464634&lt;/th&gt;
+      &lt;td&gt; 464635&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12102014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 10&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005959&lt;/td&gt;
+      &lt;td&gt; 2014005959&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464635&lt;/th&gt;
+      &lt;td&gt; 464636&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12132014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 13&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005960&lt;/td&gt;
+      &lt;td&gt; 2014005960&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464636&lt;/th&gt;
+      &lt;td&gt; 464637&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12112014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005961&lt;/td&gt;
+      &lt;td&gt; 2014005961&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464637&lt;/th&gt;
+      &lt;td&gt; 464638&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12142014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 14&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005962&lt;/td&gt;
+      &lt;td&gt; 2014005962&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464638&lt;/th&gt;
+      &lt;td&gt; 464639&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12102014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 10&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005963&lt;/td&gt;
+      &lt;td&gt; 2014005963&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464639&lt;/th&gt;
+      &lt;td&gt; 464640&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12122014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005964&lt;/td&gt;
+      &lt;td&gt; 2014005964&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464640&lt;/th&gt;
+      &lt;td&gt; 464641&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12122014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005965&lt;/td&gt;
+      &lt;td&gt; 2014005965&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464641&lt;/th&gt;
+      &lt;td&gt; 464642&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12102014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 10&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005966&lt;/td&gt;
+      &lt;td&gt; 2014005966&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464642&lt;/th&gt;
+      &lt;td&gt; 464643&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12142014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 14&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005967&lt;/td&gt;
+      &lt;td&gt; 2014005967&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464643&lt;/th&gt;
+      &lt;td&gt; 464644&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12152014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 15&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1200&lt;/td&gt;
+      &lt;td&gt; 2014005968&lt;/td&gt;
+      &lt;td&gt; 2014005968&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464644&lt;/th&gt;
+      &lt;td&gt; 464645&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12132014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 13&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005969&lt;/td&gt;
+      &lt;td&gt; 2014005969&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464645&lt;/th&gt;
+      &lt;td&gt; 464646&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12102014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 10&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005970&lt;/td&gt;
+      &lt;td&gt; 2014005970&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464646&lt;/th&gt;
+      &lt;td&gt; 464647&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12122014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005971&lt;/td&gt;
+      &lt;td&gt; 2014005971&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464647&lt;/th&gt;
+      &lt;td&gt; 464648&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12152014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 15&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005972&lt;/td&gt;
+      &lt;td&gt; 2014005972&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464648&lt;/th&gt;
+      &lt;td&gt; 464649&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12152014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 15&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1200&lt;/td&gt;
+      &lt;td&gt; 2014005973&lt;/td&gt;
+      &lt;td&gt; 2014005973&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464649&lt;/th&gt;
+      &lt;td&gt; 464650&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12152014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 15&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005974&lt;/td&gt;
+      &lt;td&gt; 2014005974&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464650&lt;/th&gt;
+      &lt;td&gt; 464651&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12102014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 10&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005975&lt;/td&gt;
+      &lt;td&gt; 2014005975&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464651&lt;/th&gt;
+      &lt;td&gt; 464652&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12152014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 15&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005976&lt;/td&gt;
+      &lt;td&gt; 2014005976&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464652&lt;/th&gt;
+      &lt;td&gt; 464653&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12112014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005977&lt;/td&gt;
+      &lt;td&gt; 2014005977&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464653&lt;/th&gt;
+      &lt;td&gt; 464654&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12162014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 16&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005978&lt;/td&gt;
+      &lt;td&gt; 2014005978&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464654&lt;/th&gt;
+      &lt;td&gt; 464655&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12152014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 15&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005979&lt;/td&gt;
+      &lt;td&gt; 2014005979&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 3&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464655&lt;/th&gt;
+      &lt;td&gt; 464656&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12122014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005980&lt;/td&gt;
+      &lt;td&gt; 2014005980&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464656&lt;/th&gt;
+      &lt;td&gt; 464657&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12162014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 16&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005981&lt;/td&gt;
+      &lt;td&gt; 2014005981&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464657&lt;/th&gt;
+      &lt;td&gt; 464658&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12102014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 10&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005982&lt;/td&gt;
+      &lt;td&gt; 2014005982&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464658&lt;/th&gt;
+      &lt;td&gt; 464659&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12102014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 10&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005983&lt;/td&gt;
+      &lt;td&gt; 2014005983&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464659&lt;/th&gt;
+      &lt;td&gt; 464660&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12112014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005984&lt;/td&gt;
+      &lt;td&gt; 2014005984&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464660&lt;/th&gt;
+      &lt;td&gt; 464661&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12102014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 10&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005985&lt;/td&gt;
+      &lt;td&gt; 2014005985&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464661&lt;/th&gt;
+      &lt;td&gt; 464662&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12152014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 15&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005986&lt;/td&gt;
+      &lt;td&gt; 2014005986&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  2&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 5&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 2&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464662&lt;/th&gt;
+      &lt;td&gt; 464663&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12132014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 13&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005987&lt;/td&gt;
+      &lt;td&gt; 2014005987&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 4&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;464663&lt;/th&gt;
+      &lt;td&gt; 464664&lt;/td&gt;
+      &lt;td&gt; 72&lt;/td&gt;
+      &lt;td&gt; 11&lt;/td&gt;
+      &lt;td&gt; 12102014&lt;/td&gt;
+      &lt;td&gt; 12&lt;/td&gt;
+      &lt;td&gt; 10&lt;/td&gt;
+      &lt;td&gt; 2014&lt;/td&gt;
+      &lt;td&gt; 1100&lt;/td&gt;
+      &lt;td&gt; 2014005988&lt;/td&gt;
+      &lt;td&gt; 2014005988&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;  1&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 6&lt;/td&gt;
+      &lt;td&gt; 1&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+      &lt;td&gt;NaN&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;464664 rows × 280 columns&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;python
+print(&quot;Number of rows:&quot;, len(df))
+print(&quot;Number of columns (variables in the survey):&quot;, len(df.columns))
+print(df.columns)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+Number of rows: 464664
+Number of columns (variables in the survey): 280
+Index([&#39;Unnamed: 0&#39;, &#39;x.state&#39;, &#39;fmonth&#39;, &#39;idate&#39;, &#39;imonth&#39;, &#39;iday&#39;, &#39;iyear&#39;, &#39;dispcode&#39;, &#39;seqno&#39;, &#39;x.psu&#39;, &#39;ctelenum&#39;, &#39;pvtresd1&#39;, &#39;colghous&#39;, &#39;stateres&#39;, &#39;ladult&#39;, &#39;numadult&#39;, &#39;nummen&#39;, &#39;numwomen&#39;, &#39;genhlth&#39;, &#39;physhlth&#39;, &#39;menthlth&#39;, &#39;poorhlth&#39;, &#39;hlthpln1&#39;, &#39;persdoc2&#39;, &#39;medcost&#39;, &#39;checkup1&#39;, &#39;exerany2&#39;, &#39;sleptim1&#39;, &#39;cvdinfr4&#39;, &#39;cvdcrhd4&#39;, &#39;cvdstrk3&#39;, &#39;asthma3&#39;, &#39;asthnow&#39;, &#39;chcscncr&#39;, &#39;chcocncr&#39;, &#39;chccopd1&#39;, &#39;havarth3&#39;, &#39;addepev2&#39;, &#39;chckidny&#39;, &#39;diabete3&#39;, &#39;diabage2&#39;, &#39;lastden3&#39;, &#39;rmvteth3&#39;, &#39;veteran3&#39;, &#39;marital&#39;, &#39;children&#39;, &#39;educa&#39;, &#39;employ1&#39;, &#39;income2&#39;, &#39;weight2&#39;, &#39;height3&#39;, &#39;numhhol2&#39;, &#39;numphon2&#39;, &#39;cpdemo1&#39;, &#39;internet&#39;, &#39;renthom1&#39;, &#39;sex&#39;, &#39;pregnant&#39;, &#39;qlactlm2&#39;, &#39;useequip&#39;, &#39;blind&#39;, &#39;decide&#39;, &#39;diffwalk&#39;, &#39;diffdres&#39;, &#39;diffalon&#39;, &#39;smoke100&#39;, &#39;smokday2&#39;, &#39;stopsmk2&#39;, &#39;lastsmk2&#39;, &#39;usenow3&#39;, &#39;alcday5&#39;, &#39;avedrnk2&#39;, &#39;drnk3ge5&#39;, &#39;maxdrnks&#39;, &#39;flushot6&#39;, &#39;flshtmy2&#39;, &#39;pneuvac3&#39;, &#39;shingle2&#39;, &#39;fall12mn&#39;, &#39;fallinj2&#39;, &#39;seatbelt&#39;, &#39;drnkdri2&#39;, &#39;hadmam&#39;, &#39;howlong&#39;, &#39;profexam&#39;, &#39;lengexam&#39;, &#39;hadpap2&#39;, &#39;lastpap2&#39;, &#39;hadhyst2&#39;, &#39;pcpsaad2&#39;, &#39;pcpsadi1&#39;, &#39;pcpsare1&#39;, &#39;psatest1&#39;, &#39;psatime&#39;, &#39;pcpsars1&#39;, &#39;bldstool&#39;, &#39;lstblds3&#39;, &#39;hadsigm3&#39;, &#39;hadsgco1&#39;, &#39;lastsig3&#39;, ...], dtype=&#39;object&#39;)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;collecting-our-variables-of-interest&quot;&gt;Collecting our variables of interest&lt;/h2&gt;
+
+&lt;p&gt;Great, so we have a lot of rows and 280 columns. We’re just trying to find some basic demographic information. If we look through the codebook, we can find those variable names. Note that an underscore in the codebook is the same as &lt;code&gt;x.&lt;/code&gt; in the data, and that variables are all caps in the codebook but lowercase in the data.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Income:&lt;/strong&gt; income2&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Race:&lt;/strong&gt; x.race&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;State:&lt;/strong&gt; x.state&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Age:&lt;/strong&gt; x.ageg5yr&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sex:&lt;/strong&gt; sex&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Height:&lt;/strong&gt; height3&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Weight:&lt;/strong&gt; weight2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’ll use height and weight to calculate BMI. In later years (like 2014), the good people at the CDC calculate that and include it as a separate variable, but in earlier years, they weren’t so advanced, so we’ll always just grab height and weight and calculate it ourselves.&lt;/p&gt;
+
+&lt;p&gt;We can use Pandas to easily grab the columns we want. We’re going to grab those columns as Pandas Series, clean them up, and then piece everything back together as a master DataFrame.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+income = df[&#39;income2&#39;]
+race = df[&#39;x.race&#39;]
+state = df[&#39;x.state&#39;]
+age = df[&#39;x.ageg5yr&#39;]
+sex = df[&#39;sex&#39;]
+height = df[&#39;height3&#39;]
+weight = df[&#39;weight2&#39;]
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If we look at one of these variables, we can get a peek at the way the survey data is coded.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+income
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+0      7
+1      4
+2      7
+3      5
+4      4
+5      6
+6      8
+7      1
+8     77
+9      7
+10    77
+11     6
+12     8
+13     5
+14     5
+...
+464649     8
+464650     3
+464651     1
+464652     6
+464653     5
+464654     1
+464655     2
+464656    99
+464657     2
+464658     5
+464659     6
+464660     7
+464661    99
+464662     2
+464663     4
+Name: income2, Length: 464664, dtype: float64
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cleaning-up-a-column-income&quot;&gt;Cleaning up a column: Income&lt;/h2&gt;
+
+&lt;p&gt;We’ll start with cleaning up the income data. Looking at the codebook, the codes are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1: &amp;lt;$10k&lt;/li&gt;
+  &lt;li&gt;2: $10k - $15k&lt;/li&gt;
+  &lt;li&gt;3: $15k - $20k&lt;/li&gt;
+  &lt;li&gt;4: $20k - $25k&lt;/li&gt;
+  &lt;li&gt;5: $25k - $35k&lt;/li&gt;
+  &lt;li&gt;6: $35k - $50k&lt;/li&gt;
+  &lt;li&gt;7: $50k - $75k&lt;/li&gt;
+  &lt;li&gt;8: &amp;gt;$75k&lt;/li&gt;
+  &lt;li&gt;77: Unknown&lt;/li&gt;
+  &lt;li&gt;99: Refused&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’re going to group 77 and 99 together as &lt;code&gt;np.nan&lt;/code&gt;, and we’re going to group 7 and 8 together as simply &amp;gt;$50k (in earlier BRFSS years, it stops at &amp;gt;$50K, rather than including the $50k-$75k and &amp;gt;$75k groups)&lt;/p&gt;
+
+&lt;p&gt;Pandas makes it easy to use a dictionary for replacement, so we’ll put these codes into a dictionary.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+income_replace = {1:&#39;&amp;lt;10k&#39;, 2:&#39;10k-15k&#39;, 3:&#39;15k-20k&#39;, 4:&#39;20k-25k&#39;, 5:&#39;25k-35k&#39;, 6:&#39;35k-50k&#39;, 7:&#39;&amp;gt;50k&#39;, 8:&#39;&amp;gt;50k&#39;, 77:np.nan, 99:np.nan}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cleaning-the-other-columns&quot;&gt;Cleaning the other columns&lt;/h2&gt;
+
+&lt;p&gt;Next, we’ll clean the race column. If you are working with historical data, this is the trickiest column. The name of the variable, the meanings of the codes, and the groups represented change frequently over the years, and sometimes in subtle ways. Being able to use historical data is why my dictionary ends up grouping some things together that the 2014 dataset breaks out. See the codebook for more details.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+race_replace = {1:&#39;white&#39;, 2:&#39;black&#39;, 3:&#39;native american&#39;, 4:&#39;asian/pacific islander&#39;, 5:&#39;asian/pacific islander&#39;, 6:&#39;other/multiracial&#39;, 7:&#39;other/multiracial&#39;, 8:&#39;hispanic&#39;, 9:&#39;refused/unknown&#39;}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll skip the state column for now. It’s represented as a FIPS statecode, and you can find more info on Wikipedia: &lt;a href=&quot;https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code&quot;&gt;FIPS codes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s get the age and sex columns mapped.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+age_replace = {1:&#39;18-24&#39;, 2:&#39;25-29&#39;, 3:&#39;30-34&#39;, 4:&#39;35-39&#39;, 5:&#39;40-44&#39;, 6:&#39;45-49&#39;, 7:&#39;50-54&#39;, 8:&#39;55-59&#39;, 9:&#39;60-64&#39;, 10:&#39;65-69&#39;, 11:&#39;70-74&#39;, 12:&#39;75-79&#39;, 13:&#39;80+&#39;, 14:np.nan}
+sex_replace = {1:&#39;male&#39;, 2:&#39;female&#39;}
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The height and weight columns are a little trickier to deal with, so we’ll handle those in a minute.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-pandas-to-do-the-replacement&quot;&gt;Using Pandas to do the replacement&lt;/h2&gt;
+&lt;p&gt;Since we’ve got our dictionaries of codes mapped to values, we can let Pandas do the heavy lifting of cleaning up our columns.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+income = income.replace(income_replace)
+race = race.replace(race_replace)
+age = age.replace(age_replace)
+sex = sex.replace(sex_replace)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s check out one of our cleaned up columns. Now it is beautiful and easy-to-use:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+income
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;```
+0        &amp;gt;50k
+1     20k-25k
+2        &amp;gt;50k
+3     25k-35k
+4     20k-25k
+5     35k-50k
+6        &amp;gt;50k
+7        &amp;lt;10k
+8         NaN
+9        &amp;gt;50k
+10        NaN
+11    35k-50k
+12       &amp;gt;50k
+13    25k-35k
+14    25k-35k
+…
+464649       &amp;gt;50k
+464650    15k-20k
+464651       &amp;lt;10k
+464652    35k-50k
+464653    25k-35k
+464654       &amp;lt;10k
+464655    10k-15k
+464656        NaN
+464657    10k-15k
+464658    25k-35k
+464659    35k-50k
+464660       &amp;gt;50k
+464661        NaN
+464662    10k-15k
+464663    20k-25k
+Name: income2, Length: 464664, dtype: object&lt;/p&gt;
+
+&lt;h2 id=&quot;cleaning-the-height-and-weight-columns&quot;&gt;Cleaning the height and weight columns&lt;/h2&gt;
+
+&lt;p&gt;Okay, now let’s work with the height and weight data. We’ll start by noting that 7777 and 9999 are ‘unknown’ or ‘replaced’ codes, so we’ll NaN those right away. Also, in later years, the survey gave the option of taking height and weight in metric and imperial units. Earlier on, it’s all imperial, so we’ll make and option for using the metric system (which is denoted differently in the codes). Finally, our max weight changes over the years also, so we’ll set that now to 999 lbs.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+hw_replace = {7777:np.nan, 9999:np.nan}
+metric = True
+max_weight = 999
+height = height.replace(hw_replace)
+weight = weight.replace(hw_replace)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dealing-with-the-height-codes&quot;&gt;Dealing with the height codes&lt;/h3&gt;
+
+&lt;p&gt;Alright, now we can tackle processing the height column. In the codebook, we see that things are a little funny.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;200-711: Height in ft/in (_&lt;/td&gt;
+          &lt;td&gt;_ _) - i.e. the first digit is feet, the second and third digits are inches. So 509 is 5’ 9’’&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;9000-9998: Height in m/cm (9_&lt;/td&gt;
+          &lt;td&gt;_ _)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To handle this, we are going to run through the height column, grab the value, and turn it into a string. We’ll pop the first token and save it as the feet, save the other two tokens as the inches, and then we will cast everything as floats and convert the result to inches and then to meters.&lt;/p&gt;
+
+&lt;p&gt;If the number is greather than 9000 and our metric toggle is &lt;code&gt;True&lt;/code&gt;, then we know that it is a metric value, and we’ll do a similar process.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; I noticed that if I do all of this in Pandas, it is very slow. It’s much faster to put the Series into a python list, do the operations and append the result to a new list, and then save the result back to a Series.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;```python
+height = height.tolist()
+new_height = []
+for row in height:
+    h = str(row)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if row &amp;lt; 1: # If the height is 0, it isn&#39;t real
+    meters = np.nan
+
+elif row &amp;lt; 712:
+    feet = float(h[0])
+    inches = float(h[1:])
+    if inches &amp;gt; 12: # Catches an error by the surveyor: no one is 5&#39; 13&quot; tall
+        meters = np.nan
+    else:
+        inches = inches + feet*12
+        meters = inches * 0.0254
+
+elif row &amp;lt; 9999 and row &amp;gt;= 9000 and metric:
+    meters = float(h[1])+float(h[2:])*0.01
+    if meters == 0: # If the height is 0, it isn&#39;t real
+        meters = np.nan
+
+else: # If you&#39;ve gotten this far, give up. You&#39;re NaN
+    meters = np.nan
+
+new_height.append(meters) ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now let’s do something similar for the weight. Except this time, we don’t have to play fun games with strings for the imperial units (we still do with the metric units).&lt;/p&gt;
+
+&lt;p&gt;```python
+weight = weight.tolist()
+new_weight = []
+for row in weight:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if row &amp;lt; 10: # No person ages 18-99 should weigh 10 lbs.
+    kg = np.nan
+
+elif row &amp;lt; max_weight:
+    kg = row * 0.453592
+
+elif row &amp;lt; 9999 and metric:
+    w = str(row)
+    kg = float(w[1:])
+    if kg &amp;lt; 10: # Again, no person 18-99 should weigh 10 kgs. And yes, I know that 10 lbs != 10 kgs, but whatever
+        kg = np.nan
+
+else:
+    kg = np.nan
+
+new_weight.append(kg) ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;calculating-bmi&quot;&gt;Calculating BMI&lt;/h3&gt;
+
+&lt;p&gt;We’ve got height and weight in metric units. Let’s compute the BMI, which is &lt;code&gt;bmi = w / h^2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;BMIs that are less than 10 or greater than 200 are possible, but highly unlikely. At the moment, I’m not terribly interested in these outliers (which are honestly more likely the result of error than true BMIs anyway). We will exclude them.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+bmi = []
+for h, w in zip(new_height, new_weight):
+    b = w/(h*h)
+    if b &amp;lt; 10 or b &amp;gt; 200:
+        b = np.nan
+    bmi.append(b)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We’ll quickly save the height, weight, and BMI back to Pandas Series.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+height = pd.Series(new_height)
+weight = pd.Series(new_weight)
+bmi = pd.Series(bmi)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;saving-our-clean-data&quot;&gt;Saving our clean data&lt;/h2&gt;
+
+&lt;p&gt;We’re almost there! Now, let’s take all of our cleaned up columns and put them back together as a single DataFrame and name the columns something easy to understand. We’ll save that out to a &lt;code&gt;.csv&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python
+brfss_out = pd.concat([income, race, state, age, sex, height, weight, bmi], axis=1)
+brfss_out.columns = [&#39;income&#39;, &#39;race&#39;, &#39;state&#39;, &#39;age&#39;, &#39;sex&#39;, &#39;height&#39;, &#39;weight&#39;, &#39;bmi&#39;]
+brfss_out.to_csv(&#39;brfss&#39; + year + &#39;clean.csv&#39;)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;And now, at long last, we are finished. We have a cleaned up set of demographic data in &lt;code&gt;brfss2014clean.csv&lt;/code&gt;. It is in the same format as what we can spit out for all of the other years of the BRFSS 1987-2014, so it will be easy to run analyses across all the years.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Do I know you? Probably.</title>
    <link href="http://winstonlarson.github.io//probably-personal"/>
-   <updated>2016-01-21T00:00:00-08:00</updated>
+   <updated>2016-01-10T00:00:00-08:00</updated>
    <id>http://winstonlarson.github.io//probably-personal</id>
    <content type="html">&lt;p&gt;Google made waves this week when it introduced &lt;a href=&quot;http://9to5google.com/2015/05/29/smart-lock-passwords-is-cool-but-google-project-abacus-wants-to-eliminate-password-authentication/&quot;&gt;Project Abacus&lt;/a&gt;, a new prototype identification system for logging into Google’s services. Instead of relying on passwords, Google proposes to use behavior to confirm a user’s identity online. This feels like a pretty shocking idea: instead of using a binary confirmation of who we are (i.e. we know our password), Google basically wants to say that it’s fairly certain that it thinks it knows who we are. However, this system of using probabilities to confirm identity is not only going to be more secure, it also actually mimics the way we humans think about identify ourselves.&lt;/p&gt;
 

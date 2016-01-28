@@ -92,6 +92,7 @@
    margin-right: 3rem;
    font-size: 1.15rem;
    text-align: left;
+   max-width: 60rem;
  }
 
  .frontpost{

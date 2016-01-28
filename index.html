@@ -20,7 +20,7 @@ title: Home
       <h3 class="frontpost">
         <a href="{{ post.url }}">{{ post.title }}</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frontdate">{{ post.date | date_to_string }}</span>
   <div class="fronttext container">
-    {{ post.note }}
+    {{ post.content }}
   </div>
   </div>
   {% endfor %}

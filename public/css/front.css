@@ -75,6 +75,16 @@
    margin-right: 3rem;
  }
 
+ .thirdrow{
+   margin-top: 0;
+   padding-top: 20.5rem;
+   padding-bottom: 2rem;
+   margin-left: 25rem;
+   font-size: 1.25rem;
+   max-width: 60rem;
+   margin-right: 3rem;
+ }
+
 /*
 .back {
   background-color: #ffffff;

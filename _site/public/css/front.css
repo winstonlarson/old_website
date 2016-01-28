@@ -29,7 +29,9 @@
    padding-top: 0rem;
    margin-left: 0rem;
    margin-right: 0rem;
-   max-width: 100%;
+   width: 100%;
+   position: fixed;
+   z-index: 2;
  }
 
  .firstrowtext{
@@ -56,17 +58,31 @@
    padding-top: 0rem;
    margin-left: 0rem;
    margin-right: 0rem;
-   max-width: 100%;
+   width: 100%;
+   position: fixed;
+   z-index: 1;
  }
 
  .secondrowtext{
    margin-top: 0;
-   padding-top: 2rem;
+   padding-top: 12.5rem;
    padding-bottom: 2rem;
    margin-left: 25rem;
    font-weight: 100;
-   font-size: 1.5rem;
+   font-size: 1.25rem;
    color: #1677B2;
+   max-width: 60rem;
+   margin-right: 3rem;
+ }
+
+ .thirdrow{
+   margin-top: 0;
+   padding-top: 20.5rem;
+   padding-bottom: 2rem;
+   margin-left: 25rem;
+   font-size: 1.25rem;
+   max-width: 60rem;
+   margin-right: 3rem;
  }
 
 /*

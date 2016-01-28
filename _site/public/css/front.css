@@ -94,6 +94,10 @@
    text-align: left;
  }
 
+ .frontpost{
+   display: inline;
+ }
+
 /*
 .back {
   background-color: #ffffff;

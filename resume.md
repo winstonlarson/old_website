@@ -7,13 +7,13 @@ title: Resume
 
 **Massachusetts Institute of Technology**
 
-**SM Mechanical Engineering**, *January 2014* - Major GPA: 5.0/5.0 <br>
+**SM Mechanical Engineering**, *January 2014* - Major GPA: 5.0/5.0
 Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship.
 
-**Master’s Thesis**, *2012-2014* - MIT Presidential Fellow <br>
+**Master’s Thesis**, *2012-2014* - MIT Presidential Fellow
 Strategic and Financial Implications of Unmanned Underwater Vehicles and Long-term Underwater Power Sources.
 
-**SB Mechanical Engineering**, *June 2012* - GPA: 5.0/5.0 <br>
+**SB Mechanical Engineering**, *June 2012* - GPA: 5.0/5.0
 Relevant coursework: Manufacturing, systems engineering, product design & dev, robotics & controls, programming, biology.
 
 **Research projects:** Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft
@@ -21,6 +21,7 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 ----
 
 ## Experience
+
 **Innosight**, *2014 - Present*
 *Innovation strategy consultant*
 Developing strategies for Fortune 500 companies to respond to disruptive innovation.
@@ -47,6 +48,7 @@ Led a team to design, build, and implement apparati for testing electrical compo
 ----
 
 ## Skills
+
 **Engineering:** Systems engineering; manufacturing; data mining and analysis; Python (pandas, Numpy, SciPy), Java & Matlab; SolidWorks; product design and development; electronics.
 
 **Business:** Team & project management; strategy & business development; disruptive innovation; entrepreneurship & startups; communication, presentations & writing.

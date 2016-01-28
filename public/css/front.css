@@ -86,9 +86,9 @@
  }
 
  .fronttext {
-   padding-top: 1.5rem;
+   padding-top: 0rem;
    max-width: 58rem;
-   margin-left: -.5rem;
+   margin-left: -.8rem;
    margin-right: 3rem;
    font-size: 1rem;
    text-align: left;

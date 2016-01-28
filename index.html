@@ -14,11 +14,11 @@ title: Home
 </div>
 
 <div class="thirdrow">
-  <h3 class="grey">Recent blog posts:</h3>
+  <h4 class="grey">My most recent blog post:</h4>
   {% for post in paginator.posts %}
   <div class="post">
-      <h3 class="frontpost">
-        <a href="{{ post.url }}">{{ post.title }}</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frontdate">{{ post.date | date_to_string }}</span>
+      <h2 class="frontpost">
+        <a href="{{ post.url }}">{{ post.title }}</a></h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frontdate">{{ post.date | date_to_string }}</span>
   <div class="fronttext container">
     {{ post.content }}
   </div>

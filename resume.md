@@ -5,7 +5,7 @@ title: Resume
 
 ## Education
 
-**Massachusetts Institute of Technology**
+<span style="font-size:1.25rem;">**Massachusetts Institute of Technology**</span>
 
 **SM Mechanical Engineering**, *January 2014* - Major GPA: 5.0/5.0
 Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship.

@@ -1783,16 +1783,7 @@ weight = weight.replace(hw_replace)
 
 <ul>
   <li>200-711: Height in ft/in (-,–) - i.e. the first digit is feet, the second and third digits are inches. So 509 is 5’ 9’’</li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>9000-9998: Height in m/cm (9-</td>
-          <td>,–)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>9000-9998: Height in m/cm (9-,–)</li>
 </ul>
 
 <p>To handle this, we are going to run through the height column, grab the value, and turn it into a string. We’ll pop the first token and save it as the feet, save the other two tokens as the inches, and then we will cast everything as floats and convert the result to inches and then to meters.</p>

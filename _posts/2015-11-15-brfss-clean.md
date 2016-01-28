@@ -1733,7 +1733,7 @@ weight = weight.replace(hw_replace)
 Alright, now we can tackle processing the height column. In the codebook, we see that things are a little funny.
 
 * 200-711: Height in ft/in (-,--) - i.e. the first digit is feet, the second and third digits are inches. So 509 is 5' 9''
-* 9000-9998: Height in m/cm (9-|,--)
+* 9000-9998: Height in m/cm (9-,--)
 
 To handle this, we are going to run through the height column, grab the value, and turn it into a string. We'll pop the first token and save it as the feet, save the other two tokens as the inches, and then we will cast everything as floats and convert the result to inches and then to meters.
 

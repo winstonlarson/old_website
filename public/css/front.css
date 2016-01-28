@@ -25,7 +25,7 @@
    /*background-image: url("http://winstonlarson.com/images/bg1.png");
    background-size: 100% 100%;
    background-repeat: repeat;*/
-   height: 12rem;
+   height: 8rem;
    padding-top: 0rem;
    margin-left: 0rem;
    margin-right: 0rem;
@@ -33,9 +33,13 @@
  }
 
  .firstrowtext{
-   color: #1677B2;
-   font-size: 4rem;
+   margin-top: 0;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   margin-left: 25rem;
    font-weight: 100;
+   font-size: 4rem;
+   color: #1677B2;
  }
 /*
 .back {

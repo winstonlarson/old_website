@@ -55,6 +55,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #1677B2; /*48A9E4;*/
 }
 
+.grey{
+  color: #b6b6b6;
+}
+
 @media (min-width: 48em) {
   h1,h2,h3,h4,h5,h6 {
     font-weight: 100;

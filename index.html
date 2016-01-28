@@ -14,7 +14,7 @@ title: Home
 </div>
 
 <div class="thirdrow">
-  <h3 style="color=#B6B6B6;"><div style="color=#B6B6B6;">Recent blog posts:</div></h3>
+  <h3 class="grey">Recent blog posts:</h3>
   {% for post in paginator.posts %}
   <div class="post">
       <h3>
@@ -23,7 +23,7 @@ title: Home
         </a>
       </h3>
       <span class="post-date" style="font-size: 1rem;">{{ post.date | date_to_string }}</span>
-  <div class="content container">
+  <div class="fronttext container">
     {{ post.note }}
   </div>
   </div>

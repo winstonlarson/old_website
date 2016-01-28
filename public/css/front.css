@@ -95,7 +95,7 @@
  }
 
  .frontpost{
-   display: inline;
+   display: inline-block;
  }
 
  .frontdate{

@@ -55,7 +55,7 @@
    background-size: 100% 100%;
    background-repeat: repeat;*/
    height: auto;
-   margin-top: 8rem;
+   padding-top: 0rem;
    margin-left: 0rem;
    margin-right: 0rem;
    max-width: 100%;
@@ -63,7 +63,7 @@
 
  .secondrowtext{
    margin-top: 0;
-   padding-top: 2rem;
+   padding-top: 10rem;
    padding-bottom: 2rem;
    margin-left: 25rem;
    font-weight: 100;

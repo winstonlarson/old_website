@@ -4,7 +4,7 @@
  <title>Winston Larson</title>
  <link href="http://winstonlarson.github.io//atom.xml" rel="self"/>
  <link href="http://winstonlarson.github.io//"/>
- <updated>2016-01-28T13:22:25-08:00</updated>
+ <updated>2016-01-28T13:23:30-08:00</updated>
  <id>http://winstonlarson.github.io/</id>
  <author>
    <name>Winston Larson</name>
@@ -1772,22 +1772,13 @@ weight = weight.replace(hw_replace)
 &lt;p&gt;Alright, now we can tackle processing the height column. In the codebook, we see that things are a little funny.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;200-711: Height in ft/in (-&lt;/td&gt;
-          &lt;td&gt;–) - i.e. the first digit is feet, the second and third digits are inches. So 509 is 5’ 9’’&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
+  &lt;li&gt;200-711: Height in ft/in (-,–) - i.e. the first digit is feet, the second and third digits are inches. So 509 is 5’ 9’’&lt;/li&gt;
   &lt;li&gt;
     &lt;table&gt;
       &lt;tbody&gt;
         &lt;tr&gt;
           &lt;td&gt;9000-9998: Height in m/cm (9-&lt;/td&gt;
-          &lt;td&gt;–)&lt;/td&gt;
+          &lt;td&gt;,–)&lt;/td&gt;
         &lt;/tr&gt;
       &lt;/tbody&gt;
     &lt;/table&gt;

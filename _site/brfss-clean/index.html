@@ -66,7 +66,7 @@
   </div>
 <div class="content container">
   <span class="post-date">15 Nov 2015</span>
-  <p>#BRFSS cleaning example</p>
+  <h2 id="brfss-cleaning-example">BRFSS cleaning example</h2>
 
 <p>This post is also available as a Jupyter Notebook on my GitHub repo: <a href="https://github.com/winstonlarson/brfss/blob/master/clean_2014_notebook.ipynb"><code>clean_2014_notebook.ipynb</code></a>.</p>
 
@@ -74,8 +74,8 @@
 
 <p>Pandas is a terrific tool for data cleaning and manipulation, and that’s what I use here.</p>
 
-<p>##Getting started<br />
-Let’s start by importing our libraries. We’ll be using Pandas and Numpy.</p>
+<h3 id="getting-started">Getting started</h3>
+<p>Let’s start by importing our libraries. We’ll be using Pandas and Numpy.</p>
 
 <pre><code class="language-python">import numpy as np
 import pandas as pd
@@ -86,7 +86,7 @@ import pandas as pd
 <pre><code class="language-python">year = '2014'
 </code></pre>
 
-<p>##Reading in the data</p>
+<h3 id="reading-in-the-data">Reading in the data</h3>
 
 <p>Let’s use Pandas to read in the <code>.csv</code> of the raw data for 2014. This isn’t available on GitHub because the file is too big, but <a href="https://www.amazon.com/clouddrive/share/HAfuNnNSbFqKmdyuodrVAQMpgcyqoFACuBoKWIqoWeG?ref_=cd_ph_share_link_copy">I’ve made it available on my Amazon Cloud Drive</a>. Also, since the file is so big, you might get a warning.</p>
 
@@ -1611,7 +1611,7 @@ Number of columns (variables in the survey): 280
 Index(['Unnamed: 0', 'x.state', 'fmonth', 'idate', 'imonth', 'iday', 'iyear', 'dispcode', 'seqno', 'x.psu', 'ctelenum', 'pvtresd1', 'colghous', 'stateres', 'ladult', 'numadult', 'nummen', 'numwomen', 'genhlth', 'physhlth', 'menthlth', 'poorhlth', 'hlthpln1', 'persdoc2', 'medcost', 'checkup1', 'exerany2', 'sleptim1', 'cvdinfr4', 'cvdcrhd4', 'cvdstrk3', 'asthma3', 'asthnow', 'chcscncr', 'chcocncr', 'chccopd1', 'havarth3', 'addepev2', 'chckidny', 'diabete3', 'diabage2', 'lastden3', 'rmvteth3', 'veteran3', 'marital', 'children', 'educa', 'employ1', 'income2', 'weight2', 'height3', 'numhhol2', 'numphon2', 'cpdemo1', 'internet', 'renthom1', 'sex', 'pregnant', 'qlactlm2', 'useequip', 'blind', 'decide', 'diffwalk', 'diffdres', 'diffalon', 'smoke100', 'smokday2', 'stopsmk2', 'lastsmk2', 'usenow3', 'alcday5', 'avedrnk2', 'drnk3ge5', 'maxdrnks', 'flushot6', 'flshtmy2', 'pneuvac3', 'shingle2', 'fall12mn', 'fallinj2', 'seatbelt', 'drnkdri2', 'hadmam', 'howlong', 'profexam', 'lengexam', 'hadpap2', 'lastpap2', 'hadhyst2', 'pcpsaad2', 'pcpsadi1', 'pcpsare1', 'psatest1', 'psatime', 'pcpsars1', 'bldstool', 'lstblds3', 'hadsigm3', 'hadsgco1', 'lastsig3', ...], dtype='object')
 </code></pre>
 
-<h2 id="collecting-our-variables-of-interest">Collecting our variables of interest</h2>
+<h3 id="collecting-our-variables-of-interest">Collecting our variables of interest</h3>
 
 <p>Great, so we have a lot of rows and 280 columns. We’re just trying to find some basic demographic information. If we look through the codebook, we can find those variable names. Note that an underscore in the codebook is the same as <code>x.</code> in the data, and that variables are all caps in the codebook but lowercase in the data.</p>
 
@@ -1677,7 +1677,7 @@ weight = df['weight2']
 Name: income2, Length: 464664, dtype: float64
 </code></pre>
 
-<p>##Cleaning up a column: Income</p>
+<h3 id="cleaning-up-a-column-income">Cleaning up a column: Income</h3>
 
 <p>We’ll start with cleaning up the income data. Looking at the codebook, the codes are:</p>
 
@@ -1701,7 +1701,7 @@ Name: income2, Length: 464664, dtype: float64
 <pre><code class="language-python">income_replace = {1:'&lt;10k', 2:'10k-15k', 3:'15k-20k', 4:'20k-25k', 5:'25k-35k', 6:'35k-50k', 7:'&gt;50k', 8:'&gt;50k', 77:np.nan, 99:np.nan}
 </code></pre>
 
-<p>##Cleaning the other columns</p>
+<h3 id="cleaning-the-other-columns">Cleaning the other columns</h3>
 
 <p>Next, we’ll clean the race column. If you are working with historical data, this is the trickiest column. The name of the variable, the meanings of the codes, and the groups represented change frequently over the years, and sometimes in subtle ways. Being able to use historical data is why my dictionary ends up grouping some things together that the 2014 dataset breaks out. See the codebook for more details.</p>
 
@@ -1718,8 +1718,8 @@ sex_replace = {1:'male', 2:'female'}
 
 <p>The height and weight columns are a little trickier to deal with, so we’ll handle those in a minute.</p>
 
-<p>##Using Pandas to do the replacement<br />
-Since we’ve got our dictionaries of codes mapped to values, we can let Pandas do the heavy lifting of cleaning up our columns.</p>
+<h3 id="using-pandas-to-do-the-replacement">Using Pandas to do the replacement</h3>
+<p>Since we’ve got our dictionaries of codes mapped to values, we can let Pandas do the heavy lifting of cleaning up our columns.</p>
 
 <pre><code class="language-python">income = income.replace(income_replace)
 race = race.replace(race_replace)
@@ -1764,20 +1764,20 @@ sex = sex.replace(sex_replace)
 464662    10k-15k
 464663    20k-25k
 Name: income2, Length: 464664, dtype: object
+</code></pre>
 
-##Cleaning the height and weight columns
+<h3 id="cleaning-the-height-and-weight-columns">Cleaning the height and weight columns</h3>
 
-Okay, now let's work with the height and weight data. We'll start by noting that 7777 and 9999 are 'unknown' or 'replaced' codes, so we'll NaN those right away. Also, in later years, the survey gave the option of taking height and weight in metric and imperial units. Earlier on, it's all imperial, so we'll make and option for using the metric system (which is denoted differently in the codes). Finally, our max weight changes over the years also, so we'll set that now to 999 lbs.
+<p>Okay, now let’s work with the height and weight data. We’ll start by noting that 7777 and 9999 are ‘unknown’ or ‘replaced’ codes, so we’ll NaN those right away. Also, in later years, the survey gave the option of taking height and weight in metric and imperial units. Earlier on, it’s all imperial, so we’ll make and option for using the metric system (which is denoted differently in the codes). Finally, our max weight changes over the years also, so we’ll set that now to 999 lbs.</p>
 
-```python
-hw_replace = {7777:np.nan, 9999:np.nan}
+<pre><code class="language-python">hw_replace = {7777:np.nan, 9999:np.nan}
 metric = True
 max_weight = 999
 height = height.replace(hw_replace)
 weight = weight.replace(hw_replace)
 </code></pre>
 
-<p>###Dealing with the height codes</p>
+<h4 id="dealing-with-the-height-codes">Dealing with the height codes</h4>
 
 <p>Alright, now we can tackle processing the height column. In the codebook, we see that things are a little funny.</p>
 
@@ -1786,8 +1786,8 @@ weight = weight.replace(hw_replace)
     <table>
       <tbody>
         <tr>
-          <td>200-711: Height in ft/in (_</td>
-          <td>_ _) - i.e. the first digit is feet, the second and third digits are inches. So 509 is 5’ 9’’</td>
+          <td>200-711: Height in ft/in (-</td>
+          <td>–) - i.e. the first digit is feet, the second and third digits are inches. So 509 is 5’ 9’’</td>
         </tr>
       </tbody>
     </table>
@@ -1796,8 +1796,8 @@ weight = weight.replace(hw_replace)
     <table>
       <tbody>
         <tr>
-          <td>9000-9998: Height in m/cm (9_</td>
-          <td>_ _)</td>
+          <td>9000-9998: Height in m/cm (9-</td>
+          <td>–)</td>
         </tr>
       </tbody>
     </table>
@@ -1806,7 +1806,7 @@ weight = weight.replace(hw_replace)
 
 <p>To handle this, we are going to run through the height column, grab the value, and turn it into a string. We’ll pop the first token and save it as the feet, save the other two tokens as the inches, and then we will cast everything as floats and convert the result to inches and then to meters.</p>
 
-<p>If the number is greather than 9000 and our metric toggle is <code>True</code>, then we know that it is a metric value, and we’ll do a similar process.</p>
+<p>If the number is greater than 9000 and our metric toggle is <code>True</code>, then we know that it is a metric value, and we’ll do a similar process.</p>
 
 <p><em><strong>Note:</strong> I noticed that if I do all of this in Pandas, it is very slow. It’s much faster to put the Series into a python list, do the operations and append the result to a new list, and then save the result back to a Series.</em></p>
 
@@ -1862,7 +1862,7 @@ for row in weight:
     new_weight.append(kg)
 </code></pre>
 
-<p>###Calculating BMI</p>
+<h4 id="calculating-bmi">Calculating BMI</h4>
 
 <p>We’ve got height and weight in metric units. Let’s compute the BMI, which is <code>bmi = w / h^2</code>.</p>
 
@@ -1883,7 +1883,7 @@ weight = pd.Series(new_weight)
 bmi = pd.Series(bmi)
 </code></pre>
 
-<p>##Saving our clean data</p>
+<h3 id="saving-our-clean-data">Saving our clean data</h3>
 
 <p>We’re almost there! Now, let’s take all of our cleaned up columns and put them back together as a single DataFrame and name the columns something easy to understand. We’ll save that out to a <code>.csv</code>.</p>
 

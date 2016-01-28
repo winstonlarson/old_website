@@ -3,7 +3,7 @@ layout: page
 title: Resume
 ---
 
-##Education
+## Education
 
 **Massachusetts Institute of Technology**
 
@@ -20,9 +20,9 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 
 ----
 
-##Experience
-**Innosight**, *2014 - Present* <br>
-*Innovation strategy consultant* <br>
+## Experience
+**Innosight**, *2014 - Present*
+*Innovation strategy consultant*
 Developing strategies for Fortune 500 companies to respond to disruptive innovation.
 
 * **Technology and Biotech R&D:** Established a joint venture between a tech company and a large pharmaceutical to build a computational biotech R&D platform.
@@ -33,20 +33,20 @@ Developing strategies for Fortune 500 companies to respond to disruptive innovat
 * **Big Data in Healthcare:** Renewed big data strategy at a health insurer by creating new processes for project and stakeholder management.
 * **Internet of things:** Facilitated a symposium examining opportunities and challenges in the Industrial Internet.
 
-**Unmanned Underwater Vehicle (UUV) Projects with Lincoln Laboratory**, *MIT 2011-2014* <br>
+**Unmanned Underwater Vehicle (UUV) Projects with Lincoln Laboratory**, *MIT 2011-2014*
 Managed research team members, experimental research, accounting ($300k budget), procurement, and technical documentation & communication for prototype long-term underwater power sources. Founded a startup, competed in the MIT 100K, acted as CFO & COO.
 
-**Boeing Company**, *Summer 2012* <br>
-*Manufacturing and Robotics Engineering Intern* <br>
+**Boeing Company**, *Summer 2012*
+*Manufacturing and Robotics Engineering Intern*
 Contributed to the development of a revolutionary manufacturing line to improve aircraft quality & takt time, building & presenting critical industrial robotic vision & manipulation systems to upper management.
 
-**Schlumberger Limited**, *Summer 2011*<br>
-*Manufacturing Engineering Intern* <br>
+**Schlumberger Limited**, *Summer 2011*
+*Manufacturing Engineering Intern*
 Led a team to design, build, and implement apparati for testing electrical components for oil exploration equipment.
 
 ----
 
-##Skills
+## Skills
 **Engineering:** Systems engineering; manufacturing; data mining and analysis; Python (pandas, Numpy, SciPy), Java & Matlab; SolidWorks; product design and development; electronics.
 
 **Business:** Team & project management; strategy & business development; disruptive innovation; entrepreneurship & startups; communication, presentations & writing.

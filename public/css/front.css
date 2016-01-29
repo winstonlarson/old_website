@@ -18,10 +18,7 @@
 .firstrow{
   margin-top: 0;
   background-color: #E8E8E8;
-  padding-left:  1rem;
-  padding-right: 1rem;
-  margin-left:  auto;
-  margin-right: auto;
+
 }
 
 .firstrowtext{
@@ -29,6 +26,10 @@
   font-size: 4rem;
   display: block;
   color: #1677B2;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 .secondrow{
@@ -44,6 +45,10 @@
   font-weight: 300;
   font-size: 1.25rem;
   color: #f2f2f2;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 @media (min-width: 48em) {
@@ -62,7 +67,6 @@
    width: 100%;
    position: fixed;
    z-index: 2;
-   display: inline-block;
  }
 
  .firstrowtext{
@@ -71,6 +75,11 @@
    padding-bottom: 2rem;
    margin-left: 25rem;
    font-weight: 100;
+   display: inline-block;
+   padding-left:  0rem;
+   padding-right: 0rem;
+   margin-left:  0;
+   margin-right: 0;
  }
 
  .secondrow {
@@ -100,6 +109,14 @@
    font-size: 1.25rem;
    max-width: 60rem;
    margin-right: 3rem;
+   padding-left:  1rem;
+   padding-right: 1rem;
+   margin-left:  auto;
+   margin-right: auto;
+   padding-left:  0rem;
+   padding-right: 0rem;
+   margin-left:  0;
+   margin-right: 0;
  }
 
  .thirdrow{

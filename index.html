@@ -17,7 +17,7 @@ title: Home
   <h4 class="frontgrey">Most recent blog posts:</h4>
   {% for post in paginator.posts %}
       <h3 class="frontpost">
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.url }}" style="text-decoration: none;">{{ post.title }}</a>
       </h3>
       <div class="frontdate">{{ post.date | date_to_string }}</div>
   <div class="fronttext">

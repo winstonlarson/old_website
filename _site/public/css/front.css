@@ -102,6 +102,8 @@
 
  .frontdate{
    display: inline;
+   font-size: 1.25rem;
+   font-weight: 100;
    margin-top: -.5rem;
    margin-bottom: 1rem;
    color: #9a9a9a;

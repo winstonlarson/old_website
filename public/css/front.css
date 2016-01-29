@@ -21,7 +21,7 @@
    padding-right: 1rem;
    margin-left:  auto;
    margin-right: auto;
-   background-color: #2C87F0;
+   background-color: #f2f2f2;
    /*background-image: url("http://winstonlarson.com/images/bg1.png");
    background-size: 100% 100%;
    background-repeat: repeat;*/
@@ -41,7 +41,7 @@
    margin-left: 25rem;
    font-weight: 100;
    font-size: 4rem;
-   color: #f2f2f2;
+   color: #1677B2;
  }
 
  .secondrow {
@@ -50,7 +50,7 @@
    padding-right: 1rem;
    margin-left:  auto;
    margin-right: auto;
-   background-color: #f2f2f2;
+   background-color: #2C87F0;
    /*background-image: url("http://winstonlarson.com/images/bg1.png");
    background-size: 100% 100%;
    background-repeat: repeat;*/
@@ -70,7 +70,7 @@
    margin-left: 25rem;
    font-weight: 100;
    font-size: 1.25rem;
-   color: #1677B2;
+   color: #f2f2f2;
    max-width: 60rem;
    margin-right: 3rem;
  }

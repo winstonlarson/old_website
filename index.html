@@ -16,7 +16,7 @@ title: Home
 <div class="thirdrow">
   <h4 class="grey">Most recent blog posts:</h4>
   {% for post in paginator.posts %}
-      <h3 class="frontpost">
+      <h3 class="frontpost container">
         <a href="{{ post.url }}">{{ post.title }}</a></h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frontdate">{{ post.date | date_to_string }}</span>
   <div class="fronttext container">
     {{ post.note }}

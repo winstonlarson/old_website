@@ -28,6 +28,14 @@
   color: #9a9a9a;
 }
 
+.frontgrey{
+  color: #9a9a9a;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
 .firstrowtext{
   font-weight: 300;
   font-size: 2rem;
@@ -181,7 +189,12 @@
    margin-left:  0;
    margin-right: 0;
  }
-
+.frontgrey{
+ padding-left:  0rem;
+ padding-right: 0rem;
+ margin-left:  0;
+ margin-right: 0;
+}
 }
 
 /*

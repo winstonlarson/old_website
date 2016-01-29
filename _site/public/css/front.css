@@ -65,13 +65,11 @@
 }
 
 .frontpost{
-  display: inline;
   padding-top: 0rem;
   max-width: 38rem;
 }
 
 .frontdate{
-  display: inline;
   font-size: 1.25rem;
   font-weight: 300;
   margin-top: -.5rem;

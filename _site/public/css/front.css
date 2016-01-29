@@ -26,13 +26,14 @@
 
 .firstrowtext{
   font-weight: 300;
-  font-size: 4rem;
+  font-size: 2rem;
   display: block;
   color: #1677B2;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
   margin-right: auto;
+  max-width: 38rem;
 }
 
 .secondrow{
@@ -52,11 +53,33 @@
   padding-right: 1rem;
   margin-left:  auto;
   margin-right: auto;
+  max-width: 38rem;
+}
+
+.frontpost{
+  padding-top: 0rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+  max-width: 38rem;
+}
+
+.frontdate{
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #9a9a9a;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+  max-width: 38rem;
 }
 
 @media (min-width: 48em) {
  .firstrow {
-   padding-top: 2rem;
    padding-left:  1rem;
    padding-right: 1rem;
    /*background-image: url("http://winstonlarson.com/images/bg1.png");
@@ -77,6 +100,8 @@
    margin-left: 25rem;
    font-weight: 100;
    display: inline-block;
+   font-size: 3rem;
+   max-width: 58rem;
  }
 
  .secondrow {
@@ -99,12 +124,12 @@
 
  .secondrowtext{
    margin-top: 0;
-   padding-top: 13rem;
+   padding-top: 12rem;
    padding-bottom: 2rem;
    margin-left: 25rem;
    font-weight: 100;
    font-size: 1.25rem;
-   max-width: 60rem;
+   max-width: 58rem;
    margin-right: 3rem;
  }
 
@@ -114,7 +139,7 @@
    padding-bottom: 0rem;
    margin-left: 25.3rem;
    font-size: 1.25rem;
-   max-width: 63rem;
+   max-width: 60rem;
    margin-right: 3rem;
  }
 
@@ -125,16 +150,18 @@
    margin-right: 3rem;
    font-size: 1.15rem;
    text-align: left;
-   max-width: 63rem;
+   max-width: 58rem;
  }
 
  .frontpost{
    display: inline-block;
-   padding-top: 0rem;
+   max-width: 58rem;
+   padding-left: 0;
  }
 
  .frontdate{
    display: inline;
+   max-width: 58rem;
    font-size: 1.25rem;
    font-weight: 100;
    margin-top: -.5rem;

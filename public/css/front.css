@@ -97,7 +97,7 @@
    margin-top: 0;
    padding-top: 2rem;
    padding-bottom: 2rem;
-   margin-left: 25rem;
+   margin-left: 24.5rem;
    font-weight: 100;
    display: inline-block;
    font-size: 3rem;
@@ -126,7 +126,7 @@
    margin-top: 0;
    padding-top: 12rem;
    padding-bottom: 2rem;
-   margin-left: 25rem;
+   margin-left: 24.5rem;
    font-weight: 100;
    font-size: 1.25rem;
    max-width: 58rem;
@@ -146,7 +146,7 @@
  .fronttext {
    padding-top: .5rem;
    padding-bottom: 1.5rem;
-   margin-left: 0rem;
+   margin-left: -.9rem;
    margin-right: 3rem;
    font-size: 1.15rem;
    text-align: left;

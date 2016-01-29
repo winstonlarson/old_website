@@ -77,25 +77,27 @@
 
  .thirdrow{
    margin-top: 0;
-   padding-top: 24rem;
+   padding-top: 25rem;
    padding-bottom: 0rem;
    margin-left: 25.3rem;
    font-size: 1.25rem;
-   max-width: 60rem;
+   max-width: 63rem;
    margin-right: 3rem;
  }
 
  .fronttext {
    padding-top: .5rem;
+   padding-bottom: 0rem;
    margin-left: -.9rem;
    margin-right: 3rem;
    font-size: 1.15rem;
    text-align: left;
-   max-width: 60rem;
+   max-width: 63rem;
  }
 
  .frontpost{
    display: inline-block;
+   padding-top: 0.5rem;
  }
 
  .frontdate{

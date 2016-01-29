@@ -16,15 +16,17 @@
  /* Modified heavily by Winston Larson for winstonlarson.com */
 
  .firstrow {
+   padding-top: 2rem;
    padding-left:  1rem;
    padding-right: 1rem;
+   margin-left:  auto;
+   margin-right: auto;
    background-color: #2C87F0;
    /*background-image: url("http://winstonlarson.com/images/bg1.png");
    background-size: 100% 100%;
    background-repeat: repeat;*/
    height: auto;
    padding-top: 0rem;
-   margin-top: 0rem;
    margin-left: 0rem;
    margin-right: 0rem;
    width: 100%;
@@ -75,6 +77,7 @@
 
  .thirdrow{
    margin-top: 0;
+   padding-top: 24rem;
    padding-bottom: 2rem;
    margin-left: 25.3rem;
    font-size: 1.25rem;
@@ -84,11 +87,11 @@
 
  .fronttext {
    padding-top: .5rem;
-   max-width: 60rem;
    margin-left: -.9rem;
    margin-right: 3rem;
    font-size: 1.15rem;
    text-align: left;
+   max-width: 60rem;
  }
 
  .frontpost{
@@ -100,10 +103,6 @@
    margin-top: -.5rem;
    margin-bottom: 1rem;
    color: #9a9a9a;
- }
-
- .frontgrey{
-   padding-top: 24rem;
  }
 
 /*

@@ -75,13 +75,13 @@
 .fronttext {
   padding-top: .5rem;
   padding-bottom: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 1.15rem;
   text-align: left;
   max-width: 58rem;
   padding-left:  1rem;
   padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .frontpost{
@@ -174,7 +174,7 @@
  .fronttext {
    padding-top: .5rem;
    padding-bottom: 1.5rem;
-   margin-left: -.9rem;
+   margin-left: 0rem;
    margin-right: 3rem;
    font-size: 1.15rem;
    text-align: left;

@@ -80,6 +80,10 @@
   margin-bottom: 1rem;
   color: #9a9a9a;
   max-width: 38rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
 }
 
 @media (min-width: 48em) {

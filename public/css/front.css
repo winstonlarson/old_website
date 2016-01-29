@@ -16,17 +16,15 @@
  /* Modified heavily by Winston Larson for winstonlarson.com */
 
  .firstrow {
-   padding-top: 2rem;
    padding-left:  1rem;
    padding-right: 1rem;
-   margin-left:  auto;
-   margin-right: auto;
    background-color: #2C87F0;
    /*background-image: url("http://winstonlarson.com/images/bg1.png");
    background-size: 100% 100%;
    background-repeat: repeat;*/
    height: auto;
    padding-top: 0rem;
+   margin-top: 0rem;
    margin-left: 0rem;
    margin-right: 0rem;
    width: 100%;

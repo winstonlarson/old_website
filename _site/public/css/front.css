@@ -36,8 +36,8 @@
 
  .firstrowtext{
    margin-top: 0;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
    margin-left: 25rem;
    font-weight: 100;
    font-size: 4rem;
@@ -77,7 +77,6 @@
 
  .thirdrow{
    margin-top: 0;
-   padding-top: 24rem;
    padding-bottom: 2rem;
    margin-left: 25.3rem;
    font-size: 1.25rem;
@@ -87,12 +86,11 @@
 
  .fronttext {
    padding-top: .5rem;
-   max-width: 58rem;
+   max-width: 60rem;
    margin-left: -.9rem;
    margin-right: 3rem;
    font-size: 1.15rem;
    text-align: left;
-   max-width: 60rem;
  }
 
  .frontpost{
@@ -104,6 +102,10 @@
    margin-top: -.5rem;
    margin-bottom: 1rem;
    color: #9a9a9a;
+ }
+
+ .frontgrey{
+   padding-top: 24rem;
  }
 
 /*

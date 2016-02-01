@@ -4,7 +4,7 @@
  <title>Winston Larson</title>
  <link href="http://winstonlarson.github.io//atom.xml" rel="self"/>
  <link href="http://winstonlarson.github.io//"/>
- <updated>2016-02-01T12:15:00-05:00</updated>
+ <updated>2016-02-01T12:19:59-05:00</updated>
  <id>http://winstonlarson.github.io/</id>
  <author>
    <name>Winston Larson</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Do I know you? Probably.</title>
    <link href="http://winstonlarson.github.io//probably-personal"/>
-   <updated>2016-01-15T00:00:00-05:00</updated>
+   <updated>2016-01-20T00:00:00-05:00</updated>
    <id>http://winstonlarson.github.io//probably-personal</id>
    <content type="html">&lt;p&gt;Google made waves this week when it introduced &lt;a href=&quot;http://9to5google.com/2015/05/29/smart-lock-passwords-is-cool-but-google-project-abacus-wants-to-eliminate-password-authentication/&quot;&gt;Project Abacus&lt;/a&gt;, a new prototype identification system for logging into Google’s services. Instead of relying on passwords, Google proposes to use behavior to confirm a user’s identity online. This feels like a pretty shocking idea: instead of using a binary confirmation of who we are (i.e. we know our password), Google basically wants to say that it’s fairly certain that it thinks it knows who we are. However, this system of using probabilities to confirm identity is not only going to be more secure, it also actually mimics the way we humans think about identify ourselves.&lt;/p&gt;
 

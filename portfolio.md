@@ -5,18 +5,18 @@ title: Portfolio
 
 I've worked on a variety of projects that reflect my interests in data science, business and management, and mechanical engineering.
 
-#### Data science
+#### <span class="grey">Data science</span>
 
 + [Venture portfolio simulation:](#ventures) Monte Carlo simulation of a venture portfolio to guide investment and management strategy
 + [Patent valuation:](#patents) Scraping the USPTO website and structuring data to estimate patent values
 + [BRFSS:](#brfss) Extracting insights from the world's largest health survey, including data wrangling and machine learning
 + [Scientific advisory board membership:](#sab) Using scientific publication records to identify potential SAB candidates
 
-#### Business and management
+#### <span class="grey">Business and management</span>
 
 + [Consulting at Innosight:](#innosight) A variety of innovation and management consulting engagements, focused on developing strategies to advance and commercialize cutting edge R&D
 
-#### Mechanical engineering
+#### <span class="grey">Mechanical engineering</span>
 
 + [Unmanned underwater vehicles and disruptive innovation:](#uuv) Demonstrating the financial and strategic value of unmanned underwater vehicles (UUVs) and how they are disrupting traditional naval power
 + [Bio-mimetic underwater robotics:](#stingray) Designing, manufacturing, programming, and testing small under-actuated stingray and salamander robots

@@ -7,7 +7,7 @@ Access to world-class expertise is a core challenge for corporate R&D projects t
 
 The code and example lists for this project can be found on GitHub in my [authorship repo](https://github.com/winstonlarson/authorship).
 
-##Publication records suggest scientific advisory board candidates
+## Publication records suggest scientific advisory board candidates
 
 Identifying KOLs can be a surprisingly difficult challenge. The most well-known academics are often busy and over-scheduled, and it becomes necessary to cast a wider net. There are many well-qualified but less well-known or more junior scientists who can provide critical knowledge, offer new perspectives, and are often exploring new and non-traditional avenues that could prove to be highly successful. How can we identify exciting potential KOL talent?
 
@@ -15,7 +15,7 @@ A rudimentary way to measure scientific achievement is to examine scientific pub
 
 The code and example lists for this project can be found on GitHub in my [authorship repo](https://github.com/winstonlarson/authorship).
 
-###Obtaining topic-based scientific publication lists
+### Obtaining topic-based scientific publication lists
 
 We have to begin by finding a comprehensive list of scientific publications for the topic in which we we are interested. Obtaining a comprehensive list of publications can be surprisingly easy, especially in biology/medicine. The government’s [PubMed](http://www.ncbi.nlm.nih.gov/pubmed) citation database is a comprehensive collection of paper citations. After doing a topic search, they have made it very easy to download the full list of citations (often thousands of publications long) in a variety of formats.
 
@@ -25,7 +25,7 @@ As an example, we can look at prostate cancer. Using the PubMed database, we can
 <img src="/images/2016-01-04-pubmed-results.png" alt="The pubmed website. Search for your topic, then click on Send to in the upper right corner." width="700">
 </p>
 
-###Using author metrics
+### Using author metrics
 We will identify potential candidates based on total authorship, first authorship, and last authorship. My method is based on a few high level assumptions.
 
 1. **Total authorship:** The more you publish, the longer you’ve been in the field and the greater your expertise. The top publishers, however, will also tend to be the type of busy person that doesn’t have time to be on SABs.
@@ -40,7 +40,7 @@ Based on these assumptions, there are a few types of people that we might be loo
 
 These assumptions and guidelines are starting points. Having even a rudimentary understanding of the field and its leaders can be very helpful in interpreting the results of a publication analysis.
 
-####Using Python and Pandas to create lists
+#### Using Python and Pandas to create lists
 The hardest part of this exercise was figuring out how to use the citation list to find interesting people. With that out of the way, we can get to the easy part: actually generating structured lists that we want from the unstructured text data.
 
 I start by reading in the text document that contains the citation list, and I clean up the tabs and newlines. Prior to this, I’ve edited the text document by hand and deleted the first entries that didn’t actually have authors (since it was sorted by first author). I use regular expressions to grab the author list for each paper. I chop up the string, creating separate lists of authors, first authors, and last authors (all based on their position in the string).
@@ -49,7 +49,7 @@ Pandas makes it easy to play with my lists of authors. Using Pandas methods and 
 
 Using these lists, I can use the guidelines I mentioned earlier to build a list of potential SAB candidates. I can then do some background research on them and begin reaching out to them.
 
-####Future directions
+#### Future directions
 The method I’ve developed, while rudimentary, is effective and suffices for its purpose in producing a list of potential SAB candidates. There are a few things I may tackle in the future that would make my method more robust.
 
 + **Disambiguating authors:** In a large field (like prostate cancer), there can be many authors who share names (i.e. to how many different authors does "Smith J” actually refer?) One way to do this is to look at the author’s institution. However, there are some complicating factors. Authors move between institutions. And there is a frustrating lack of consistency in listing institution names. MIT, Massachusetts Institute of Technology, and Mass. Inst. of Tech. all refer to the same place. Sometimes authors at the same university (which itself has several name variations) lead multiple labs. So while it’s a simple idea, it could be frustratingly difficult to implement in code. Maybe I’ll try to make it a machine learning example project.

@@ -5,7 +5,7 @@ title: BRFSS
 
 Insights into health and behavior using data from the CDC
 
-###BRFSS Introduction
+### BRFSS Introduction
 
 Every year since 1984, the government has called around the country and asked people a series of probing questions about their health. As the largest and longest running health survey system in the world, the CDC's Behavioral Risk Factor Surveillance System (BRFSS) provides a wealth of information about health and health-related behaviors in the United States. It covers hundreds of variables over 400,000 adult interviews from all 50 states, the District of Columbia, and three territories. For more information about the survey itself, you should check out the [CDC BRFSS site](http://www.cdc.gov/brfss/).
 
@@ -15,7 +15,7 @@ Unfortunately, BRFSS data isn't exactly easy to deal with. Its breadth and struc
 
 The code for this project can be found on GitHub in my [BRFSS repo](https://github.com/winstonlarson/brfss).
 
-###Getting BRFSS data
+### Getting BRFSS data
 
 Anyone can download BRFSS data from the [BRFSS Annual Survey Data](http://www.cdc.gov/brfss/annual_data/annual_data.htm) page. There are links to each year the survey has been conducted. The data is available in `.XPT` (SAS Transport Format) or in `.ASCII` files. These are pretty big files, especially in more recent years. All together, the raw data is somewhere around 10GB.
 
@@ -25,7 +25,7 @@ Python is my language of choice, and it's easiest to use the files in Python if 
 
 The `.csv` files for the BRFSS are too big to host on GitHub, but I've made them publicly available on my [Amazon Cloud Drive BRFSS folder](https://www.amazon.com) to make it easier for everyone else to use them.
 
-###Cleaning BRFSS data
+### Cleaning BRFSS data
 A quick flip through the codebooks makes it clear that BRFSS data is not useful right out of the box. It takes some heavy-duty cleaning to get what you want. The codes and variable names can change subtly from year to year, so I had to check the codebook for every year of interest.
 
 I started by grabbing and cleaning the basic demographic data available for each respondent. Not only did this process elucidate how to clean and use BRFSS data, but it's also useful in showing how the demographics of the survey change over time. I ended up grabbing the income group, race, state, age group, sex, and BMI of each respondent.

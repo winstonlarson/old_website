@@ -65,13 +65,13 @@
     <h1 class="page-title">Patent valuation</h1>
   </div>
   <div class="content container">
-    <p>##Valuing patents using forward cites</p>
+    <h2 id="valuing-patents-using-forward-cites">Valuing patents using forward cites</h2>
 
 <p>Protectable intellectual property is a crucial piece of any corporate strategy for creating a long-term differentiated position in a market. Patents are a key part of IP strategy. Thanks to a series of high profile court cases, patents and patent strategy have become a highly visible part of technology strategy, representing billions of dollars in litigation every year. Patent valuation has arisen as a critical component of legal cases, startup valuations, and measuring R&amp;D productivity.</p>
 
 <p>There are many approaches to patent valuation, but a common and reliable method examines the number of patents citing a given patent (called “forward cites”). A patent with many forward cites (some patents have hundreds of forward cites) is likely more valuable since it was the genesis of continued innovation. Theoretically, a highly cited patent is more likely to represent a company’s core technology, is more likely to be licensed, and will be more valuable in generating future IP. Patents are organized by class and sub-class, thereby grouping similar patents together (some classes contain hundreds of thousands of patents). We can therefore measure a patent’s value relative to similar patents by comparing its number of forward cites with other patents in the same patent class.</p>
 
-<p>###Counting forward cites</p>
+<h3 id="counting-forward-cites">Counting forward cites</h3>
 
 <p>I created software that uses the USPTO website to find the find the information needed to value a patent. For a class of patents, I scrape the key information for each patent as well as its forward cites (i.e. patent number, title, abstract, assignee, and file date). This involved leveraging the websites search format to find the desired patent classes, find all the patents in the class, and then download each patent’s individual page. I then used regex in python to create structured tables out of the downloaded HTML files.</p>
 
@@ -81,11 +81,11 @@
 
 <p>The code for this project can be found on GitHub in my <a href="https://github.com/winstonlarson/patents">patents repo</a>.</p>
 
-<p>##Automating patent searches</p>
+<h2 id="automating-patent-searches">Automating patent searches</h2>
 
 <p>I relied on the <a href="http://patft.uspto.gov/netahtml/PTO/search-adv.htm">USPTO’s advanced search website</a> (which I refer to as PATFT) to scrape patent data, since existing patent databases are not flexible enough or too expensive to use for my purposes.</p>
 
-<p>###Scraping patents</p>
+<h3 id="scraping-patents">Scraping patents</h3>
 
 <p>The great thing about PATFT is that it has a very predictable format in translating searches into URLs, so it’s easy to search for patents or patent classes using just URLs. This means that given a class number <code>classNum</code>, I can get the search results by using the URL <code>http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&amp;r=0&amp;p=1&amp;f=S&amp;l=50&amp;Query=ccl%2F' + classNum + '&amp;d=PTXT'</code>.</p>
 
@@ -93,7 +93,7 @@
 
 <p>Finally, after getting information on all of the patents in a class, I completed a similar process for searching for, getting a list of, and downloading the webpages for each patent’s forward cites. The PATFT search tools and URL formats were similar to before.</p>
 
-<p>###Creating structured data</p>
+<h3 id="creating-structured-data">Creating structured data</h3>
 
 <p>I had to scrape the webpages for all of the patents and forward cites in HTML format. I was looking for specific pieces of information that help to understand the context of the patent:</p>
 
@@ -107,11 +107,11 @@
 
 <p>I used Python’s awesome <code>re</code> module for regex to extract this data out of the HTML files. I filtered the results into <code>csv</code> files (some of which ended up being absolutely enormous) in order to easily view and manipulate the data, with rows representing patents and columns the desired information. These data files were used to analyze patent values.</p>
 
-<p>###Building a complete solution</p>
+<h3 id="building-a-complete-solution">Building a complete solution</h3>
 
 <p>I tied together each of the individual parts to create a full solution that is easy to use. I am able to enter the patent classes we would like to value, and the software generates the desired <code>csv</code> files of lists of patent and forward cite data. Controller files tie together the different functions for downloading different types of search results and then extracting the relevant data and producing structured files.</p>
 
-<p>##Creating robust software</p>
+<h2 id="creating-robust-software">Creating robust software</h2>
 
 <p>I have to admit that all of this sounds relatively simple:</p>
 
@@ -149,7 +149,7 @@
 
     <div class="content container">
       <hr>
-      <p style="font-size: 1rem;">&copy; 2016. All rights reserved. "Then you will know the data, and the data will set you free."</p>
+      <p style="font-size: 1rem;">&copy; 2016. All rights reserved. "Then you will know the data, and the data will set you free."&nbsp;&nbsp;<a href="mailto:winstonlarson@gmail.com">winstonlarson@gmail.com</a></p>
     </div>
 
   </body>

@@ -13,7 +13,7 @@ I explored the financial and strategic implications of UUVs and long-term underw
 
 A copy of my [master's thesis](https://dspace.mit.edu/bitstream/handle/1721.1/87959/880676433-MIT.pdf?sequence=2) is available from DSpace@MIT. You can also learn more about [Professor Doug Hart's research in to UUV power sources](https://www.ll.mit.edu/news/NovelUUV.html) at MIT.
 
-###Unmanned underwater vehicles
+### Unmanned underwater vehicles
 
 As the U.S. Military maintains readiness to wage war with traditional nation-states as well as with terrorist groups, unmanned and autonomous systems are revolutionizing warfare. Aerial drones have been wildly successful, and unmanned underwater vehicles (UUVs) are an opportunity for the U.S. Navy to increase its capability and effectiveness in a similar way under the sea.
 
@@ -21,7 +21,7 @@ Unmanned underwater vehicles are used in a variety of military, scientific, and 
 
 Long-term power sources will drastically improve the usefulness of the UUV technologies. An aluminum-based power source being developed at MIT under the direction of Professor Doug Hart is projected to offer an energy density of 8000 MJ/L, a 1000% improvement over current energy storage technologies. The improved range and power capabilities of UUVs equipped with such a power source will be a strategic advantage.
 
-###Disruptive innovation and battlefield entropy
+### Disruptive innovation and battlefield entropy
 
 Disruptive innovations are those which improve a product along new performance metrics. Disruptive technologies improve through sustaining innovation (improvement along existing performance metrics) to displace existing technologies. Disruptive innovation plays an important role in maintaining combat superiority. Submarines, aerial drones, and cruise missiles are all examples of disruptive military innovations. There is significant first-mover advantage in adopting and skillfully managing disruptive innovation.
 
@@ -31,7 +31,7 @@ Battlefield entropy measures the difference between an entity's ideal fighting f
 
 Disruptive innovation must be skillfully managed to realize its full potential. Four theories (jobs-to-be-done theory, market/application identification, discovery-driven planning, and resource-process-value theory) provide best practices for identifying, adopting, and applying disruptive innovations well.
 
-###UUV Mission cost analysis and comparison
+### UUV Mission cost analysis and comparison
 
 To demonstrate the disruptive power of UUVs, I analyzed the costs of missions that can be completed using current UUV technology. I examined the mission scenarios, the cost of completing the mission using manned systems, and the cost of completing the mission using UUVs. I compared the costs and analyzed the advantages of using UUV technologies. In the table below, I present the percent cost savings experienced by using UUV technologies rather than manned systems. In general, UUV systems are roughly an order of magnitude (90% cost savings) less expensive than manned systems.
 
@@ -53,7 +53,7 @@ Mission type | Percent savings
   In-water survey | 67%
 **Undersea infrastructure** | 86%
 
-###Implications of UUV adoption
+### Implications of UUV adoption
 
 In conclusion, I offer several observations on UUVs and their disruptive potential to naval operations:
 

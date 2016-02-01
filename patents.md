@@ -3,13 +3,13 @@ layout: page
 title: Patent valuation
 ---
 
-##Valuing patents using forward cites
+## Valuing patents using forward cites
 
 Protectable intellectual property is a crucial piece of any corporate strategy for creating a long-term differentiated position in a market. Patents are a key part of IP strategy. Thanks to a series of high profile court cases, patents and patent strategy have become a highly visible part of technology strategy, representing billions of dollars in litigation every year. Patent valuation has arisen as a critical component of legal cases, startup valuations, and measuring R&D productivity.
 
 There are many approaches to patent valuation, but a common and reliable method examines the number of patents citing a given patent (called “forward cites”). A patent with many forward cites (some patents have hundreds of forward cites) is likely more valuable since it was the genesis of continued innovation. Theoretically, a highly cited patent is more likely to represent a company’s core technology, is more likely to be licensed, and will be more valuable in generating future IP. Patents are organized by class and sub-class, thereby grouping similar patents together (some classes contain hundreds of thousands of patents). We can therefore measure a patent’s value relative to similar patents by comparing its number of forward cites with other patents in the same patent class.
 
-###Counting forward cites
+### Counting forward cites
 
 I created software that uses the USPTO website to find the find the information needed to value a patent. For a class of patents, I scrape the key information for each patent as well as its forward cites (i.e. patent number, title, abstract, assignee, and file date). This involved leveraging the websites search format to find the desired patent classes, find all the patents in the class, and then download each patent's individual page. I then used regex in python to create structured tables out of the downloaded HTML files.
 
@@ -19,11 +19,11 @@ Given the large size of some patent classes and the large number of forward cite
 
 The code for this project can be found on GitHub in my [patents repo](https://github.com/winstonlarson/patents).
 
-##Automating patent searches
+## Automating patent searches
 
 I relied on the [USPTO's advanced search website](http://patft.uspto.gov/netahtml/PTO/search-adv.htm) (which I refer to as PATFT) to scrape patent data, since existing patent databases are not flexible enough or too expensive to use for my purposes.
 
-###Scraping patents
+### Scraping patents
 
 The great thing about PATFT is that it has a very predictable format in translating searches into URLs, so it's easy to search for patents or patent classes using just URLs. This means that given a class number `classNum`, I can get the search results by using the URL `http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&u=%2Fnetahtml%2FPTO%2Fsearch-adv.htm&r=0&p=1&f=S&l=50&Query=ccl%2F' + classNum + '&d=PTXT'`.
 
@@ -31,7 +31,7 @@ I used Python's `requests` package to grab the HTML pages for the class searches
 
 Finally, after getting information on all of the patents in a class, I completed a similar process for searching for, getting a list of, and downloading the webpages for each patent's forward cites. The PATFT search tools and URL formats were similar to before.
 
-###Creating structured data
+### Creating structured data
 
 I had to scrape the webpages for all of the patents and forward cites in HTML format. I was looking for specific pieces of information that help to understand the context of the patent:
 
@@ -43,11 +43,11 @@ I had to scrape the webpages for all of the patents and forward cites in HTML fo
 
 I used Python's awesome `re` module for regex to extract this data out of the HTML files. I filtered the results into `csv` files (some of which ended up being absolutely enormous) in order to easily view and manipulate the data, with rows representing patents and columns the desired information. These data files were used to analyze patent values.
 
-###Building a complete solution
+### Building a complete solution
 
 I tied together each of the individual parts to create a full solution that is easy to use. I am able to enter the patent classes we would like to value, and the software generates the desired `csv` files of lists of patent and forward cite data. Controller files tie together the different functions for downloading different types of search results and then extracting the relevant data and producing structured files.
 
-##Creating robust software
+## Creating robust software
 
 I have to admit that all of this sounds relatively simple:
 

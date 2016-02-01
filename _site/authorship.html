@@ -69,7 +69,7 @@
 
 <p>The code and example lists for this project can be found on GitHub in my <a href="https://github.com/winstonlarson/authorship">authorship repo</a>.</p>
 
-<p>##Publication records suggest scientific advisory board candidates</p>
+<h2 id="publication-records-suggest-scientific-advisory-board-candidates">Publication records suggest scientific advisory board candidates</h2>
 
 <p>Identifying KOLs can be a surprisingly difficult challenge. The most well-known academics are often busy and over-scheduled, and it becomes necessary to cast a wider net. There are many well-qualified but less well-known or more junior scientists who can provide critical knowledge, offer new perspectives, and are often exploring new and non-traditional avenues that could prove to be highly successful. How can we identify exciting potential KOL talent?</p>
 
@@ -77,7 +77,7 @@
 
 <p>The code and example lists for this project can be found on GitHub in my <a href="https://github.com/winstonlarson/authorship">authorship repo</a>.</p>
 
-<p>###Obtaining topic-based scientific publication lists</p>
+<h3 id="obtaining-topic-based-scientific-publication-lists">Obtaining topic-based scientific publication lists</h3>
 
 <p>We have to begin by finding a comprehensive list of scientific publications for the topic in which we we are interested. Obtaining a comprehensive list of publications can be surprisingly easy, especially in biology/medicine. The government’s <a href="http://www.ncbi.nlm.nih.gov/pubmed">PubMed</a> citation database is a comprehensive collection of paper citations. After doing a topic search, they have made it very easy to download the full list of citations (often thousands of publications long) in a variety of formats.</p>
 
@@ -87,8 +87,8 @@
 <img src="/images/2016-01-04-pubmed-results.png" alt="The pubmed website. Search for your topic, then click on Send to in the upper right corner." width="700" />
 </p>
 
-<p>###Using author metrics<br />
-We will identify potential candidates based on total authorship, first authorship, and last authorship. My method is based on a few high level assumptions.</p>
+<h3 id="using-author-metrics">Using author metrics</h3>
+<p>We will identify potential candidates based on total authorship, first authorship, and last authorship. My method is based on a few high level assumptions.</p>
 
 <ol>
   <li><strong>Total authorship:</strong> The more you publish, the longer you’ve been in the field and the greater your expertise. The top publishers, however, will also tend to be the type of busy person that doesn’t have time to be on SABs.</li>
@@ -106,8 +106,8 @@ We will identify potential candidates based on total authorship, first authorshi
 
 <p>These assumptions and guidelines are starting points. Having even a rudimentary understanding of the field and its leaders can be very helpful in interpreting the results of a publication analysis.</p>
 
-<p>####Using Python and Pandas to create lists<br />
-The hardest part of this exercise was figuring out how to use the citation list to find interesting people. With that out of the way, we can get to the easy part: actually generating structured lists that we want from the unstructured text data.</p>
+<h4 id="using-python-and-pandas-to-create-lists">Using Python and Pandas to create lists</h4>
+<p>The hardest part of this exercise was figuring out how to use the citation list to find interesting people. With that out of the way, we can get to the easy part: actually generating structured lists that we want from the unstructured text data.</p>
 
 <p>I start by reading in the text document that contains the citation list, and I clean up the tabs and newlines. Prior to this, I’ve edited the text document by hand and deleted the first entries that didn’t actually have authors (since it was sorted by first author). I use regular expressions to grab the author list for each paper. I chop up the string, creating separate lists of authors, first authors, and last authors (all based on their position in the string).</p>
 
@@ -115,8 +115,8 @@ The hardest part of this exercise was figuring out how to use the citation list 
 
 <p>Using these lists, I can use the guidelines I mentioned earlier to build a list of potential SAB candidates. I can then do some background research on them and begin reaching out to them.</p>
 
-<p>####Future directions<br />
-The method I’ve developed, while rudimentary, is effective and suffices for its purpose in producing a list of potential SAB candidates. There are a few things I may tackle in the future that would make my method more robust.</p>
+<h4 id="future-directions">Future directions</h4>
+<p>The method I’ve developed, while rudimentary, is effective and suffices for its purpose in producing a list of potential SAB candidates. There are a few things I may tackle in the future that would make my method more robust.</p>
 
 <ul>
   <li><strong>Disambiguating authors:</strong> In a large field (like prostate cancer), there can be many authors who share names (i.e. to how many different authors does “Smith J” actually refer?) One way to do this is to look at the author’s institution. However, there are some complicating factors. Authors move between institutions. And there is a frustrating lack of consistency in listing institution names. MIT, Massachusetts Institute of Technology, and Mass. Inst. of Tech. all refer to the same place. Sometimes authors at the same university (which itself has several name variations) lead multiple labs. So while it’s a simple idea, it could be frustratingly difficult to implement in code. Maybe I’ll try to make it a machine learning example project.</li>
@@ -128,7 +128,7 @@ The method I’ve developed, while rudimentary, is effective and suffices for it
 
     <div class="content container">
       <hr>
-      <p style="font-size: 1rem;">&copy; 2016. All rights reserved. "Then you will know the data, and the data will set you free."</p>
+      <p style="font-size: 1rem;">&copy; 2016. All rights reserved. "Then you will know the data, and the data will set you free."&nbsp;&nbsp;<a href="mailto:winstonlarson@gmail.com">winstonlarson@gmail.com</a></p>
     </div>
 
   </body>

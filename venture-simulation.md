@@ -7,7 +7,7 @@ Managing a portfolio of venture-based companies is inherently fraught with risk.
 
 The code for this project can be found on GitHub in my [venture-simulation repo](https://github.com/winstonlarson/venture_simulation).
 
-##Simulating a research venture portfolio
+## Simulating a research venture portfolio
 
 I created a Monte Carlo simulation of a generalized venture portfolio. Based on a one potential strategic structure of a portfolio, my simulation accepts basic assumptions about the expected life-span of ventures, their chances of success, and their expected costs. My model assumes that a portfolio manager knows that they desire a certain number of successful ventures over the life of the portfolio. To understand the effort involved in reaching success, my simulation can be used to estimate:
 
@@ -19,7 +19,7 @@ I created a Monte Carlo simulation of a generalized venture portfolio. Based on 
 
 My simulation is designed to inform portfolio managers in creating their portfolio strategy, setting and communicating expectations about the output of the portfolio, and the eventual amount of investment they might need to make.
 
-###Venture portfolio strategy
+### Venture portfolio strategy
 
 Let's suppose that the R&D arm of a large research-driven corporation is interested in developing a venture portfolio. That might mean that the goal of the venture portfolio is not to achieve some given return on an investment fund. Rather, the goal is to nurture high-risk research projects to a point where they could be adopted by the R&D group and developed into a full product. Many corporations pursue this strategy. For example, one might think of Alphabet as a portfolio of very large ventures that are pursuing high-risk, high-reward projects.
 
@@ -31,7 +31,7 @@ In essence, a portfolio becomes a kind of project pipeline or funnel (see the fi
 <img src="/images/2015-12-10-img-funnel.png" alt="It was a funnel. Divided into five stages." width="500">
 </p>
 
-###Why a simulation is useful
+### Why a simulation is useful
 
 Let's suppose that a manager knows how many projects they want at the end of ten years, but they need to know what that means for the actual operations of their portfolio. There are some important questions they need answers to:
 
@@ -39,7 +39,7 @@ Let's suppose that a manager knows how many projects they want at the end of ten
 * How many projects and ideas will they need to screen each year to reach their goals? What are the implications for considerations like hiring and lab space?
 * How should they divide their time between different types of projects? How much time should they give to early-stage ideas vs. more mature, successful projects?
 
-###Creating the simulation
+### Creating the simulation
 
 There are several levels of information that I need to keep track of in order to answer these questions. First, I need to model a portfolio where the projects could be tracked. If projects fail anywhere in the pipeline, new projects need to be started. As I mentioned, one way to think about a portfolio is to divide it into stages. Each stage has a limited number of projects it could hold at a given time. Second, I need to keep track of the projects themselves. What stage are they at, what is their investment amount and headcount, how long have they been active, and are they successful at their current stage or are they failing? Third, I need to track the progress of the portfolio each year over the ten years. How much money is being spent, how many projects are active in each stage, and how many new projects will need to be launched?
 
@@ -49,7 +49,7 @@ I had to start with some basic assumptions. I assumed that all projects were cre
 
 Finally, I thought it might be useful to get started with some boundary conditions that would probably prove realistic for a new portfolio manager. Let's support that there is already a first project in the portfolio, a minimal headcount of representing the early team, and a starting budget.
 
-####Going to Monte Carlo
+#### Going to Monte Carlo
 Since this is a Monte Carlo simulation, I determined the success of a given project in its stage by a random drawing based on the assumed success rate for that stage. Since the success of the projects was random, each Accelerator would be different. To understand the average expected behavior of the portfolio, I loop through thousands of Accelerator objects and take the average of their metrics (e.g. total budget).
 
 The basic goal of the simulation was to understand what would be required to reach a certain number of successful projects that graduated from the portfolio. The key variable that I altered was the number of projects that could be brought into the first phase in a given year. Since it takes a certain amount of time for projects to move through all the stages and graduate, there comes a point when you don’t even want to accept new ideas anymore. It's like you were a VC that raised a fund. If you want to do a new round of projects, you go out and raise a new fund. So let's suppose that our portfolio manager knows that they want three successful projects over a 15 year timeline. They need to know how many projects to accept in the earlier years to reach their goal.
@@ -62,7 +62,7 @@ To check that I actually set up this simulation correctly, I did a fairly simple
 
 Which evaluates to about *P* = 0.59. That’s about the probability of success that the simulation predicted across many trials.
 
-###Simulation results
+### Simulation results
 
 As I mentioned at the beginning, the goal here is to answer some key questions to help the portfolio managers understand and communicate their strategy and expectations for the venture portfolio they might be running. Visualizations are always helpful, so a summary graphic is shown in the figure using some dummy simulation data I generated using some of the assumptions I mentioned earlier.
 

@@ -4,7 +4,7 @@
  <title>Winston Larson</title>
  <link href="http://winstonlarson.github.io//atom.xml" rel="self"/>
  <link href="http://winstonlarson.github.io//"/>
- <updated>2016-01-29T10:07:36-08:00</updated>
+ <updated>2016-02-01T12:15:00-05:00</updated>
  <id>http://winstonlarson.github.io/</id>
  <author>
    <name>Winston Larson</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Do I know you? Probably.</title>
    <link href="http://winstonlarson.github.io//probably-personal"/>
-   <updated>2016-01-10T00:00:00-08:00</updated>
+   <updated>2016-01-15T00:00:00-05:00</updated>
    <id>http://winstonlarson.github.io//probably-personal</id>
    <content type="html">&lt;p&gt;Google made waves this week when it introduced &lt;a href=&quot;http://9to5google.com/2015/05/29/smart-lock-passwords-is-cool-but-google-project-abacus-wants-to-eliminate-password-authentication/&quot;&gt;Project Abacus&lt;/a&gt;, a new prototype identification system for logging into Google’s services. Instead of relying on passwords, Google proposes to use behavior to confirm a user’s identity online. This feels like a pretty shocking idea: instead of using a binary confirmation of who we are (i.e. we know our password), Google basically wants to say that it’s fairly certain that it thinks it knows who we are. However, this system of using probabilities to confirm identity is not only going to be more secure, it also actually mimics the way we humans think about identify ourselves.&lt;/p&gt;
 
@@ -52,9 +52,46 @@
  </entry>
  
  <entry>
+   <title>Avoiding timeouts while web-scraping in Python</title>
+   <link href="http://winstonlarson.github.io//scraping-timeouts"/>
+   <updated>2016-01-06T00:00:00-05:00</updated>
+   <id>http://winstonlarson.github.io//scraping-timeouts</id>
+   <content type="html">&lt;h3 id=&quot;painful-server-timeouts&quot;&gt;Painful server timeouts&lt;/h3&gt;
+
+&lt;p&gt;I do a lot of web-scraping in my free time, and I am often pinging servers that aren’t exactly the most robust. For example, when &lt;a href=&quot;/patent-valuation&quot;&gt;scraping patents for patent valuation analysis&lt;/a&gt;, I am scraping the USPTO’s patent database. It’s an awesome system that is actually quite useful, but I found that every hundred patents or so, I would get a timeout on the server that would stall my code. Frequently, the timeout wouldn’t resolve, so I would have to stop the code, hand-code a fix in the scraping loops, and restart. It was a pain, especially considering that I liked to run the code overnight given the large number of patents I was downloading.&lt;/p&gt;
+
+&lt;h3 id=&quot;frustration-free-timeout-handling&quot;&gt;Frustration-free timeout handling&lt;/h3&gt;
+
+&lt;p&gt;I knew that this had to stop, and that there has to be an easy way to keep code going in the face of timeouts.&lt;/p&gt;
+
+&lt;p&gt;Of course there is. I use Python’s &lt;code&gt;requests&lt;/code&gt; package to download webpages, and there is a handy exception that is thrown if a url takes too long to download. If you make the exception a part of a loop, you can get your code to keep trying to download a page until it actually works. It took me longer than it should have to find this sort of solution using Google and Python’s documentation, so I want to share it in hopes that others have an easier time fixing their own problems.&lt;/p&gt;
+
+&lt;p&gt;I’ve got the code below, but I’ve also &lt;a href=&quot;https://gist.github.com/winstonlarson/7dd141800227359a37ee#file-html-retry-py&quot;&gt;saved it as a Gist for easy reference&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;
+import requests
+
+timeout = 60 # How long to wait until trying again
+url = &#39;http://winstonlarson.com&#39;
+
+while True: # Keep trying until the webpage successfully downloads
+  try:
+    page = requests.get(url, timeout=60)
+    break # If it downloads, get out and get on with life
+  except requests.exceptions.RequestException as e: # If it doesn&#39;t download after the timeout period, an exceptions is thrown, and we try again
+    print(&#39;Try again&#39;)
+    pass
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This turned out to be the perfect fix. Often my program needed just one more try on the server and the page would download no problem. Your mileage may vary, but it’s something to try.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Cleaning BRFSS demographic data</title>
    <link href="http://winstonlarson.github.io//brfss-clean"/>
-   <updated>2015-11-15T00:00:00-08:00</updated>
+   <updated>2015-11-15T00:00:00-05:00</updated>
    <id>http://winstonlarson.github.io//brfss-clean</id>
    <content type="html">&lt;h2 id=&quot;brfss-cleaning-example&quot;&gt;BRFSS cleaning example&lt;/h2&gt;
 

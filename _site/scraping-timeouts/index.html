@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Avoiding timeouts while web-scraping in Python &middot; Winston Larson
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://winstonlarson.github.io/public/css/poole.css">
+  <link rel="stylesheet" href="http://winstonlarson.github.io/public/css/syntax.css">
+  <link rel="stylesheet" href="http://winstonlarson.github.io/public/css/hyde.css">
+  <link rel="stylesheet" href="http://winstonlarson.github.io/public/css/front.css">
+  <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface"> -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Muli" />
+  <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://winstonlarson.github.io/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="http://winstonlarson.github.io/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="back">
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <a href="http://winstonlarson.github.io/" style="text-decoration: none;">
+    <div class="sidebar-about" style="text-decoration: none;">
+      <h1 style="text-decoration: none;">
+            Winston Larson
+      </h1>
+      <!-- <p class="lead"></p> -->
+    </div>
+    </a>
+    <hr>
+    <nav class="sidebar-nav">
+      <div class="sidebar-nav-item">
+        <!-- <a class="sidebar-nav-item" href="http://winstonlarson.github.io/">Home</a> -->
+        <a href="/about">About</a><br>
+        <a href="/portfolio">Portfolio</a><br>
+        <a href="/archive">Archive</a><br>
+        <a href="/resume">Resume</a><br>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+
+      <div class="post">
+  <div class="topper">
+    <h1 class="post-title">Avoiding timeouts while web-scraping in Python</h1>
+  </div>
+<div class="content container">
+  <span class="post-date">06 Jan 2016</span>
+  <h3 id="painful-server-timeouts">Painful server timeouts</h3>
+
+<p>I do a lot of web-scraping in my free time, and I am often pinging servers that aren’t exactly the most robust. For example, when <a href="/patent-valuation">scraping patents for patent valuation analysis</a>, I am scraping the USPTO’s patent database. It’s an awesome system that is actually quite useful, but I found that every hundred patents or so, I would get a timeout on the server that would stall my code. Frequently, the timeout wouldn’t resolve, so I would have to stop the code, hand-code a fix in the scraping loops, and restart. It was a pain, especially considering that I liked to run the code overnight given the large number of patents I was downloading.</p>
+
+<h3 id="frustration-free-timeout-handling">Frustration-free timeout handling</h3>
+
+<p>I knew that this had to stop, and that there has to be an easy way to keep code going in the face of timeouts.</p>
+
+<p>Of course there is. I use Python’s <code>requests</code> package to download webpages, and there is a handy exception that is thrown if a url takes too long to download. If you make the exception a part of a loop, you can get your code to keep trying to download a page until it actually works. It took me longer than it should have to find this sort of solution using Google and Python’s documentation, so I want to share it in hopes that others have an easier time fixing their own problems.</p>
+
+<p>I’ve got the code below, but I’ve also <a href="https://gist.github.com/winstonlarson/7dd141800227359a37ee#file-html-retry-py">saved it as a Gist for easy reference</a>.</p>
+
+<pre><code class="language-python">
+import requests
+
+timeout = 60 # How long to wait until trying again
+url = 'http://winstonlarson.com'
+
+while True: # Keep trying until the webpage successfully downloads
+  try:
+    page = requests.get(url, timeout=60)
+    break # If it downloads, get out and get on with life
+  except requests.exceptions.RequestException as e: # If it doesn't download after the timeout period, an exceptions is thrown, and we try again
+    print('Try again')
+    pass
+
+</code></pre>
+
+<p>This turned out to be the perfect fix. Often my program needed just one more try on the server and the page would download no problem. Your mileage may vary, but it’s something to try.</p>
+
+</div>
+</div>
+
+<div class="content container">
+<div class="related">
+  <h4 class="grey">Related posts</h4>
+  <ul class="related-posts">
+    
+      <li>
+        <h4 class="frontpost">
+          <a href="/probably-personal">
+            Do I know you? Probably.
+          </a></h4>
+          <span class="frontdate">&nbsp;&nbsp;&nbsp;15 Jan 2016</span>
+      </li>
+    
+      <li>
+        <h4 class="frontpost">
+          <a href="/brfss-clean">
+            Cleaning BRFSS demographic data
+          </a></h4>
+          <span class="frontdate">&nbsp;&nbsp;&nbsp;15 Nov 2015</span>
+      </li>
+    
+  </ul>
+</div>
+</div>
+
+    <div class="content container">
+      <hr>
+      <p style="font-size: 1rem;">&copy; 2016. All rights reserved. "Then you will know the data, and the data will set you free."&nbsp;&nbsp;<a href="mailto:winstonlarson@gmail.com">winstonlarson@gmail.com</a></p>
+    </div>
+
+  </body>
+</html>

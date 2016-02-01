@@ -133,7 +133,6 @@
  }
 
  .secondrow {
-   padding-top: 2rem;
    padding-left:  1rem;
    padding-right: 1rem;
    margin-left:  auto;
@@ -152,8 +151,8 @@
 
  .secondrowtext{
    margin-top: 0;
-   padding-top: 12rem;
-   padding-bottom: 2rem;
+   padding-top: 11rem;
+   padding-bottom: 1rem;
    margin-left: 24.5rem;
    font-weight: 100;
    font-size: 1.25rem;

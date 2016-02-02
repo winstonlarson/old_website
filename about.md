@@ -7,9 +7,13 @@ title: About
 
 ## Contact
 Email: [winstonlarson@gmail.com](mailto:winstonlarson@gmail.com)
+
 LinkedIn: [Winston Larson's LinkedIn profile](https://www.linkedin.com/in/rwinstonlarson)
+
 Twitter: [@winstonlarson](https://www.twitter.com/winstonlarson)
+
 Github: [Winston Larson's Github repos](https://www.github.com/winstonlarson)
+
 AngelList: [Winston Larson on AngelList](https://angel.co/winstonlarson)
 
 ## Bio

@@ -6,14 +6,10 @@ title: About
 <img src="/images/about-img-pic.png" alt="Profile pic" width="200">
 
 ## Contact
-Email: [winstonlarson@gmail.com](mailto:winstonlarson@gmail.com)
-
-LinkedIn: [Winston Larson's LinkedIn profile](https://www.linkedin.com/in/rwinstonlarson)
-
-Twitter: [@winstonlarson](https://www.twitter.com/winstonlarson)
-
-Github: [Winston Larson's Github repos](https://www.github.com/winstonlarson)
-
+Email: [winstonlarson@gmail.com](mailto:winstonlarson@gmail.com)<br>
+LinkedIn: [Winston Larson's LinkedIn profile](https://www.linkedin.com/in/rwinstonlarson)<br>
+Twitter: [@winstonlarson](https://www.twitter.com/winstonlarson)<br>
+Github: [Winston Larson's Github repos](https://www.github.com/winstonlarson)<br>
 AngelList: [Winston Larson on AngelList](https://angel.co/winstonlarson)
 
 ## Bio

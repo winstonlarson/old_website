@@ -7,13 +7,13 @@ title: Resume
 
 <span style="font-size:1.25rem;">**Massachusetts Institute of Technology**</span>
 
-**SM Mechanical Engineering**, *January 2014* - Major GPA: 5.0/5.0
+**SM Mechanical Engineering**, *January 2014* - Major GPA: 5.0/5.0<br>
 Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship.
 
-**Master’s Thesis**, *2012-2014* - MIT Presidential Fellow
+**Master’s Thesis**, *2012-2014* - MIT Presidential Fellow<br>
 Strategic and Financial Implications of Unmanned Underwater Vehicles and Long-term Underwater Power Sources.
 
-**SB Mechanical Engineering**, *June 2012* - GPA: 5.0/5.0
+**SB Mechanical Engineering**, *June 2012* - GPA: 5.0/5.0<br>
 Relevant coursework: Manufacturing, systems engineering, product design & dev, robotics & controls, programming, biology.
 
 **Research projects:** Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft
@@ -22,8 +22,8 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 
 ## Experience
 
-**Innosight**, *2014 - Present*
-*Innovation strategy consultant*
+**Innosight**, *2014 - Present*<br>
+*Innovation strategy consultant*<br>
 Developing strategies for Fortune 500 companies to respond to disruptive innovation.
 
 * **Technology and Biotech R&D:** Established a joint venture between a tech company and a large pharmaceutical to build a computational biotech R&D platform.
@@ -34,15 +34,15 @@ Developing strategies for Fortune 500 companies to respond to disruptive innovat
 * **Big Data in Healthcare:** Renewed big data strategy at a health insurer by creating new processes for project and stakeholder management.
 * **Internet of things:** Facilitated a symposium examining opportunities and challenges in the Industrial Internet.
 
-**Unmanned Underwater Vehicle (UUV) Projects with Lincoln Laboratory**, *MIT 2011-2014*
+**Unmanned Underwater Vehicle (UUV) Projects with Lincoln Laboratory**, *MIT 2011-2014*<br>
 Managed research team members, experimental research, accounting ($300k budget), procurement, and technical documentation & communication for prototype long-term underwater power sources. Founded a startup, competed in the MIT 100K, acted as CFO & COO.
 
-**Boeing Company**, *Summer 2012*
-*Manufacturing and Robotics Engineering Intern*
+**Boeing Company**, *Summer 2012*<br>
+*Manufacturing and Robotics Engineering Intern*<br>
 Contributed to the development of a revolutionary manufacturing line to improve aircraft quality & takt time, building & presenting critical industrial robotic vision & manipulation systems to upper management.
 
-**Schlumberger Limited**, *Summer 2011*
-*Manufacturing Engineering Intern*
+**Schlumberger Limited**, *Summer 2011*<br>
+*Manufacturing Engineering Intern*<br>
 Led a team to design, build, and implement apparati for testing electrical components for oil exploration equipment.
 
 ----

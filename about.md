@@ -5,13 +5,6 @@ title: About
 
 <img src="/images/about-img-pic.png" alt="Profile pic" width="200">
 
-## Contact
-Email: [winstonlarson@gmail.com](mailto:winstonlarson@gmail.com)<br>
-LinkedIn: [Winston Larson's LinkedIn profile](https://www.linkedin.com/in/rwinstonlarson)<br>
-Twitter: [@winstonlarson](https://www.twitter.com/winstonlarson)<br>
-Github: [Winston Larson's Github repos](https://www.github.com/winstonlarson)<br>
-AngelList: [Winston Larson on AngelList](https://angel.co/winstonlarson)
-
 ## Bio
 
 I bring a research-oriented mindset and iterative, hypothesis-driven approach to solving ambiguous problems. I rely on data, technical skills, and a detail-focused management style to drive complex projects. I have a diverse background in innovation, R&D management, mechanical engineering, and industrial manufacturing that enables me to better understand problems and identify solutions.

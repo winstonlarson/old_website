@@ -7,7 +7,7 @@ permalink:           "/:title"
 title:               Winston Larson
 tagline:             Mechanical engineering | Data science | Management
 url:                 http://winstonlarson.github.io/
-paginate:            3
+paginate:            5
 baseurl:             "http://winstonlarson.github.io/"
 
 # Assets

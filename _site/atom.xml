@@ -4,7 +4,7 @@
  <title>Winston Larson</title>
  <link href="http://winstonlarson.github.io//atom.xml" rel="self"/>
  <link href="http://winstonlarson.github.io//"/>
- <updated>2016-02-03T10:35:26-05:00</updated>
+ <updated>2016-02-05T11:31:17-05:00</updated>
  <id>http://winstonlarson.github.io/</id>
  <author>
    <name>Winston Larson</name>
@@ -1963,6 +1963,46 @@ brfss_out.to_csv(&#39;brfss&#39; + year + &#39;clean.csv&#39;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And now, at long last, we are finished. We have a cleaned up set of demographic data in &lt;code&gt;brfss2014clean.csv&lt;/code&gt;. It is in the same format as what we can spit out for all of the other years of the BRFSS 1987-2014, so it will be easy to run analyses across all the years.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Book review - Doing Data Science</title>
+   <link href="http://winstonlarson.github.io//review-doing-data-science"/>
+   <updated>2015-10-09T00:00:00-04:00</updated>
+   <id>http://winstonlarson.github.io//review-doing-data-science</id>
+   <content type="html">&lt;p&gt;Even though it sometimes feels differently, data science as a field and a profession is fairly new. Sure, sure, statistics and stuff aren’t, but the hype and unbounded optimism are recent occurrences. And that’s not a bad thing. It’s great to feel like you’re getting in on the ground floor of something that is amazing and will grow to be even more so.&lt;/p&gt;
+
+&lt;h2 id=&quot;doing-data-science-straight-talk-from-the-frontline&quot;&gt;&lt;em&gt;Doing Data Science: Straight talk from the frontline&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;This book is written to give an overview of the space to those who are trying to jump into data science. Based on a class at NYU, it covers the major ideas, value, and applications of data science. It includes a review of the underlying maths, a tour of the major algorithms and methods, and a taste of important new developments like map reduce. It also has profiles of data scientists, demonstrating the different backgrounds and types of skills that can contribute to a strong career.&lt;/p&gt;
+
+&lt;p&gt;In addition to an introduction to the field and its ins and outs, &lt;em&gt;Doing Data Science&lt;/em&gt; covers some of the math and programming principles of data analysis and machine learning. While this material is covered at a fairly high, not-too-technical level, it does include projects and problems for the reader to solve to engage with the subject matter. In many ways, &lt;em&gt;Doing Data Science&lt;/em&gt; is the text version of class lectures and then the problem set for the week, minus the recitation where they actually teach you the nuts and bolts of how to do the homeworks.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-i-found-compelling&quot;&gt;What I found compelling&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Data scientist profiles:&lt;/strong&gt; We all know that data science sits at the intersection of a variety of deeper disciplines. To demonstrate this idea, and the fact that you can combine skill sets in many ways to create an exciting career, the authors profiled a series of guest lecturers who visited their class. They charted their skills in:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Visualization&lt;/li&gt;
+  &lt;li&gt;Computer science&lt;/li&gt;
+  &lt;li&gt;Math&lt;/li&gt;
+  &lt;li&gt;Stats&lt;/li&gt;
+  &lt;li&gt;Machine learning&lt;/li&gt;
+  &lt;li&gt;Domain expertise&lt;/li&gt;
+  &lt;li&gt;Presentation and communication&lt;/li&gt;
+  &lt;li&gt;Data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By profiling a series of data scientists, it shows that you can be great in some areas and just okay in others and still have a successful career. It’s all about how you combine your skills and apply them to solving important problems.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;High-level introduction:&lt;/strong&gt; I liked the high level introduction to the most important methods in data science. So many introductory works belabor the math, forgetting that learning is an iterative process. Don’t get me wrong: I think it’s very important to learn the underlying theory and math, but it can be a lot to digest when you’re just trying to get into a topic. O’Neil and Schutt do a good job of giving the appropriate rigor while keeping it understandable and introductory.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Non-method materials:&lt;/strong&gt; There’s a lot more to data science than just the algorithms. In fact, you could argue that they are a core but minor part of being successful. The authors do a great job of going beyond the algorithms and methods, engaging in topics like where you get data, visualizing and presenting results, participating in competitions, and fitting data science into business. These are important ideas that usually don’t get enough air time.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-i-didnt-love&quot;&gt;What I didn’t love&lt;/h3&gt;
+
+&lt;p&gt;Since this is a high-level, introductory work, I felt like the very involved projects at the end of each chapter were a little unnecessary. In fact, they were kind of distracting. I understand that they were a critical part of the course, but without the supporting academic structures, they felt a bit like an afterthought. I’m using other books to learn more about the details of the methods. I’ll use those resources as I practice applying what I learn. This book would be better off presenting the material, which is terrific, and leaving it at that.&lt;/p&gt;
 </content>
  </entry>
  

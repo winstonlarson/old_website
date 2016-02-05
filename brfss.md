@@ -26,10 +26,13 @@ Python is my language of choice, and it's easiest to use the files in Python if 
 The `.csv` files for the BRFSS are too big to host on GitHub, but I've made them publicly available on my [Amazon Cloud Drive BRFSS folder](https://www.amazon.com) to make it easier for everyone else to use them.
 
 ### Cleaning BRFSS data
+
+Since cleaning a given year is a complicated and arduous process, I have detailed my methods for cleaning up an example year (2014) in [a blog post](/brfss-clean), which is also available as an [iPython notebook](https://github.com/winstonlarson/brfss/blob/master/clean_2014_notebook.ipynb).
+
 A quick flip through the codebooks makes it clear that BRFSS data is not useful right out of the box. It takes some heavy-duty cleaning to get what you want. The codes and variable names can change subtly from year to year, so I had to check the codebook for every year of interest.
 
 I started by grabbing and cleaning the basic demographic data available for each respondent. Not only did this process elucidate how to clean and use BRFSS data, but it's also useful in showing how the demographics of the survey change over time. I ended up grabbing the income group, race, state, age group, sex, and BMI of each respondent.
 
-Due to the differences in codes over time, the easiest way for me to clean the data was to make a separate script for each year's data set. The scripts read in the entire data set for the year, grab the variables of interest, replace the codes with meaningful data, and save it back out in a standardized format as a `.csv`. The scripts for each year are in my GitHub repo. Since cleaning a given year is a complicated and arduous process, I have detailed my methods for cleaning up an example year (2014) in a blog post, which is also available as an iPython notebook.
+Due to the differences in codes over time, the easiest way for me to clean the data was to make a separate script for each year's data set. The scripts read in the entire data set for the year, grab the variables of interest, replace the codes with meaningful data, and save it back out in a standardized format as a `.csv`. The scripts for each year are in my GitHub repo.
 
 Since all of the years now have clean tables that behave the same way, when I want to do analysis across multiple years, it's a much simpler exercise of reading back in the cleaned tables and easily examining my variables of interest.

@@ -19,3 +19,10 @@ You can view my <a href="/resume">resume</a>, and you can learn more about my va
 I bring a research-oriented mindset and iterative, hypothesis-driven approach to solving ambiguous problems, relying on data, technical skills, and a detail-focused management style to drive complex projects. I have a diverse background in innovation strategy, R&D management and consulting, mechanical engineering, and industrial manufacturing that enables me to better understand problems and identify solutions. I specialize in building and executing R&D strategies under circumstances of high technical and market uncertainty. I am interested in combining data science, business and management, and engineering to build new products and business models.
 
 You can view my resume, and you can learn more about my various data, business, and engineering projects in my portfolio. Feel free to get in contact with me. My blog captures my thoughts on everything from my recent data science projects to my thoughts on business and strategy.
+
+- Managed the design of a cloud-based computational platform for biotech R&D. Created technical documentation and facilitated negotiations between tech and pharma stakeholders.
+- Helped create a new R&D accelerator and launch its first project at pharmaceutical company. Designed strategy and organizational structure. Evaluated projects and potential leadership.
+- Launched a strategic initiative in water in drough-stricken California. Identified opportunities. Implemented strategy through financial modeling, customer meetings, and pilot projects.
+- Devised R&D strategy for a new product line at a popular consumer electronics company. Designed new processes to confront high technical and market risk.
+- Advised assessment and potential expansion of semiconductor design and manufacturing at electronics components company.
+- Helped a health insurance company improve strategies for leveraging big data. Assessed internal needs and industry trends. Created processes to improve collaboration.

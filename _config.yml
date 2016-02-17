@@ -5,7 +5,7 @@ permalink:           "/:title"
 
 # Setup
 title:               Winston Larson
-tagline:             Mechanical engineering | Data science | Management
+tagline:             Data science | Business | Engineering
 url:                 http://winstonlarson.github.io/
 paginate:            5
 baseurl:             "http://winstonlarson.github.io/"

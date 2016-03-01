@@ -3,6 +3,10 @@ layout: page
 title: Resume
 ---
 
+<span style="font-size:1.25rem;">You can <a href="public/Winston_Larson_Resume.pdf">download my resume as a PDF</a></span>
+
+----
+
 ## Education
 
 <span style="font-size:1.25rem;">**Massachusetts Institute of Technology**</span>
@@ -44,6 +48,22 @@ Contributed to the development of a revolutionary manufacturing line to improve 
 **Schlumberger Limited**, *Summer 2011*<br>
 *Manufacturing Engineering Intern*<br>
 Led a team to design, build, and implement apparati for testing electrical components for oil exploration equipment.
+
+----
+
+## Data Science Projects
+
+**BRFSS diabetes and demographics**, *2015-2016*<br>
+Built machine learning model to predict diabetes based on behavior. Cleaned demographics data for 30 years of BRFSS.
+
+**Venture portfolio simulation**, *2014-2015*<br>
+Built Monte Carlo simulation of a large venture portfolio over 10 years to guide investment and management strategy.
+
+**Patent valuation**, *2014-2015*<br>
+Scraped hundreds of thousands of patents from the USPTO website and structured data to estimate patent values.
+
+**Scientific advisory board membership**, *2015*<br>
+Used scientific publication records to identify potential SAB candidates.
 
 ----
 

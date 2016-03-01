@@ -4,7 +4,7 @@
  <title>Winston Larson</title>
  <link href="http://winstonlarson.github.io//atom.xml" rel="self"/>
  <link href="http://winstonlarson.github.io//"/>
- <updated>2016-02-17T13:14:25-08:00</updated>
+ <updated>2016-03-01T10:40:54-05:00</updated>
  <id>http://winstonlarson.github.io/</id>
  <author>
    <name>Winston Larson</name>
@@ -15,7 +15,7 @@
  <entry>
    <title>Do I know you? Probably.</title>
    <link href="http://winstonlarson.github.io//probably-personal"/>
-   <updated>2016-01-20T00:00:00-08:00</updated>
+   <updated>2016-01-20T00:00:00-05:00</updated>
    <id>http://winstonlarson.github.io//probably-personal</id>
    <content type="html">&lt;p&gt;Google made waves this week when it introduced &lt;a href=&quot;http://9to5google.com/2015/05/29/smart-lock-passwords-is-cool-but-google-project-abacus-wants-to-eliminate-password-authentication/&quot;&gt;Project Abacus&lt;/a&gt;, a new prototype identification system for logging into Google’s services. Instead of relying on passwords, Google proposes to use behavior to confirm a user’s identity online. This feels like a pretty shocking idea: instead of using a binary confirmation of who we are (i.e. we know our password), Google basically wants to say that it’s fairly certain that it thinks it knows who we are. However, this system of using probabilities to confirm identity is not only going to be more secure, it also actually mimics the way we humans think about identify ourselves.&lt;/p&gt;
 
@@ -54,7 +54,7 @@
  <entry>
    <title>Avoiding timeouts while web-scraping in Python</title>
    <link href="http://winstonlarson.github.io//scraping-timeouts"/>
-   <updated>2016-01-06T00:00:00-08:00</updated>
+   <updated>2016-01-06T00:00:00-05:00</updated>
    <id>http://winstonlarson.github.io//scraping-timeouts</id>
    <content type="html">&lt;h3 id=&quot;painful-server-timeouts&quot;&gt;Painful server timeouts&lt;/h3&gt;
 
@@ -91,7 +91,7 @@ while True: # Keep trying until the webpage successfully downloads
  <entry>
    <title>Protecting your services-based business</title>
    <link href="http://winstonlarson.github.io//services-and-products"/>
-   <updated>2015-12-18T00:00:00-08:00</updated>
+   <updated>2015-12-18T00:00:00-05:00</updated>
    <id>http://winstonlarson.github.io//services-and-products</id>
    <content type="html">&lt;p&gt;Services-based business models are all the rage these days. We used to buy our CRMs; now Salesforce is software as a service. People still buy cars, but it’s easy to imagine a future where Uber and ZipCar provide the same functionality purely through a service model. Of course, it’s easy to see the value and allure of services. Uber, which will get a car to your door, has a private valuation now somewhere north of $60B. Ford, on the other hand, actually makes the cars, but their valuation floats around $50B. There are no two ways about it: Understanding the customer’s real problem (getting from point A to point B as easily as possible) and finding a great solution to it unlocks enormous value.&lt;/p&gt;
 
@@ -152,7 +152,7 @@ while True: # Keep trying until the webpage successfully downloads
  <entry>
    <title>Cleaning BRFSS demographic data</title>
    <link href="http://winstonlarson.github.io//brfss-clean"/>
-   <updated>2015-11-15T00:00:00-08:00</updated>
+   <updated>2015-11-15T00:00:00-05:00</updated>
    <id>http://winstonlarson.github.io//brfss-clean</id>
    <content type="html">&lt;h2 id=&quot;brfss-cleaning-example&quot;&gt;BRFSS cleaning example&lt;/h2&gt;
 
@@ -1969,7 +1969,7 @@ brfss_out.to_csv(&#39;brfss&#39; + year + &#39;clean.csv&#39;)
  <entry>
    <title>Book review - Doing Data Science</title>
    <link href="http://winstonlarson.github.io//review-doing-data-science"/>
-   <updated>2015-10-09T00:00:00-07:00</updated>
+   <updated>2015-10-09T00:00:00-04:00</updated>
    <id>http://winstonlarson.github.io//review-doing-data-science</id>
    <content type="html">&lt;p&gt;Even though it sometimes feels differently, data science as a field and a profession is fairly new. Sure, sure, statistics and stuff aren’t, but the hype and unbounded optimism are recent occurrences. And that’s not a bad thing. It’s great to feel like you’re getting in on the ground floor of something that is amazing and will grow to be even more so.&lt;/p&gt;
 

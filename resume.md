@@ -53,6 +53,9 @@ Led a team to design, build, and implement apparati for testing electrical compo
 
 ## Data Science Projects
 
+**Predicting content value for advertising**, *2016*<br>
+Built regression model to correlate content with ad value. Used SQL and Python to process over 250 million samples.
+
 **BRFSS diabetes and demographics**, *2015-2016*<br>
 Built machine learning model to predict diabetes based on behavior. Cleaned demographics data for 30 years of BRFSS.
 

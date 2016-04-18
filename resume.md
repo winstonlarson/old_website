@@ -51,21 +51,40 @@ Led a team to design, build, and implement apparati for testing electrical compo
 
 ----
 
+# Healthcare innovation
+
+**Biotech computing platform**<br>
+Managed a project between major pharma and tech companies to design a cloud platform for biotech R&D. Created technical documentation, designed a new business model to commercialize, and helped negotiate terms.
+
+**Pharma R&D accelerator**<br>
+Built a new in-house accelerator for high-risk breakthrough research at a major pharma, including organizational design, funding structure, identifying opportunity areas, evaluating potential ventures, and finding talent.
+
+**New venture in high-risk immunology research**<br>
+Identified a disease area with scientific potential and high unmet medical need. Identified talent, created venture pitch, outlined experimental and clinical objectives and timelines, and evaluated technologies and partners.
+
+**Planning capabilities development for R&D programs**<br>
+Identified critical science and technology capabilities needed to build an R&D program for a new therapeutic group. Created a detailed plan for development, including specific technologies, hiring, timelines, location, and budgeting.
+
+**New health payor business models based on big data**<br>
+Created a new organizational design, project execution structure, and outcomes evaluation model for a big data group at a major health insurer. Outlined new ways to deliver value to payor business units and communicate impact.
+
+----
+
 ## Data Science Projects
 
-**Predicting content value for advertising**, *2016*<br>
+**Predicting content value for advertising**<br>
 Built regression model to correlate content with ad value. Used SQL and Python to process over 250 million samples.
 
-**BRFSS diabetes and demographics**, *2015-2016*<br>
+**BRFSS diabetes and demographics**<br>
 Built machine learning model to predict diabetes based on behavior. Cleaned demographics data for 30 years of BRFSS.
 
-**Venture portfolio simulation**, *2014-2015*<br>
+**Venture portfolio simulation**<br>
 Built Monte Carlo simulation of a large venture portfolio over 10 years to guide investment and management strategy.
 
-**Patent valuation**, *2014-2015*<br>
+**Patent valuation**<br>
 Scraped hundreds of thousands of patents from the USPTO website and structured data to estimate patent values.
 
-**Scientific advisory board membership**, *2015*<br>
+**Scientific advisory board membership**<br>
 Used scientific publication records to identify potential SAB candidates.
 
 ----

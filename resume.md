@@ -70,7 +70,7 @@ Created a new organizational design, project execution structure, and outcomes e
 
 ----
 
-## Data Science Projects
+## Data science
 
 **Predicting content value for advertising**<br>
 Built regression model to correlate content with ad value. Used SQL and Python to process over 250 million samples.

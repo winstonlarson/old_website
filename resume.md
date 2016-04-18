@@ -51,7 +51,7 @@ Led a team to design, build, and implement apparati for testing electrical compo
 
 ----
 
-# Healthcare innovation
+## Healthcare innovation
 
 **Biotech computing platform**<br>
 Managed a project between major pharma and tech companies to design a cloud platform for biotech R&D. Created technical documentation, designed a new business model to commercialize, and helped negotiate terms.

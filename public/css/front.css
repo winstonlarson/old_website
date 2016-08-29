@@ -41,7 +41,6 @@
   font-weight: 300;
   font-size: 2rem;
   display: block;
-  color: #1677B2;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -63,7 +62,6 @@
 .secondrowtext{
   font-weight: 300;
   font-size: 1.25rem;
-  color: #C2DFFF;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -151,7 +149,7 @@
 
  .secondrowtext{
    margin-top: 0;
-   padding-top: 10.5rem;
+   /*padding-top: 10.5rem;*/
    padding-bottom: 1rem;
    margin-left: 24.5rem;
    /*font-weight: 100;*/
@@ -162,7 +160,7 @@
 
  .thirdrow{
    margin-top: 0;
-   padding-top: 25rem;
+   /*padding-top: 25rem;*/
    padding-bottom: 0rem;
    margin-left: 26rem;
    font-size: 1.25rem;

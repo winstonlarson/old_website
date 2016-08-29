@@ -57,12 +57,12 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 48em) {
   h1,h2,h3,h4,h5,h6 {
-    font-weight: 100;
+    /*font-weight: 100;*/
   }
   .page-title,
   .post-title,
   .post-title a {
-    font-weight: 100;
+    /*font-weight: 100;*/
   }
 }
 
@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sidebar links */
 .sidebar a {
-  color: #E5E4E2;
+  color: #1677B2;
 }
 
 /* About section */
@@ -184,7 +184,7 @@ a.sidebar-nav-item:focus {
     margin-right: 3rem;
   }
   .topper {
-    background-color: #E8E8E8;
+    background-color: #FFFFFF;
     /*background-image: url("http://winstonlarson.com/images/bg1.png");
     background-size: 100% 100%;
     background-repeat: repeat;*/

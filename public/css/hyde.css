@@ -118,7 +118,7 @@ a.sidebar-about:hover {
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
-  color: #48A9E4;
+  color: #1677B2;
 }
 .sidebar-nav-item {
   display: block;
@@ -129,7 +129,7 @@ a.sidebar-about:hover {
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
-  color: #48A9E4;
+  color: #1677B2;
 }
 
 /* Sticky sidebar

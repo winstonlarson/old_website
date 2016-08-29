@@ -53,7 +53,7 @@
 
 .secondrow{
   margin-top: 0;
-  background-color: #2C87F0;
+  background-color: #FFF;
   padding-left:  1rem;
   padding-right: 1rem;
   margin-left:  auto;
@@ -145,7 +145,7 @@
    margin-left: 0rem;
    margin-right: 0rem;
    width: 100%;
-   position: fixed;
+   /*position: fixed;*/
    z-index: 1;
  }
 
@@ -154,7 +154,7 @@
    padding-top: 10.5rem;
    padding-bottom: 1rem;
    margin-left: 24.5rem;
-   font-weight: 100;
+   /*font-weight: 100;*/
    font-size: 1.25rem;
    max-width: 58rem;
    margin-right: 3rem;

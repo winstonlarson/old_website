@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   /*background: #FAFAFA; /*linear-gradient(to right, #1F45FC, #52B3EE);*/
-  background-color: #03102E;/*03102E*/
+  background-color: #ffffff;/*03102E*/
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About section */
 .sidebar-about h1 {
-  color: #fff;
+  color: #03102E;
   margin-top: 0;
   font-family: 'Lato', Arial, sans-serif;
   font-size: 5rem;

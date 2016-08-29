@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About section */
 .sidebar-about h1 {
-  color: #03102E;
+  color: #00489A;
   margin-top: 0;
   font-family: 'Lato', Arial, sans-serif;
   font-size: 5rem;
@@ -124,7 +124,7 @@ a.sidebar-about:hover {
   display: block;
   line-height: 2.75;
   font-size: 18px;
-  font-weight: 100;
+  /*font-weight: 100;*/
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {

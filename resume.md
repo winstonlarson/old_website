@@ -11,16 +11,16 @@ title: Resume
 
 <span style="font-size:1.25rem;">**Massachusetts Institute of Technology**</span>
 
-**SM Mechanical Engineering**, *January 2014* - Major GPA: 5.0/5.0<br>
-Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship.
+**SM Mechanical Engineering**, *January 2014* - GPA: 5.0/5.0<br>
+Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship, technology sales management.
 
 **Master’s Thesis**, *2012-2014* - MIT Presidential Fellow<br>
 Strategic and Financial Implications of Unmanned Underwater Vehicles and Long-term Underwater Power Sources.
 
 **SB Mechanical Engineering**, *June 2012* - GPA: 5.0/5.0<br>
-Relevant coursework: Manufacturing, systems engineering, product design & dev, robotics & controls, programming, biology.
+Relevant coursework: Manufacturing, systems engineering, product design & development, robotics & controls, programming and computer science, biology.
 
-**Research projects:** Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft
+**Research projects:** Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft.
 
 ----
 
@@ -30,6 +30,7 @@ Relevant coursework: Manufacturing, systems engineering, product design & dev, r
 *Innovation strategy consultant*<br>
 Developing strategies for Fortune 500 companies to respond to disruptive innovation.
 
+* **Medical Device Manufacturing:** Evaluated market potential of a revolutionary manufacturing process and created an implementation plan to build a full production line 
 * **Technology and Biotech R&D:** Established a joint venture between a tech company and a large pharmaceutical to build a computational biotech R&D platform.
 * **Pharmaceutical R&D:** Created a new R&D accelerator and launched its first project at a major pharmaceutical.
 * **Energy & Water:** Launched a strategic initiative in water at an electric utility in California.

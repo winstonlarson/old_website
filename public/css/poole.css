@@ -48,7 +48,7 @@ body {
 }
 
 html {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -93,7 +93,7 @@ a:focus {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
   color: #808080; /*f2b632;*/
@@ -127,7 +127,7 @@ p {
 
 strong {
   color: #303030;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 
@@ -278,7 +278,7 @@ tbody tr:nth-child(odd) th {
 
 .lead {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 
@@ -356,7 +356,7 @@ tbody tr:nth-child(odd) th {
 .post-title,
 .post-title a {
   margin-top: 0;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 4rem;
 }
 
@@ -404,7 +404,7 @@ tbody tr:nth-child(odd) th {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }

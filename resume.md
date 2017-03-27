@@ -7,40 +7,18 @@ title: Resume
 
 ----
 
-## Education
-
-<span style="font-size:1.25rem;">**Massachusetts Institute of Technology**</span>
-
-**SM Mechanical Engineering**, *January 2014* - GPA: 5.0/5.0<br>
-Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship, technology sales management.
-
-**Master’s Thesis**, *2012-2014* - MIT Presidential Fellow<br>
-Strategic and Financial Implications of Unmanned Underwater Vehicles and Long-term Underwater Power Sources.
-
-**SB Mechanical Engineering**, *June 2012* - GPA: 5.0/5.0<br>
-Relevant coursework: Manufacturing, systems engineering, product design & development, robotics & controls, programming and computer science, biology.
-
-**Research projects:** Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft.
-
-----
-
 ## Experience
 
 **Innosight**, *2014 - Present*<br>
 *Innovation strategy consultant*<br>
-Developing strategies for Fortune 500 companies to respond to disruptive innovation.
+Member of consulting team developing strategies for the Fortune 500 to respond to disruptive innovation. Responsible for analysis, communications, and client management. Hired as analyst, promoted twice to senior associate. Project highlights:
 
-* **Medical Device Manufacturing:** Evaluated market potential of a revolutionary manufacturing process and created an implementation plan to build a full production line 
-* **Technology and Biotech R&D:** Established a joint venture between a tech company and a large pharmaceutical to build a computational biotech R&D platform.
-* **Pharmaceutical R&D:** Created a new R&D accelerator and launched its first project at a major pharmaceutical.
-* **Energy & Water:** Launched a strategic initiative in water at an electric utility in California.
-* **Consumer Electronics:** Devised an R&D strategy for a new product line being launched by a popular consumer electronics company.
-* **Semiconductor Manufacturing:** Advised assessment and expansion of semiconductor design and manufacturing capabilities at an electronics components company.
-* **Big Data in Healthcare:** Renewed big data strategy at a health insurer by creating new processes for project and stakeholder management.
-* **Internet of things:** Facilitated a symposium examining opportunities and challenges in the Industrial Internet.
-
-**Unmanned Underwater Vehicle (UUV) Projects with Lincoln Laboratory**, *MIT 2011-2014*<br>
-Managed research team members, experimental research, accounting ($300k budget), procurement, and technical documentation & communication for prototype long-term underwater power sources. Founded a startup, competed in the MIT 100K, acted as CFO & COO.
+* **Early-stage Pharm R&D:** Proposed a disease area with scientific potential and high unmet medical need. Identified talent, created venture pitch, outlined clinical objectives & timelines, and evaluated potential partners. Resulted in new therapeutic R&D program and multimillion dollar funding at major pharmaceutical company.
+* **Clean Tech:** Coached manager of a new innovation group at a major power utility, focused on new water sources in California. Guided development of go-to-market strategy, day-to-day management, and team leadership. Built model of market size, sales growth, and costs for new business. Helped gain CEO support and additional funding.
+* **Medical Devices:** Managed consulting team examining a revolutionary medical device manufacturing process at a major healthcare company. Built financial models of market potential & supply chain impact. Created implementation plan to build a full production line. Prompted multimillion dollar investment in additional R&D funding.
+* **Pharm R&D Capabilities Planning:** Created plan to build an R&D program for a new therapeutic group, including hiring, timelines, location, lab equipment, and budgeting. Resulted in successful launch of new lab.
+* **Biotech computing platform:** Managed a collaboration between major pharma and tech companies to design a cloud platform for biotech R&D. Wrote technical documentation detailing platform specifications and timelines, created a business model to commercialize, modeled projected finances, built internal alignment, and helped negotiate terms.
+* **Automotive:** Designed top-level strategy for transitioning to electric vehicles at major auto OEM, driving alignment of senior leadership team. Assessed competitive landscape and predicted EV adoption based on market, technology, and regulation. Valued business opportunity, identified key pilot activities, and supported strategy execution.
 
 **Boeing Company**, *Summer 2012*<br>
 *Manufacturing and Robotics Engineering Intern*<br>
@@ -52,46 +30,25 @@ Led a team to design, build, and implement apparati for testing electrical compo
 
 ----
 
-## Healthcare innovation
+## Education
 
-**Biotech computing platform**<br>
-Managed a project between major pharma and tech companies to design a cloud platform for biotech R&D. Created technical documentation, designed a new business model to commercialize, and helped negotiate terms.
+<span style="font-size:1.25rem;">**Massachusetts Institute of Technology**</span>
 
-**Pharma R&D accelerator**<br>
-Built a new in-house accelerator for high-risk breakthrough research at a major pharma, including organizational design, funding structure, identifying opportunity areas, evaluating potential ventures, and finding talent.
+**SM - Master's of Science** | Mechanical Engineering | *January 2014* - GPA: 5.0/5.0<br>
+Thesis: *Strategic and Financial Implications of Unmanned Underwater Vehicles and Long-term Underwater Power Sources.*<br>
+* MIT Presidential Fellowship awarded to pursue research into innovative underwater energy sources
+* TA’ed senior design class, mentoring students and providing technical expertise, helping to build a functioning power source for an unmanned underwater vehicle with MIT Lincoln Labs.
+* Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship, technology sales management.
 
-**New venture in high-risk immunology research**<br>
-Identified a disease area with scientific potential and high unmet medical need. Identified talent, created venture pitch, outlined experimental and clinical objectives and timelines, and evaluated technologies and partners.
-
-**Planning capabilities development for R&D programs**<br>
-Identified critical science and technology capabilities needed to build an R&D program for a new therapeutic group. Created a detailed plan for development, including specific technologies, hiring, timelines, location, and budgeting.
-
-**New health payor business models based on big data**<br>
-Created a new organizational design, project execution structure, and outcomes evaluation model for a big data group at a major health insurer. Outlined new ways to deliver value to payor business units and communicate impact.
-
-----
-
-## Data science
-
-**Predicting content value for advertising**<br>
-Built regression model to correlate content with ad value. Used SQL and Python to process over 250 million samples.
-
-**BRFSS diabetes and demographics**<br>
-Built machine learning model to predict diabetes based on behavior. Cleaned demographics data for 30 years of BRFSS.
-
-**Venture portfolio simulation**<br>
-Built Monte Carlo simulation of a large venture portfolio over 10 years to guide investment and management strategy.
-
-**Patent valuation**<br>
-Scraped hundreds of thousands of patents from the USPTO website and structured data to estimate patent values.
-
-**Scientific advisory board membership**<br>
-Used scientific publication records to identify potential SAB candidates.
+**SB  - Bachelor's of Science** | Mechanical Engineering | *June 2012* - GPA: 5.0/5.0<br>
+* Managed research team members, accounting ($300k budget), and technical documentation & communication as part of a team building a fully functioning prototype of a long-term underwater power source for MIT Lincoln Labs.
+* Relevant coursework: Manufacturing, systems engineering, product design & development, robotics & controls, programming and computer science, biology.
+* Research projects: Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft.
 
 ----
 
 ## Skills
 
-**Engineering:** Systems engineering; manufacturing; data mining and analysis; Python (pandas, Numpy, SciPy), Java & Matlab; SolidWorks; product design and development; electronics.
+**Business:** Team & project management; strategy & business development; disruptive innovation; entrepreneurship & startups; communication, presentations & writing; financial modeling; market sizing; competitive research; ethnography.
 
-**Business:** Team & project management; strategy & business development; disruptive innovation; entrepreneurship & startups; communication, presentations & writing.
+**Technical:** Systems engineering; manufacturing; data mining, analysis, simulation; Python (pandas, Numpy, SciPy), Java, SQL, Matlab, Excel; SolidWorks; product design and development; electronics.

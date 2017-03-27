@@ -9,8 +9,8 @@ title: Resume
 
 ## Experience
 
-**Innosight**, *2014 - Present*<br>
-*Innovation strategy consultant*<br>
+<span style="font-size:1.25rem;">Innosight</span><br>
+**Innovation strategy consultant** | Lexington, MA | *2014 - Present*<br>
 Member of consulting team developing strategies for the Fortune 500 to respond to disruptive innovation. Responsible for analysis, communications, and client management. Hired as analyst, promoted twice to senior associate. Project highlights:
 
 * **Early-stage Pharm R&D:** Proposed a disease area with scientific potential and high unmet medical need. Identified talent, created venture pitch, outlined clinical objectives & timelines, and evaluated potential partners. Resulted in new therapeutic R&D program and multimillion dollar funding at major pharmaceutical company.
@@ -34,13 +34,13 @@ Led a team to design, build, and implement apparati for testing electrical compo
 
 <span style="font-size:1.25rem;">**Massachusetts Institute of Technology**</span>
 
-**SM - Master's of Science** | Mechanical Engineering | *January 2014* - GPA: 5.0/5.0<br>
+**SM Mechanical Engineering** | GPA: 5.0/5.0 | *January 2014*<br>
 Thesis: *Strategic and Financial Implications of Unmanned Underwater Vehicles and Long-term Underwater Power Sources.*<br>
 * MIT Presidential Fellowship awarded to pursue research into innovative underwater energy sources
 * TA’ed senior design class, mentoring students and providing technical expertise, helping to build a functioning power source for an unmanned underwater vehicle with MIT Lincoln Labs.
 * Relevant coursework: Sustainable manufacturing, computational science and engineering, innovation strategy, entrepreneurship, technology sales management.
 
-**SB  - Bachelor's of Science** | Mechanical Engineering | *June 2012* - GPA: 5.0/5.0<br>
+**SB Mechanical Engineering** | GPA: 5.0/5.0 | *June 2012*<br>
 * Managed research team members, accounting ($300k budget), and technical documentation & communication as part of a team building a fully functioning prototype of a long-term underwater power source for MIT Lincoln Labs.
 * Relevant coursework: Manufacturing, systems engineering, product design & development, robotics & controls, programming and computer science, biology.
 * Research projects: Bio-mimetic underwater robotics, networked indoor robot navigation, firearms identification for Boston Police, compact fusion power for spacecraft.

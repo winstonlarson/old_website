@@ -38,7 +38,7 @@
 }
 
 .firstrowtext{
-  font-weight: 300;
+  font-weight: 400;
   font-size: 2rem;
   display: block;
   padding-left:  1rem;
@@ -124,7 +124,7 @@
    padding-top: 2rem;
    padding-bottom: 2rem;
    margin-left: 24.5rem;
-   font-weight: 300;
+   font-weight: 400;
    display: inline-block;
    font-size: 3rem;
    max-width: 58rem;
@@ -190,7 +190,7 @@
  .frontdate{
    max-width: 58rem;
    font-size: 1.25rem;
-   font-weight: 300;
+   font-weight: 400;
    margin-top: -.5rem;
    margin-bottom: 1rem;
    color: #9a9a9a;

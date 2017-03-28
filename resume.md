@@ -11,7 +11,7 @@ title: RESUME
 
 <span style="font-size:1.5rem;">**INNOSIGHT**</span><br>
 **Innovation strategy consultant** | Lexington, MA | *2014 - Present*<br>
-Member of consulting team developing strategies for the Fortune 500 to respond to disruptive innovation. Responsible for analysis, communications, and client management. Hired as analyst, promoted twice to senior associate. Project highlights:
+Member of consulting team developing strategies for the Fortune 500 to respond to disruptive innovation. Responsible for analysis, communications and presentations, and client management. Hired as analyst, promoted twice to senior associate. Project highlights:
 
 * **Early-stage Pharm R&D:** Proposed a disease area with scientific potential and high unmet medical need. Identified talent, created venture pitch, outlined clinical objectives & timelines, and evaluated potential partners. Resulted in new therapeutic R&D program and multimillion dollar funding at major pharmaceutical company.
 * **Clean Tech:** Coached manager of a new innovation group at a major power utility, focused on new water sources in California. Guided development of go-to-market strategy, day-to-day management, and team leadership. Built model of market size, sales growth, and costs for new business. Helped gain CEO support and additional funding.

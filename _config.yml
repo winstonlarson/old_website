@@ -6,9 +6,9 @@ permalink:           "/:title"
 # Setup
 title:               WINSTON LARSON
 tagline:             Managing innovation
-url:                 http://winstonlarson.github.io/
+url:                 http://winstonlarson.com/
 paginate:            5
-baseurl:             "http://winstonlarson.github.io/"
+baseurl:             "http://winstonlarson.com/"
 
 # Assets
 #

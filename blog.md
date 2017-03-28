@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Blog
+title: BLOG
 ---
 
 {% for post in site.posts %}

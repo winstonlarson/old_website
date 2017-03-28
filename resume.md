@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resume
+title: RESUME
 ---
 
 <span style="font-size:1.25rem;">You can <a href="public/Winston_Larson_Resume.pdf">download my resume as a PDF</a></span>
@@ -9,7 +9,7 @@ title: Resume
 
 ## PROFESSIONAL EXPERIENCE
 
-<span style="font-size:1.25rem;">**INNOSIGHT**</span><br>
+<span style="font-size:1.5rem;">**INNOSIGHT**</span><br>
 **Innovation strategy consultant** | Lexington, MA | *2014 - Present*<br>
 Member of consulting team developing strategies for the Fortune 500 to respond to disruptive innovation. Responsible for analysis, communications, and client management. Hired as analyst, promoted twice to senior associate. Project highlights:
 
@@ -20,19 +20,19 @@ Member of consulting team developing strategies for the Fortune 500 to respond t
 * **Biotech computing platform:** Managed a collaboration between major pharma and tech companies to design a cloud platform for biotech R&D. Wrote technical documentation detailing platform specifications and timelines, created a business model to commercialize, modeled projected finances, built internal alignment, and helped negotiate terms.
 * **Automotive:** Designed top-level strategy for transitioning to electric vehicles at major auto OEM, driving alignment of senior leadership team. Assessed competitive landscape and predicted EV adoption based on market, technology, and regulation. Valued business opportunity, identified key pilot activities, and supported strategy execution.
 
-<span style="font-size:1.25rem;">**BOEING COMPANY**</span><br>
+<span style="font-size:1.5rem;">**BOEING COMPANY**</span><br>
 **Manufacturing and Robotics Engineering Intern** | Renton, WA | *Summer 2012*<br>
 Contributed to the development of a revolutionary manufacturing line to improve aircraft quality & takt time, building & presenting critical industrial robotic vision & manipulation systems to upper management.
 
-<span style="font-size:1.25rem;">**SCHLUMBERGER LIMITED**</span><br>
+<span style="font-size:1.5rem;">**SCHLUMBERGER LIMITED**</span><br>
 **Manufacturing Engineering Intern** | Princeton, NJ | *Summer 2011*<br>
 Led a team to design, build, and implement apparati for testing electrical components for oil exploration equipment.
 
 ----
 
-## Education
+## EDUCATION
 
-<span style="font-size:1.25rem;">**MASSACHUSETTS INSTITUTE OF TECHNOLOGY**</span>
+<span style="font-size:1.5rem;">**MASSACHUSETTS INSTITUTE OF TECHNOLOGY**</span>
 
 **SM Mechanical Engineering** | GPA: 5.0/5.0 | *January 2014*<br>
 Thesis: *Strategic and Financial Implications of Unmanned Underwater Vehicles and Long-term Underwater Power Sources.*<br>
@@ -47,7 +47,7 @@ Thesis: *Strategic and Financial Implications of Unmanned Underwater Vehicles an
 
 ----
 
-## Skills
+## SKILLS
 
 **Business:** Team & project management; strategy & business development; disruptive innovation; entrepreneurship & startups; communication, presentations & writing; financial modeling; market sizing; competitive research; ethnography.
 

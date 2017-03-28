@@ -1,11 +1,11 @@
 ---
 layout: page
-title: About
+title: ABOUT
 ---
 
 <img src="/images/about-img-pic.png" alt="Profile pic" width="200">
 
-## Bio
+## BIO
 
 I am interested in data science, business and management, and engineering. I enjoy working at the intersection of all three, finding ways to use data and my technical skills to build interesting businesses. No matter what I'm working on, I love learning new things, and I find a broad range of topics to be fodder for new ideas and opportunities. Engaging with difficult, layered problems is fun, and I thrive on working at the fringes of what has never been done before.
 

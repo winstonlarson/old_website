@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact
+title: CONTACT
 ---
 
 I'd love to hear from you.
